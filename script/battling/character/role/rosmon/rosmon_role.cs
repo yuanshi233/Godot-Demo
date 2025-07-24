@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class rosmon_role : CharacterBody2D, RoleBase
+public partial class rosmon_role : RoleBase
 {
 	// Called when the node enters the scene tree for the first time.
 	[Export] public double SpeedMove { get; set; } = 200;
@@ -20,7 +20,7 @@ public partial class rosmon_role : CharacterBody2D, RoleBase
 	private Sprite2D sprite2D;
 	private PackedScene jujian;
 	private bool skillReady;
-	public Vector2 pos{ set; get; }
+	public override Vector2 pos{ set; get; }
 
 	private int sta;        //1死亡2后摇
 
@@ -100,7 +100,7 @@ public partial class rosmon_role : CharacterBody2D, RoleBase
 	}
 
 	//被攻击，0物理，1法术
-	public void Attacked(double value, int type)
+	public override void Attacked(double value, int type)
 	{
 		double sum = 1.0;
 		if (type == 0)
@@ -121,7 +121,7 @@ public partial class rosmon_role : CharacterBody2D, RoleBase
 			Hud.HP_Bar.Value = HP;
 		}
 	}
-	public void Move(Vector2 inputVector)
+	public override void Move(Vector2 inputVector)
 	{
 		if (sta == 2)
 			return;
@@ -131,7 +131,7 @@ public partial class rosmon_role : CharacterBody2D, RoleBase
 		HandleFlipAndAnimation(inputVector);
 	}
 	//用于role权限
-	public void SetState(Global.State stat)
+	public override void SetState(Global.State stat)
 	{
 		state = stat;
 		if (stat == Global.State.HUD)
@@ -143,7 +143,7 @@ public partial class rosmon_role : CharacterBody2D, RoleBase
 	{
 		pos = _pos;
 	}
-	public void Attack(int type)
+	public override void Attack(int type)
 	{
 		if (sta == 2)
 			return;

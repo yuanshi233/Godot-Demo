@@ -1,35 +1,22 @@
 using Godot;
 using System;
+using System.Diagnostics;
 
 public partial class RoleSeleUI : Control
 {
-
+	public static RoleSeleUI Instance;
 	// Called when the node enters the scene tree for the first time.
-	public static int len = 0;
-	public override void _Ready()
-	{
-		containerB = GetNode<HBoxContainer>("Panel/ScrollContainer/HBoxContainer"); 
-		containerA = GetNode<HBoxContainer>("PanelContainer/HBoxContainer");
-		for (int i = 0; i < 5; i++)
-		{
-			PackedScene card = GD.Load<PackedScene>("res://scene/character/role/jesica/card/jesica_card_B.tscn");
-			GetNode<HBoxContainer>("Panel/ScrollContainer/HBoxContainer").AddChild(card.Instantiate());
-			card = GD.Load<PackedScene>("res://scene/character/role/rosmon/card/rosmon_card_B.tscn");
-			GetNode<HBoxContainer>("Panel/ScrollContainer/HBoxContainer").AddChild(card.Instantiate());
-		}
-
-
-	}
+	public int len = 0;
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-
+		Instance = this;
 	}
 
 	private void BackUserUI()
 	{
-		RoleSeleUI.len = 0;
+		len = 0;
 		var scene = GD.Load<PackedScene>("res://scene/UI/user_ui.tscn");
 		GetTree().ChangeSceneToPacked(scene);
 	}
@@ -37,8 +24,9 @@ public partial class RoleSeleUI : Control
 	{
 		
 	}
-
-	public static HBoxContainer containerB;
-	public static HBoxContainer containerA;
+	[Export]
+	public HBoxContainer containerB;
+	[Export]
+	public HBoxContainer containerA;
 
 }

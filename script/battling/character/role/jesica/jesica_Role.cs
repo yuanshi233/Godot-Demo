@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class jesica_Role : CharacterBody2D, RoleBase
+public partial class jesica_Role : RoleBase
 {
     [Signal] public delegate void ShootEventHandler(int type, double val, Vector2 pos);
 
@@ -23,7 +23,7 @@ public partial class jesica_Role : CharacterBody2D, RoleBase
     private Node2D player;
     private Global.State state;
     //private Vector2 pos;
-    public Vector2 pos{ set; get; }
+    public override Vector2 pos{ set; get; }
 
 
 
@@ -117,7 +117,7 @@ public partial class jesica_Role : CharacterBody2D, RoleBase
 
     //被攻击，0物理，1法术, 2治疗
 
-    public void Attacked(double value, int type)
+    public override void Attacked(double value, int type)
     {
         double sum = 1.0;
         if (type == 0)
@@ -142,7 +142,7 @@ public partial class jesica_Role : CharacterBody2D, RoleBase
     {
         pos = _pos;
     }
-    public void Attack(int type)
+    public override void Attack(int type)
     {
         if (skillReady)
         {
@@ -158,7 +158,7 @@ public partial class jesica_Role : CharacterBody2D, RoleBase
             t1 = 0;
         }
     }
-    public void Move(Vector2 inputVector)
+    public override void Move(Vector2 inputVector)
     {
         //处理移动和动画
         HandleMovement(inputVector);
@@ -167,7 +167,7 @@ public partial class jesica_Role : CharacterBody2D, RoleBase
         HandleFlipAndAnimatioWeapon();
     }
     //用于role权限
-    public void SetState(Global.State stat)
+    public override void SetState(Global.State stat)
     {
         state = stat;
         if (stat == Global.State.HUD)

@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://pxb2hsx5r81j"]
+[gd_scene load_steps=12 format=3 uid="uid://pxb2hsx5r81j"]
 
 [ext_resource type="Script" uid="uid://bi5msdjf3xhgk" path="res://script/UI/RoleSeleUI.cs" id="1_syoff"]
+[ext_resource type="PackedScene" uid="uid://bx3kd2tryku6m" path="res://scene/character/role/jesica/card/jesica_card_B.tscn" id="2_dycu8"]
 [ext_resource type="Texture2D" uid="uid://cyvly1kuq6opk" path="res://resource/occupation/先锋.png" id="2_rpgyf"]
 [ext_resource type="Texture2D" uid="uid://caevhfw827r7g" path="res://resource/occupation/术师.png" id="3_7fx84"]
+[ext_resource type="PackedScene" uid="uid://bux103vg306ac" path="res://scene/character/role/rosmon/card/rosmon_card_B.tscn" id="3_xtx73"]
 [ext_resource type="Texture2D" uid="uid://oxsbyoykljcp" path="res://resource/occupation/狙击.png" id="4_i7rsg"]
 [ext_resource type="Texture2D" uid="uid://cb6c0ym5ygeau" path="res://resource/occupation/医疗.png" id="5_dycu8"]
 [ext_resource type="Texture2D" uid="uid://bw3to4exes51a" path="res://resource/occupation/重装.png" id="6_xtx73"]
@@ -10,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cvqupeulagoiv" path="res://resource/occupation/辅助.png" id="8_25tk5"]
 [ext_resource type="Texture2D" uid="uid://bkk4ravhn7w6q" path="res://resource/occupation/特种.png" id="9_ej01b"]
 
-[node name="RoleSeleUI" type="Control"]
+[node name="RoleSeleUI" type="Control" node_paths=PackedStringArray("containerB", "containerA")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,6 +20,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_syoff")
+containerB = NodePath("Panel/ScrollContainer/HBoxContainer")
+containerA = NodePath("PanelContainer/HBoxContainer")
 
 [node name="Panel" type="PanelContainer" parent="."]
 layout_mode = 0
@@ -31,6 +35,12 @@ horizontal_scroll_mode = 3
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
+
+[node name="jesica_card_B" parent="Panel/ScrollContainer/HBoxContainer" instance=ExtResource("2_dycu8")]
+layout_mode = 2
+
+[node name="RosmonCardB" parent="Panel/ScrollContainer/HBoxContainer" instance=ExtResource("3_xtx73")]
+layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 clip_contents = true
