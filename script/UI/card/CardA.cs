@@ -5,7 +5,9 @@ public partial class CardA : Panel
 	
 	[Export] protected Button skill1;
 	[Export] protected Button skill2;
-	[Export] public String RoleName;
+	[Export] public PackedScene Role;
+
+	private RoleBase RoleInstance;
 
 	protected HBoxContainer cardBContainer;
 	public CardB cardBInstance;
@@ -17,6 +19,8 @@ public partial class CardA : Panel
 		cardBContainer = RoleSeleUI.Instance.containerB;
 		skill2.ButtonPressed = false;
 		skill1.ButtonPressed = true;
+		RoleInstance = Role.Instantiate<RoleBase>();
+		Global.RoleTeam.Add(RoleInstance);
 	}
 
 	private void OnSkill1Toggled(bool toggledOn)
@@ -40,6 +44,7 @@ public partial class CardA : Panel
 	}
 	private void SpawnNewCardB()
 	{
+		Global.RoleTeam.Remove(RoleInstance);
 		cardBContainer.AddChild(cardBInstance);
 		RoleSeleUI.Instance.len--;
 		GetParent().RemoveChild(this);
