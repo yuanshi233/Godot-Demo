@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://7j2vviujho71"]
+[gd_scene load_steps=9 format=3 uid="uid://7j2vviujho71"]
 
 [ext_resource type="Script" uid="uid://c2616gfbwvk57" path="res://script/UI/card/CardA.cs" id="1_i38m5"]
 [ext_resource type="Texture2D" uid="uid://y1xowfs87jlx" path="res://resource/character/role/jesica/card/大头.png" id="2_5vhat"]
+[ext_resource type="PackedScene" uid="uid://d4iy8x4nb3e1q" path="res://scene/character/role/jesica/jesica_role.tscn" id="2_87ehk"]
 [ext_resource type="Texture2D" uid="uid://db53fqnsbqemu" path="res://resource/character/role/jesica/card/A.png" id="2_i38m5"]
 [ext_resource type="Texture2D" uid="uid://drp5f25ligrtv" path="res://resource/character/role/jesica/card/技能_强力击·β型.png" id="3_i38m5"]
 [ext_resource type="Texture2D" uid="uid://44riipm8qk3a" path="res://resource/character/role/jesica/card/技能_掩护烟幕.png" id="4_87ehk"]
@@ -30,6 +31,7 @@ grow_vertical = 2
 script = ExtResource("1_i38m5")
 skill1 = NodePath("skill1")
 skill2 = NodePath("skill2")
+Role = ExtResource("2_87ehk")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0

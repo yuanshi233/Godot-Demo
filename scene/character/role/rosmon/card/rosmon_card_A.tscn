@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://do16ke4rawafl"]
+[gd_scene load_steps=9 format=3 uid="uid://do16ke4rawafl"]
 
 [ext_resource type="Texture2D" uid="uid://cjlldrc5hwuqf" path="res://resource/character/role/rosmon/card/大头.png" id="1_356c4"]
 [ext_resource type="Script" uid="uid://c2616gfbwvk57" path="res://script/UI/card/CardA.cs" id="1_ntxa0"]
+[ext_resource type="PackedScene" uid="uid://cm7iuty7mykep" path="res://scene/character/role/rosmon/rosmon_role.tscn" id="2_5alo5"]
 [ext_resource type="Texture2D" uid="uid://b3rvuhrjkfmxm" path="res://resource/character/role/rosmon/card/技能_思维膨大.png" id="2_dg1wv"]
 [ext_resource type="Texture2D" uid="uid://blylym33ch2uh" path="res://resource/character/role/rosmon/card/A.png" id="2_ntxa0"]
 [ext_resource type="Texture2D" uid="uid://cs5got8pf7xm1" path="res://resource/character/role/rosmon/card/技能_末梢阻断.png" id="3_ntxa0"]
@@ -30,6 +31,7 @@ grow_vertical = 2
 script = ExtResource("1_ntxa0")
 skill1 = NodePath("skill1")
 skill2 = NodePath("skill2")
+Role = ExtResource("2_5alo5")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
