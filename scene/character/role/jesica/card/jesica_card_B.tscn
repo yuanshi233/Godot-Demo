@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://bx3kd2tryku6m"]
+
+[ext_resource type="Script" uid="uid://b6248eexhmhuj" path="res://script/UI/card/CardB.cs" id="1_boojt"]
+[ext_resource type="Texture2D" uid="uid://c8jh1uwob31qt" path="res://resource/character/role/jesica/card/基建.png" id="1_ym58m"]
+[ext_resource type="PackedScene" uid="uid://7j2vviujho71" path="res://scene/character/role/jesica/card/jesica_card_A.tscn" id="2_7tt4x"]
+[ext_resource type="Texture2D" uid="uid://b6q16ssxgvoix" path="res://resource/character/role/jesica/card/B.png" id="2_tgu8o"]
+[ext_resource type="Texture2D" uid="uid://bgi60s7mgrnob" path="res://resource/character/role/jesica/card/速射手.png" id="3_aps3u"]
+[ext_resource type="Texture2D" uid="uid://b3l25rhs5l4tb" path="res://resource/background/阴影.png" id="3_boojt"]
+[ext_resource type="Texture2D" uid="uid://csiwv4dd1apki" path="res://resource/character/role/jesica/card/图标_职业_狙击_大图.png" id="3_tgu8o"]
+[ext_resource type="Texture2D" uid="uid://drp5f25ligrtv" path="res://resource/character/role/jesica/card/技能_强力击·β型.png" id="6_tgu8o"]
+[ext_resource type="Texture2D" uid="uid://44riipm8qk3a" path="res://resource/character/role/jesica/card/技能_掩护烟幕.png" id="7_boojt"]
+
+[node name="jesica_card_B" type="Panel"]
+custom_minimum_size = Vector2(144, 392)
+offset_right = 144.0
+offset_bottom = 392.0
+script = ExtResource("1_boojt")
+CardAScene = ExtResource("2_7tt4x")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 144.0
+offset_bottom = 394.0
+texture = ExtResource("2_tgu8o")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 130.0
+offset_right = 144.0
+offset_bottom = 285.0
+texture = ExtResource("3_boojt")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 348.0
+offset_right = 131.0
+offset_bottom = 396.0
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("3_tgu8o")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 201.0
+offset_right = 143.0
+offset_bottom = 225.0
+texture = ExtResource("3_aps3u")
+expand_mode = 1
+
+[node name="skill1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 290.0
+offset_right = 63.0
+offset_bottom = 340.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("6_tgu8o")
+stretch_mode = 2
+
+[node name="skill2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 290.0
+offset_right = 135.0
+offset_bottom = 340.0
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("7_boojt")
+stretch_mode = 2
+
+[node name="Label" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -1.0
+offset_top = 336.0
+offset_right = 77.0
+offset_bottom = 376.0
+text = "速射手"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 227.0
+offset_right = 112.0
+offset_bottom = 251.0
+text = "Jesica"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 247.0
+offset_right = 112.0
+offset_bottom = 271.0
+text = "杰西卡"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(128, 208)
+layout_mode = 0
+offset_right = 144.0
+offset_bottom = 392.0
+icon = ExtResource("1_ym58m")
+flat = true
+vertical_icon_alignment = 0
+
+[connection signal="button_down" from="Button" to="." method="OnFreeButton"]

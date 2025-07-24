@@ -1,0 +1,235 @@
+[gd_scene load_steps=22 format=3 uid="uid://dbdsc02j3128p"]
+
+[ext_resource type="Script" uid="uid://lb1q0fk6mk7y" path="res://script/battling/character/role/rosmon/RosmonWeapon.cs" id="1_exi3a"]
+[ext_resource type="Texture2D" uid="uid://qq4kteu8pw7k" path="res://resource/character/role/rosmon/weapon/F_Weapon_3.png" id="1_ig41f"]
+[ext_resource type="Texture2D" uid="uid://cesh3gr0efsig" path="res://resource/character/role/rosmon/影子.png" id="2_idr4p"]
+[ext_resource type="Texture2D" uid="uid://i7evasubk8pc" path="res://resource/character/role/rosmon/weapon/rosmon_05.png" id="2_ltkp6"]
+[ext_resource type="Texture2D" uid="uid://nq6q0425xrjq" path="res://resource/character/role/rosmon/weapon/rosmon_04.png" id="3_exi3a"]
+[ext_resource type="Texture2D" uid="uid://c0vojp7hm0h3v" path="res://resource/character/role/rosmon/weapon/star_02.png" id="4_udvrv"]
+[ext_resource type="Texture2D" uid="uid://dktmj1n77n2br" path="res://resource/character/role/rosmon/weapon/flipbook_68.png" id="6_o8eaa"]
+[ext_resource type="AudioStream" uid="uid://bx6x6h4e81ysb" path="res://resource/character/role/rosmon/audio/normal.mp3" id="8_31o40"]
+[ext_resource type="AudioStream" uid="uid://klrf4pbwyb6c" path="res://resource/character/role/rosmon/audio/skill.mp3" id="9_eohbx"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_31o40"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_o8eaa"]
+blend_mode = 1
+light_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_31o40"]
+offsets = PackedFloat32Array(0, 0.995885, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eohbx"]
+gradient = SubResource("Gradient_31o40")
+fill_from = Vector2(0.641026, 0.769231)
+
+[sub_resource type="Gradient" id="Gradient_idr4p"]
+offsets = PackedFloat32Array(0, 0.567839, 0.61809, 0.753769, 1)
+colors = PackedColorArray(0.994612, 0.950641, 0.931667, 1, 0.99922, 0.973804, 0.947301, 0.432161, 0.996062, 0.916471, 0.82474, 0.38191, 0.971746, 0.836613, 0.620116, 0.246231, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3vp4y"]
+gradient = SubResource("Gradient_idr4p")
+
+[sub_resource type="Curve" id="Curve_31o40"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.99999, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_eohbx"]
+curve = SubResource("Curve_31o40")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ohm3w"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 50.0
+emission_ring_radius = 50.0
+emission_ring_inner_radius = 0.0
+emission_ring_cone_angle = 90.0
+spread = 180.0
+initial_velocity_min = 400.0
+initial_velocity_max = 400.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_eohbx")
+color_ramp = SubResource("GradientTexture1D_3vp4y")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_idr4p"]
+radius = 64.0313
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_eohbx"]
+light_mode = 1
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_31o40"]
+radius = 100.008
+height = 275.98
+
+[node name="RosmonWeapon" type="Node2D"]
+y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_exi3a")
+
+[node name="normal" type="Node2D" parent="."]
+rotation = -0.785398
+
+[node name="Sprite2D" type="Sprite2D" parent="normal"]
+modulate = Color(0.521569, 0.521569, 0.521569, 0.568627)
+material = SubResource("CanvasItemMaterial_31o40")
+position = Vector2(-24.0416, -29.6985)
+rotation = 0.794753
+scale = Vector2(1.28464, 0.809232)
+texture = ExtResource("2_idr4p")
+
+[node name="Sprite_3" type="Sprite2D" parent="normal"]
+position = Vector2(6.66666, -100)
+texture = ExtResource("1_ig41f")
+
+[node name="Sprite_3_1" type="Sprite2D" parent="normal"]
+position = Vector2(-20, -90)
+rotation = 0.0162994
+scale = Vector2(3, 3.5)
+texture = ExtResource("2_ltkp6")
+
+[node name="Sprite_3_2" type="Sprite2D" parent="normal"]
+position = Vector2(20, -73.3333)
+rotation = 0.0516845
+scale = Vector2(3, 4)
+texture = ExtResource("2_ltkp6")
+
+[node name="Sprite_3_3" type="Sprite2D" parent="normal"]
+material = SubResource("CanvasItemMaterial_o8eaa")
+position = Vector2(-7.07105, -15.5563)
+scale = Vector2(1.49838, 1.45467)
+texture = ExtResource("4_udvrv")
+
+[node name="PointLight2D" type="PointLight2D" parent="normal"]
+position = Vector2(5.65685, -101.823)
+scale = Vector2(2.30279, 6.83197)
+color = Color(0.027451, 1, 1, 1)
+energy = 1.5
+texture = SubResource("GradientTexture2D_eohbx")
+texture_scale = 0.5
+
+[node name="Sprite_3_0" type="Sprite2D" parent="normal"]
+position = Vector2(31.1127, -22.6274)
+rotation = 0.801211
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_exi3a")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="normal"]
+position = Vector2(4.24264, -15.5564)
+emitting = false
+amount = 50
+texture = ExtResource("6_o8eaa")
+lifetime = 0.5
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_ohm3w")
+
+[node name="Area2D" type="Area2D" parent="normal"]
+position = Vector2(1.52588e-05, 0)
+rotation = 0.0195155
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="normal/Area2D"]
+position = Vector2(-1.38661, 1.44179)
+rotation = 0.756536
+shape = SubResource("CircleShape2D_idr4p")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="normal"]
+stream = ExtResource("8_31o40")
+
+[node name="skill" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="skill"]
+modulate = Color(0.305882, 0.305882, 0.305882, 0.490196)
+material = SubResource("CanvasItemMaterial_eohbx")
+position = Vector2(2, 4.76837e-07)
+rotation = 0.0173969
+scale = Vector2(1.60498, 1.01659)
+texture = ExtResource("2_idr4p")
+
+[node name="Sprite_3" type="Sprite2D" parent="skill"]
+position = Vector2(-38, -108)
+rotation = -0.0741619
+texture = ExtResource("1_ig41f")
+
+[node name="Sprite_3_" type="Sprite2D" parent="skill"]
+position = Vector2(32, -106)
+rotation = -0.0143318
+texture = ExtResource("1_ig41f")
+
+[node name="Sprite_3_1" type="Sprite2D" parent="skill"]
+position = Vector2(-66, -88)
+rotation = 0.0162994
+scale = Vector2(3, 3.5)
+texture = ExtResource("2_ltkp6")
+
+[node name="Sprite_3_1_" type="Sprite2D" parent="skill"]
+position = Vector2(-20, -84)
+rotation = 0.0162994
+scale = Vector2(3, 3.5)
+texture = ExtResource("2_ltkp6")
+
+[node name="Sprite_3_2" type="Sprite2D" parent="skill"]
+position = Vector2(66, -78)
+rotation = 0.0516845
+scale = Vector2(3, 4)
+texture = ExtResource("2_ltkp6")
+
+[node name="Sprite_3_2_" type="Sprite2D" parent="skill"]
+position = Vector2(-1.99999, -82)
+rotation = 0.0516845
+scale = Vector2(3, 4)
+texture = ExtResource("2_ltkp6")
+
+[node name="Sprite_3_3" type="Sprite2D" parent="skill"]
+material = SubResource("CanvasItemMaterial_o8eaa")
+position = Vector2(0, -14)
+scale = Vector2(2.07006, 1.95824)
+texture = ExtResource("4_udvrv")
+
+[node name="PointLight2D" type="PointLight2D" parent="skill"]
+position = Vector2(4, -106)
+scale = Vector2(5.75, 7.4375)
+color = Color(0.027451, 1, 1, 1)
+energy = 1.5
+texture = SubResource("GradientTexture2D_eohbx")
+texture_scale = 0.5
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="skill"]
+position = Vector2(4.24264, -15.5564)
+emitting = false
+amount = 50
+texture = ExtResource("6_o8eaa")
+lifetime = 0.5
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_ohm3w")
+
+[node name="Sprite_3_0" type="Sprite2D" parent="skill"]
+position = Vector2(56, -38)
+rotation = -0.0167964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_exi3a")
+
+[node name="Sprite_3_0_" type="Sprite2D" parent="skill"]
+position = Vector2(-50, -38)
+rotation = -0.0167964
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_exi3a")
+flip_h = true
+
+[node name="Area2D" type="Area2D" parent="skill"]
+position = Vector2(2, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="skill/Area2D"]
+position = Vector2(0, -9.53674e-07)
+rotation = 1.5752
+shape = SubResource("CapsuleShape2D_31o40")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="skill"]
+stream = ExtResource("9_eohbx")
+
+[connection signal="body_entered" from="normal/Area2D" to="." method="OnBodyEntered"]
+[connection signal="body_entered" from="skill/Area2D" to="." method="OnBodyEntered"]

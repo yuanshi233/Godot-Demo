@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bipfiyau3etp8"]
+
+[node name="Camera" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true

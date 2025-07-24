@@ -1,0 +1,116 @@
+[gd_scene load_steps=8 format=3 uid="uid://do16ke4rawafl"]
+
+[ext_resource type="Texture2D" uid="uid://cjlldrc5hwuqf" path="res://resource/character/role/rosmon/card/大头.png" id="1_356c4"]
+[ext_resource type="Script" uid="uid://c2616gfbwvk57" path="res://script/UI/card/CardA.cs" id="1_ntxa0"]
+[ext_resource type="Texture2D" uid="uid://b3rvuhrjkfmxm" path="res://resource/character/role/rosmon/card/技能_思维膨大.png" id="2_dg1wv"]
+[ext_resource type="Texture2D" uid="uid://blylym33ch2uh" path="res://resource/character/role/rosmon/card/A.png" id="2_ntxa0"]
+[ext_resource type="Texture2D" uid="uid://cs5got8pf7xm1" path="res://resource/character/role/rosmon/card/技能_末梢阻断.png" id="3_ntxa0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5alo5"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0jhu"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="RosmonCardA" type="Panel" node_paths=PackedStringArray("skill1", "skill2")]
+custom_minimum_size = Vector2(288, 192)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1012.0
+offset_bottom = -456.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ntxa0")
+skill1 = NodePath("skill1")
+skill2 = NodePath("skill2")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 288.0
+offset_bottom = 192.0
+texture = ExtResource("2_ntxa0")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 13.0
+offset_right = 139.0
+offset_bottom = 141.0
+texture = ExtResource("1_356c4")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 148.0
+offset_right = 138.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 20
+text = "迷迭香"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 149.0
+offset_top = 73.0
+offset_right = 278.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 13
+text = "物理伤害：50
+法术伤害：0
+物理防御：10
+法术防御：10
+技能：手动"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 144.0
+offset_top = 46.0
+offset_right = 277.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 25
+text = "★★★★★★"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 288.0
+offset_bottom = 192.0
+
+[node name="skill1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 9.0
+offset_right = 258.0
+offset_bottom = 67.0
+scale = Vector2(0.65, 0.65)
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5alo5")
+toggle_mode = true
+icon = ExtResource("2_dg1wv")
+icon_alignment = 1
+
+[node name="skill2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 9.0
+offset_right = 299.0
+offset_bottom = 67.0
+scale = Vector2(0.65, 0.65)
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p0jhu")
+toggle_mode = true
+icon = ExtResource("3_ntxa0")
+icon_alignment = 1
+
+[connection signal="button_down" from="TextureButton2" to="." method="OnFreePressed"]

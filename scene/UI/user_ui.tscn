@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlqsftxglmsdd"]
+
+[ext_resource type="Script" uid="uid://u2ac5ftptbar" path="res://script/UI/UserUI.cs" id="1_qksmw"]
+
+[node name="UserUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qksmw")
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 256.0
+offset_right = 271.0
+offset_bottom = 368.0
+dragging_enabled = false
+
+[node name="Button" type="Button" parent="VSplitContainer"]
+custom_minimum_size = Vector2(210, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "开始游戏"
+
+[node name="Button2" type="Button" parent="VSplitContainer"]
+custom_minimum_size = Vector2(210, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "退出游戏"
+
+[connection signal="button_down" from="VSplitContainer/Button" to="." method="OnButtonDownStart"]

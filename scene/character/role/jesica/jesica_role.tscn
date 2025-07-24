@@ -1,0 +1,467 @@
+[gd_scene load_steps=108 format=3 uid="uid://d4iy8x4nb3e1q"]
+
+[ext_resource type="Script" uid="uid://cfq6pe4e08j8q" path="res://script/battling/character/role/jesica/jesica_Role.cs" id="1_5iftf"]
+[ext_resource type="Texture2D" uid="uid://btywv4g0mk54x" path="res://resource/character/role/jesica/影子.png" id="1_jiy83"]
+[ext_resource type="Texture2D" uid="uid://bk3tu7sx5om18" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_00.png" id="2_0w6f7"]
+[ext_resource type="Texture2D" uid="uid://dqa5lkglopu6q" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_01.png" id="3_44xkg"]
+[ext_resource type="Texture2D" uid="uid://cv050uv31ehns" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_02.png" id="4_trjre"]
+[ext_resource type="Texture2D" uid="uid://bwcuh0y7uelrk" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_03.png" id="5_fhbbq"]
+[ext_resource type="Texture2D" uid="uid://3uqb03qvk1jd" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_04.png" id="6_yob82"]
+[ext_resource type="Texture2D" uid="uid://dchuw6ksi7ypy" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_05.png" id="7_q8sgi"]
+[ext_resource type="Texture2D" uid="uid://c12djkjn4hb1p" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_06.png" id="8_4eapt"]
+[ext_resource type="Texture2D" uid="uid://cdon16npv7a8n" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_07.png" id="9_uqs5k"]
+[ext_resource type="Texture2D" uid="uid://dakyaei8107nc" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_08.png" id="10_pdteu"]
+[ext_resource type="Texture2D" uid="uid://d4hv4jikqlo4k" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_09.png" id="11_dma51"]
+[ext_resource type="Texture2D" uid="uid://dokl6i4ebu5t0" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_10.png" id="12_84yia"]
+[ext_resource type="Texture2D" uid="uid://br64m7el1gbhd" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_11.png" id="13_pxy64"]
+[ext_resource type="Texture2D" uid="uid://dy4f61bb78fcg" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_12.png" id="14_u4qke"]
+[ext_resource type="Texture2D" uid="uid://c7ucelxsj6c80" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_13.png" id="15_vmjka"]
+[ext_resource type="Texture2D" uid="uid://c8kuv1oeoln5s" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_14.png" id="16_2ye2n"]
+[ext_resource type="Texture2D" uid="uid://cp5x5f4q7xcki" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_15.png" id="17_ss276"]
+[ext_resource type="Texture2D" uid="uid://cy3dagbmdnuwh" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_16.png" id="18_dyt8q"]
+[ext_resource type="Texture2D" uid="uid://dtr4bhlcdsvgy" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_17.png" id="19_jh1y2"]
+[ext_resource type="Texture2D" uid="uid://dqpph144tt4rx" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_18.png" id="20_v4nq4"]
+[ext_resource type="Texture2D" uid="uid://c47vsrf7iskv3" path="res://resource/character/role/jesica/die/enemy_1002_nsabr-Die_19.png" id="21_02htq"]
+[ext_resource type="Texture2D" uid="uid://c714vn6pbbmcs" path="res://resource/character/role/jesica/idle/char_235_jesica_00.png" id="22_gigpq"]
+[ext_resource type="Texture2D" uid="uid://bimfb3rvtalak" path="res://resource/character/role/jesica/idle/char_235_jesica_01.png" id="23_4n3n4"]
+[ext_resource type="Texture2D" uid="uid://cplq6a564nxx3" path="res://resource/character/role/jesica/idle/char_235_jesica_02.png" id="24_etpjm"]
+[ext_resource type="Texture2D" uid="uid://dxxt2og7gs0it" path="res://resource/character/role/jesica/idle/char_235_jesica_03.png" id="25_dfb2g"]
+[ext_resource type="Texture2D" uid="uid://bq43gmyh8gjse" path="res://resource/character/role/jesica/idle/char_235_jesica_04.png" id="26_3btik"]
+[ext_resource type="Texture2D" uid="uid://ipbmsc3ii3tp" path="res://resource/character/role/jesica/idle/char_235_jesica_05.png" id="27_oalsa"]
+[ext_resource type="Texture2D" uid="uid://0xo135oevyaq" path="res://resource/character/role/jesica/idle/char_235_jesica_06.png" id="28_ghe2b"]
+[ext_resource type="Texture2D" uid="uid://ovcbjhiekchj" path="res://resource/character/role/jesica/idle/char_235_jesica_07.png" id="29_3g4ne"]
+[ext_resource type="Texture2D" uid="uid://c4u3dgvyv1o08" path="res://resource/character/role/jesica/idle/char_235_jesica_08.png" id="30_ojxua"]
+[ext_resource type="Texture2D" uid="uid://3gak4t3l737d" path="res://resource/character/role/jesica/idle/char_235_jesica_09.png" id="31_hhdqk"]
+[ext_resource type="Texture2D" uid="uid://bofkv580x3207" path="res://resource/character/role/jesica/idle/char_235_jesica_10.png" id="32_edu6t"]
+[ext_resource type="Texture2D" uid="uid://dgwr74men6rur" path="res://resource/character/role/jesica/idle/char_235_jesica_11.png" id="33_n71i8"]
+[ext_resource type="Texture2D" uid="uid://d1ewxnpwdt3gd" path="res://resource/character/role/jesica/idle/char_235_jesica_12.png" id="34_5cg1n"]
+[ext_resource type="Texture2D" uid="uid://0t0bnrkm4obc" path="res://resource/character/role/jesica/idle/char_235_jesica_13.png" id="35_gvf82"]
+[ext_resource type="Texture2D" uid="uid://wtgqynxujl3n" path="res://resource/character/role/jesica/idle/char_235_jesica_14.png" id="36_b7unj"]
+[ext_resource type="Texture2D" uid="uid://we56drguxbva" path="res://resource/character/role/jesica/idle/char_235_jesica_15.png" id="37_ckil2"]
+[ext_resource type="Texture2D" uid="uid://cwiiy22ueih0v" path="res://resource/character/role/jesica/idle/char_235_jesica_16.png" id="38_5wlsf"]
+[ext_resource type="Texture2D" uid="uid://cle5jocbgj5ut" path="res://resource/character/role/jesica/idle/char_235_jesica_17.png" id="39_if1ya"]
+[ext_resource type="Texture2D" uid="uid://xj1d8gsjbxvm" path="res://resource/character/role/jesica/idle/char_235_jesica_18.png" id="40_a521u"]
+[ext_resource type="Texture2D" uid="uid://ck6skas3gy87l" path="res://resource/character/role/jesica/idle/char_235_jesica_19.png" id="41_wafay"]
+[ext_resource type="Texture2D" uid="uid://d06cx420ls0p0" path="res://resource/character/role/jesica/idle/char_235_jesica_20.png" id="42_o2gby"]
+[ext_resource type="Texture2D" uid="uid://b3cpi0y4whp1w" path="res://resource/character/role/jesica/idle/char_235_jesica_21.png" id="43_i1xlu"]
+[ext_resource type="Texture2D" uid="uid://8vcgbg4pabji" path="res://resource/character/role/jesica/idle/char_235_jesica_22.png" id="44_5350h"]
+[ext_resource type="Texture2D" uid="uid://cysamqr3xhqgo" path="res://resource/character/role/jesica/idle/char_235_jesica_23.png" id="45_rhkth"]
+[ext_resource type="Texture2D" uid="uid://d4g8h7fjk735y" path="res://resource/character/role/jesica/idle/char_235_jesica_24.png" id="46_r00dw"]
+[ext_resource type="Texture2D" uid="uid://bghwyr0ddacjn" path="res://resource/character/role/jesica/idle/char_235_jesica_25.png" id="47_5kx2q"]
+[ext_resource type="Texture2D" uid="uid://byx8wb0pnlmn3" path="res://resource/character/role/jesica/idle/char_235_jesica_26.png" id="48_unqur"]
+[ext_resource type="Texture2D" uid="uid://djam488ermtre" path="res://resource/character/role/jesica/idle/char_235_jesica_27.png" id="49_rmfah"]
+[ext_resource type="Texture2D" uid="uid://b165ut4stqxso" path="res://resource/character/role/jesica/idle/char_235_jesica_28.png" id="50_170f5"]
+[ext_resource type="Texture2D" uid="uid://cfokfyg3qa7g6" path="res://resource/character/role/jesica/idle/char_235_jesica_29.png" id="51_4myym"]
+[ext_resource type="Texture2D" uid="uid://c8g5o1g3li1lg" path="res://resource/character/role/jesica/idle/char_235_jesica_30.png" id="52_netls"]
+[ext_resource type="Texture2D" uid="uid://dtxotmviadxbi" path="res://resource/character/role/jesica/idle/char_235_jesica_31.png" id="53_rpnnx"]
+[ext_resource type="Texture2D" uid="uid://cg5arj1s7u822" path="res://resource/character/role/jesica/idle/char_235_jesica_32.png" id="54_smx1j"]
+[ext_resource type="Texture2D" uid="uid://cxq44wvoj71hf" path="res://resource/character/role/jesica/idle/char_235_jesica_33.png" id="55_1rarc"]
+[ext_resource type="Texture2D" uid="uid://cwv4rfyfe5iyk" path="res://resource/character/role/jesica/idle/char_235_jesica_34.png" id="56_e5r4l"]
+[ext_resource type="Texture2D" uid="uid://cwnkxw1a0btwb" path="res://resource/character/role/jesica/idle/char_235_jesica_35.png" id="57_q1jf0"]
+[ext_resource type="Texture2D" uid="uid://c756t1eee7s8v" path="res://resource/character/role/jesica/idle/char_235_jesica_36.png" id="58_2ytlb"]
+[ext_resource type="Texture2D" uid="uid://6ed510pthfyg" path="res://resource/character/role/jesica/idle/char_235_jesica_37.png" id="59_nd2oh"]
+[ext_resource type="Texture2D" uid="uid://djhbpdhrw6xi1" path="res://resource/character/role/jesica/idle/char_235_jesica_38.png" id="60_w4g3u"]
+[ext_resource type="Texture2D" uid="uid://bqd4je187gx3o" path="res://resource/character/role/jesica/idle/char_235_jesica_39.png" id="61_w22ug"]
+[ext_resource type="Texture2D" uid="uid://dm3b0detmyus1" path="res://resource/character/role/jesica/walk/1_00.png" id="62_ib2th"]
+[ext_resource type="Texture2D" uid="uid://cdokvh1pt6ph2" path="res://resource/character/role/jesica/walk/1_01.png" id="63_6qx5e"]
+[ext_resource type="Texture2D" uid="uid://klxu6qjg836" path="res://resource/character/role/jesica/walk/1_02.png" id="64_b0abt"]
+[ext_resource type="Texture2D" uid="uid://c6g5suyrdmjkp" path="res://resource/character/role/jesica/walk/1_03.png" id="65_m5hwc"]
+[ext_resource type="Texture2D" uid="uid://d36hq0fgojwp1" path="res://resource/character/role/jesica/walk/1_04.png" id="66_hytpq"]
+[ext_resource type="Texture2D" uid="uid://bfetdnui7kjon" path="res://resource/character/role/jesica/walk/1_05.png" id="67_b515m"]
+[ext_resource type="Texture2D" uid="uid://cs3h2ysrljjda" path="res://resource/character/role/jesica/walk/1_06.png" id="68_wvphb"]
+[ext_resource type="Texture2D" uid="uid://vdl6v8bfnrtk" path="res://resource/character/role/jesica/walk/1_07.png" id="69_i03at"]
+[ext_resource type="Texture2D" uid="uid://dj0ckwx52fmuy" path="res://resource/character/role/jesica/walk/1_08.png" id="70_0rc0c"]
+[ext_resource type="Texture2D" uid="uid://1w5i8y7b6xjb" path="res://resource/character/role/jesica/walk/1_09.png" id="71_chyik"]
+[ext_resource type="Texture2D" uid="uid://44aas1276mjb" path="res://resource/character/role/jesica/walk/1_10.png" id="72_24bem"]
+[ext_resource type="Texture2D" uid="uid://7mueolaww51p" path="res://resource/character/role/jesica/walk/1_11.png" id="73_jqtvq"]
+[ext_resource type="Texture2D" uid="uid://du4j1spy7xerp" path="res://resource/character/role/jesica/walk/1_12.png" id="74_rf1lv"]
+[ext_resource type="Texture2D" uid="uid://bofaf35xfrkdr" path="res://resource/character/role/jesica/walk/1_13.png" id="75_7opdn"]
+[ext_resource type="Texture2D" uid="uid://crd17v6v8u2vi" path="res://resource/character/role/jesica/walk/1_14.png" id="76_wwxsf"]
+[ext_resource type="Texture2D" uid="uid://3kxxuu6y7yyq" path="res://resource/character/role/jesica/walk/1_15.png" id="77_58t6q"]
+[ext_resource type="Texture2D" uid="uid://dck54yn55rwna" path="res://resource/character/role/jesica/walk/1_16.png" id="78_xxksf"]
+[ext_resource type="Texture2D" uid="uid://dmvvi1qjbbeeo" path="res://resource/character/role/jesica/walk/1_17.png" id="79_a07ox"]
+[ext_resource type="Texture2D" uid="uid://4mly4t2dqpi0" path="res://resource/character/role/jesica/walk/1_18.png" id="80_7fbri"]
+[ext_resource type="Texture2D" uid="uid://bqyxmk01onri1" path="res://resource/character/role/jesica/walk/1_19.png" id="81_twny6"]
+[ext_resource type="Texture2D" uid="uid://daauk5lvigx16" path="res://resource/character/role/jesica/walk/1_20.png" id="82_8s8em"]
+[ext_resource type="Texture2D" uid="uid://ds58svlabsrum" path="res://resource/character/role/jesica/walk/1_21.png" id="83_cf4nc"]
+[ext_resource type="Texture2D" uid="uid://jm771fih7280" path="res://resource/character/role/jesica/walk/1_22.png" id="84_x4wmw"]
+[ext_resource type="Texture2D" uid="uid://3hiow18u08hk" path="res://resource/character/role/jesica/walk/1_23.png" id="85_bkicj"]
+[ext_resource type="Texture2D" uid="uid://5bjhc6cs53hx" path="res://resource/character/role/jesica/walk/1_24.png" id="86_kfnyn"]
+[ext_resource type="Texture2D" uid="uid://bwwxg8ymbkcsi" path="res://resource/character/role/jesica/walk/1_25.png" id="87_gc4ma"]
+[ext_resource type="Texture2D" uid="uid://d16akjn5yja1x" path="res://resource/character/role/jesica/walk/1_26.png" id="88_4cywj"]
+[ext_resource type="Texture2D" uid="uid://b46dphm2wj6su" path="res://resource/character/role/jesica/walk/1_27.png" id="89_gul76"]
+[ext_resource type="Texture2D" uid="uid://b5ronfxbm3tio" path="res://resource/character/role/jesica/walk/1_28.png" id="90_h6jky"]
+[ext_resource type="Texture2D" uid="uid://b8w54wn8xmnrl" path="res://resource/character/role/jesica/walk/1_29.png" id="91_ppa21"]
+[ext_resource type="Texture2D" uid="uid://b7hnv35hw6qv2" path="res://resource/character/role/jesica/walk/1_30.png" id="92_c07qy"]
+[ext_resource type="Texture2D" uid="uid://5tc1q3qwwrgy" path="res://resource/character/role/jesica/walk/1_31.png" id="93_wd23a"]
+[ext_resource type="Texture2D" uid="uid://dx1lp3ic6xnb8" path="res://resource/character/role/jesica/walk/1_32.png" id="94_ekkvc"]
+[ext_resource type="Texture2D" uid="uid://dyegp5sb1ubko" path="res://resource/character/role/jesica/walk/1_33.png" id="95_falyt"]
+[ext_resource type="Texture2D" uid="uid://bgc40ca5mn7hv" path="res://resource/character/role/jesica/walk/1_34.png" id="96_7c6qm"]
+[ext_resource type="Texture2D" uid="uid://bubctac3inxo2" path="res://resource/character/role/jesica/walk/1_35.png" id="97_la6de"]
+[ext_resource type="Texture2D" uid="uid://ctaxm6qlw57ok" path="res://resource/character/role/jesica/walk/1_36.png" id="98_kfpsw"]
+[ext_resource type="Texture2D" uid="uid://dhl1bh5j0omgm" path="res://resource/character/role/jesica/walk/1_37.png" id="99_qyh5c"]
+[ext_resource type="Texture2D" uid="uid://depb745gphuwm" path="res://resource/character/role/jesica/walk/1_38.png" id="100_gk445"]
+[ext_resource type="Texture2D" uid="uid://boskergovw873" path="res://resource/character/role/jesica/walk/1_39.png" id="101_8f04d"]
+[ext_resource type="PackedScene" uid="uid://dlcafturbvnlv" path="res://scene/character/role/jesica/weapon.tscn" id="102_4v37u"]
+[ext_resource type="Script" uid="uid://b6yhsegfvnwhm" path="res://script/battling/character/role/jesica/Weapon.cs" id="104_5iftf"]
+[ext_resource type="AudioStream" uid="uid://3qq25v7w6qaf" path="res://resource/character/role/jesica/audio/die.mp3" id="105_44xkg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5kjuc"]
+radius = 19.0
+height = 56.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_swyrm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0w6f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_44xkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_trjre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fhbbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yob82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q8sgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4eapt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uqs5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pdteu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dma51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_84yia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pxy64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_u4qke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vmjka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2ye2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ss276")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dyt8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jh1y2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_v4nq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_02htq")
+}],
+"loop": false,
+"name": &"die",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_gigpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4n3n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_etpjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_dfb2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_3btik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_oalsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ghe2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_3g4ne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ojxua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_hhdqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_edu6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_n71i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_5cg1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_gvf82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_b7unj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ckil2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_5wlsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_if1ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_a521u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_wafay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_o2gby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_i1xlu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_5350h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_rhkth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_r00dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_5kx2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_unqur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rmfah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_170f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_4myym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_netls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_rpnnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_smx1j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_1rarc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_e5r4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_q1jf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_2ytlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_nd2oh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_w4g3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_w22ug")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_ib2th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_6qx5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_b0abt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_m5hwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_hytpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_b515m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_wvphb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_i03at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_0rc0c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_chyik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_24bem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_jqtvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_rf1lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_7opdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_wwxsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_58t6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_xxksf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_a07ox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_7fbri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_twny6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_8s8em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_cf4nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_x4wmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_bkicj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_kfnyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_gc4ma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_4cywj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_gul76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_h6jky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_ppa21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_c07qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_wd23a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_ekkvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_falyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_7c6qm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_la6de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_kfpsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_qyh5c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_gk445")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_8f04d")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 20.0
+}]
+
+[node name="JesicaRole" type="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(2, -2)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_5iftf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_5kjuc")
+
+[node name="body" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="body"]
+modulate = Color(0.187176, 0.187176, 0.187176, 0.419608)
+position = Vector2(1.19209e-07, 31)
+scale = Vector2(0.287356, 0.228411)
+texture = ExtResource("1_jiy83")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="body"]
+position = Vector2(-2, 2)
+scale = Vector2(0.318619, 0.339636)
+sprite_frames = SubResource("SpriteFrames_swyrm")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="weaponNode2D" type="Node2D" parent="body"]
+
+[node name="Weapon" parent="body/weaponNode2D" instance=ExtResource("102_4v37u")]
+position = Vector2(-2, -1)
+script = ExtResource("104_5iftf")
+
+[node name="die2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("105_44xkg")
+
+[connection signal="Shoot" from="." to="body/weaponNode2D/Weapon" method="shoot"]
+[connection signal="animation_finished" from="body/AnimatedSprite2D" to="." method="_on_animation_finished"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwckn6ubr6ari"]
+
+[ext_resource type="PackedScene" uid="uid://b0c2ad6flhua2" path="res://scene/UI/canvas_layer.tscn" id="1_blmjb"]
+[ext_resource type="Script" uid="uid://c2o4sts6q041a" path="res://script/battling/Player.cs" id="2_t03a0"]
+
+[node name="Bat" type="Node2D"]
+
+[node name="CanvasLayer" parent="." instance=ExtResource("1_blmjb")]
+
+[node name="BatMain" type="Node" parent="."]
+
+[node name="Player" type="Node2D" parent="."]
+script = ExtResource("2_t03a0")
+
+[node name="RoleManager" type="Node2D" parent="."]
+
+[node name="EnemyManager" type="Node2D" parent="."]

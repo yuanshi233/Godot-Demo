@@ -1,0 +1,115 @@
+[gd_scene load_steps=8 format=3 uid="uid://7j2vviujho71"]
+
+[ext_resource type="Script" uid="uid://c2616gfbwvk57" path="res://script/UI/card/CardA.cs" id="1_i38m5"]
+[ext_resource type="Texture2D" uid="uid://y1xowfs87jlx" path="res://resource/character/role/jesica/card/大头.png" id="2_5vhat"]
+[ext_resource type="Texture2D" uid="uid://db53fqnsbqemu" path="res://resource/character/role/jesica/card/A.png" id="2_i38m5"]
+[ext_resource type="Texture2D" uid="uid://drp5f25ligrtv" path="res://resource/character/role/jesica/card/技能_强力击·β型.png" id="3_i38m5"]
+[ext_resource type="Texture2D" uid="uid://44riipm8qk3a" path="res://resource/character/role/jesica/card/技能_掩护烟幕.png" id="4_87ehk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vhat"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i38m5"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[node name="JesicaCardA" type="Panel" node_paths=PackedStringArray("skill1", "skill2")]
+custom_minimum_size = Vector2(288, 192)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1012.0
+offset_bottom = -456.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i38m5")
+skill1 = NodePath("skill1")
+skill2 = NodePath("skill2")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 288.0
+offset_bottom = 192.0
+texture = ExtResource("2_i38m5")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("2_5vhat")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 148.0
+offset_right = 139.0
+offset_bottom = 180.0
+theme_override_font_sizes/font_size = 20
+text = "杰西卡"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 75.0
+offset_right = 277.0
+offset_bottom = 177.0
+theme_override_font_sizes/font_size = 13
+text = "物理伤害：10
+法术伤害：0
+物理防御：10
+法术防御：10
+技能：自动"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 144.0
+offset_top = 47.0
+offset_right = 277.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 25
+text = "★★★★"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 288.0
+offset_bottom = 192.0
+
+[node name="skill1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 200.0
+offset_top = 10.0
+offset_right = 258.0
+offset_bottom = 68.0
+scale = Vector2(0.65, 0.65)
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5vhat")
+toggle_mode = true
+icon = ExtResource("3_i38m5")
+icon_alignment = 1
+
+[node name="skill2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 10.0
+offset_right = 298.0
+offset_bottom = 68.0
+scale = Vector2(0.65, 0.65)
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i38m5")
+toggle_mode = true
+icon = ExtResource("4_87ehk")
+icon_alignment = 1
+
+[connection signal="button_down" from="TextureButton2" to="." method="OnFreePressed"]

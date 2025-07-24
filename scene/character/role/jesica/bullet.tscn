@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://bdtj324wye7ry"]
+
+[ext_resource type="Script" uid="uid://bcpybs84h045p" path="res://script/battling/character/role/jesica/Bullet.cs" id="1_nkq1j"]
+[ext_resource type="Texture2D" uid="uid://bcpbr3752pb6e" path="res://resource/character/role/jesica/weapon/子弹.png" id="2_xw300"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xw300"]
+size = Vector2(13.25, 3.75)
+
+[sub_resource type="Curve" id="Curve_hf2ki"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.756032, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_mkrst"]
+curve = SubResource("Curve_hf2ki")
+
+[sub_resource type="Gradient" id="Gradient_yitsv"]
+offsets = PackedFloat32Array(0, 0.00288184, 0.974063, 1)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0.760784, 0.227451, 0.184314, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_pt556"]
+gradient = SubResource("Gradient_yitsv")
+
+[sub_resource type="Curve" id="Curve_lmr3x"]
+_data = [Vector2(0.0080429, 0.52356), 0.0, 0.0, 0, 0, Vector2(0.383378, 1), 0.0, 0.0, 0, 0, Vector2(0.849866, 0.511482), 0.0, 0.0, 0, 0, Vector2(1, 0.382568), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_texxh"]
+curve = SubResource("Curve_lmr3x")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jxctj"]
+particle_flag_disable_z = true
+spread = 86.194
+initial_velocity_min = 30.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, 0, 0)
+scale_min = 3.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_texxh")
+color_ramp = SubResource("GradientTexture1D_pt556")
+alpha_curve = SubResource("CurveTexture_mkrst")
+
+[node name="Bullet" type="Node2D"]
+script = ExtResource("1_nkq1j")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.375, 0.125)
+shape = SubResource("RectangleShape2D_xw300")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.374287, 0.147298)
+rotation = 1.57146
+scale = Vector2(0.230997, 0.171909)
+texture = ExtResource("2_xw300")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+emitting = false
+lifetime = 0.1
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_jxctj")
+
+[connection signal="body_entered" from="Area2D" to="." method="OnBodyEntered"]

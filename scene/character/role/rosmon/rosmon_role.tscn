@@ -1,0 +1,1478 @@
+[gd_scene load_steps=358 format=3 uid="uid://cm7iuty7mykep"]
+
+[ext_resource type="Script" uid="uid://mp0axknk1qhr" path="res://script/battling/character/role/rosmon/rosmon_role.cs" id="1_gg1iu"]
+[ext_resource type="Texture2D" uid="uid://cesh3gr0efsig" path="res://resource/character/role/rosmon/影子.png" id="1_iengy"]
+[ext_resource type="Texture2D" uid="uid://cyr3htilltidl" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_000.png" id="2_1pkls"]
+[ext_resource type="Texture2D" uid="uid://c4omiu1p0bxf6" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_00.png" id="2_d4ddx"]
+[ext_resource type="Texture2D" uid="uid://b2lsbes6dkcgx" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_01.png" id="3_gg1iu"]
+[ext_resource type="Texture2D" uid="uid://cyrr76qkxnlw5" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_001.png" id="3_krmqd"]
+[ext_resource type="Texture2D" uid="uid://bg7jpe5ajjt8e" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_02.png" id="4_kwha1"]
+[ext_resource type="Texture2D" uid="uid://bh4ysgnaijfy4" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_002.png" id="4_lwc21"]
+[ext_resource type="Texture2D" uid="uid://m6kn43of7yaf" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_03.png" id="5_c05n5"]
+[ext_resource type="Texture2D" uid="uid://bnfjufqywag28" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_003.png" id="5_o6eqm"]
+[ext_resource type="Texture2D" uid="uid://dlw5dh8rkddql" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_004.png" id="6_1v43g"]
+[ext_resource type="Texture2D" uid="uid://yf6r3khwjmpn" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_04.png" id="6_8qj80"]
+[ext_resource type="Texture2D" uid="uid://m04e7ydbj44b" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_005.png" id="7_3pup0"]
+[ext_resource type="Texture2D" uid="uid://bvwxmcijae0ij" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_05.png" id="7_enxqm"]
+[ext_resource type="Texture2D" uid="uid://4djlvb3thltb" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_06.png" id="8_brugo"]
+[ext_resource type="Texture2D" uid="uid://bv6eqjfcf6r7p" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_006.png" id="8_iw4br"]
+[ext_resource type="Texture2D" uid="uid://dbin8etcux5ny" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_07.png" id="9_4hwx8"]
+[ext_resource type="Texture2D" uid="uid://o7luihb6hbli" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_007.png" id="9_0032l"]
+[ext_resource type="Texture2D" uid="uid://xt6jt0lj854e" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_008.png" id="10_0ep7h"]
+[ext_resource type="Texture2D" uid="uid://dqrwhoc7m7ae" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_08.png" id="10_4foan"]
+[ext_resource type="Texture2D" uid="uid://bgmww26kw8x8h" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_009.png" id="11_5x0ad"]
+[ext_resource type="Texture2D" uid="uid://k62vxi3glnpw" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_09.png" id="11_6hgfc"]
+[ext_resource type="Texture2D" uid="uid://cfqylot283ml2" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_10.png" id="12_2i18u"]
+[ext_resource type="Texture2D" uid="uid://cd3b2s4mpj38d" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_010.png" id="12_h7g2f"]
+[ext_resource type="Texture2D" uid="uid://dqh7bl84w3nrp" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_011.png" id="13_su2bq"]
+[ext_resource type="Texture2D" uid="uid://bky33kergwbyg" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_11.png" id="13_vvlwc"]
+[ext_resource type="Texture2D" uid="uid://7b7s3v040whr" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_012.png" id="14_2wu0h"]
+[ext_resource type="Texture2D" uid="uid://c3bgmwjt6vxu4" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_12.png" id="14_ka7ss"]
+[ext_resource type="Texture2D" uid="uid://cwjcbd3j1wg0s" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_013.png" id="15_5pimv"]
+[ext_resource type="Texture2D" uid="uid://bd5obhox870i7" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_13.png" id="15_64p1t"]
+[ext_resource type="Texture2D" uid="uid://dt74w4psq75qx" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_14.png" id="16_41mwl"]
+[ext_resource type="Texture2D" uid="uid://d0oygeqbn6jxj" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_014.png" id="16_me543"]
+[ext_resource type="Texture2D" uid="uid://cwqmhc0tl672k" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_015.png" id="17_u00p5"]
+[ext_resource type="Texture2D" uid="uid://drgfa8pcdiqgt" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_15.png" id="17_ubtik"]
+[ext_resource type="Texture2D" uid="uid://dhk6n11pwqlvr" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_016.png" id="18_1pej8"]
+[ext_resource type="Texture2D" uid="uid://cbl0fe6yvi7b6" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_16.png" id="18_v3xtj"]
+[ext_resource type="Texture2D" uid="uid://c48scve14btfm" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_17.png" id="19_5nkxf"]
+[ext_resource type="Texture2D" uid="uid://d0m63j61mges" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_017.png" id="19_c5jgs"]
+[ext_resource type="Texture2D" uid="uid://cjts7j0ma5yab" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_18.png" id="20_dei4e"]
+[ext_resource type="Texture2D" uid="uid://dlu8h0p0dd1cv" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_018.png" id="20_scth4"]
+[ext_resource type="Texture2D" uid="uid://b7am8n213eh8h" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_19.png" id="21_7o2lf"]
+[ext_resource type="Texture2D" uid="uid://biesycd6s88dn" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_019.png" id="21_klyxj"]
+[ext_resource type="Texture2D" uid="uid://dikx3y2ur7g3m" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_20.png" id="22_g51nu"]
+[ext_resource type="Texture2D" uid="uid://b82bqwuuw74bj" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_020.png" id="22_y2kc5"]
+[ext_resource type="Texture2D" uid="uid://c82j58tfupr77" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_021.png" id="23_cbyvj"]
+[ext_resource type="Texture2D" uid="uid://blbfjtaq6k3ue" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_21.png" id="23_rjunn"]
+[ext_resource type="Texture2D" uid="uid://b2ph65fwm50pq" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_022.png" id="24_8j5ch"]
+[ext_resource type="Texture2D" uid="uid://b2hdk2b3yvc6q" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_22.png" id="24_lohub"]
+[ext_resource type="Texture2D" uid="uid://cta4krn6pq67n" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_023.png" id="25_3g157"]
+[ext_resource type="Texture2D" uid="uid://bjc5or2dsagxx" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_23.png" id="25_e67ca"]
+[ext_resource type="Texture2D" uid="uid://c1jg5v647y3x7" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_024.png" id="26_4ate8"]
+[ext_resource type="Texture2D" uid="uid://oh2dfwhbarce" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_24.png" id="26_7iyri"]
+[ext_resource type="Texture2D" uid="uid://c154h34rn0p54" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_25.png" id="27_a3m0j"]
+[ext_resource type="Texture2D" uid="uid://dcwoh3l0yr5fj" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_025.png" id="27_aibs3"]
+[ext_resource type="Texture2D" uid="uid://bg5yiehv3pmc0" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_26.png" id="28_8sjjb"]
+[ext_resource type="Texture2D" uid="uid://cy1ekpsg7367r" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_026.png" id="28_trm57"]
+[ext_resource type="Texture2D" uid="uid://bi2nf04ovih6a" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_27.png" id="29_8by2r"]
+[ext_resource type="Texture2D" uid="uid://ba3rlncy7lbic" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_027.png" id="29_jvb8m"]
+[ext_resource type="Texture2D" uid="uid://caeid64ub61h5" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_28.png" id="30_kxab2"]
+[ext_resource type="Texture2D" uid="uid://dn87inhs5t2kd" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_028.png" id="30_y7aat"]
+[ext_resource type="Texture2D" uid="uid://pgd7j66clblr" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_29.png" id="31_0vtwo"]
+[ext_resource type="Texture2D" uid="uid://fthgttwqqr5p" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_029.png" id="31_v4bbf"]
+[ext_resource type="Texture2D" uid="uid://ddkje8plwcqjq" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_30.png" id="32_0hrvh"]
+[ext_resource type="Texture2D" uid="uid://bdh80u6oiuxyo" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_030.png" id="32_3rffh"]
+[ext_resource type="Texture2D" uid="uid://b1auk77kfobnj" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_031.png" id="33_vqggu"]
+[ext_resource type="Texture2D" uid="uid://bupxb3mfncuq1" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_31.png" id="33_vu0f5"]
+[ext_resource type="Texture2D" uid="uid://cstbamoqccr1m" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_032.png" id="34_d8itc"]
+[ext_resource type="Texture2D" uid="uid://w3c10cpah507" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_32.png" id="34_msju4"]
+[ext_resource type="Texture2D" uid="uid://dnv70o8apfrft" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_33.png" id="35_b7v7j"]
+[ext_resource type="Texture2D" uid="uid://dc2jp0mec27yb" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_033.png" id="35_tm05o"]
+[ext_resource type="Texture2D" uid="uid://ccpyass4mvetl" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_034.png" id="36_iptgw"]
+[ext_resource type="Texture2D" uid="uid://ilyyfx881fpd" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_34.png" id="36_md5qo"]
+[ext_resource type="Texture2D" uid="uid://b6xqaoedf88op" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_35.png" id="37_1k7h2"]
+[ext_resource type="Texture2D" uid="uid://by7uad8ojl8tk" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_035.png" id="37_32sfy"]
+[ext_resource type="Texture2D" uid="uid://dtu1nea1p0fix" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_036.png" id="38_jo8yj"]
+[ext_resource type="Texture2D" uid="uid://bqgqpthffq0wb" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_36.png" id="38_yk5rl"]
+[ext_resource type="Texture2D" uid="uid://bm8755sljajgu" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_037.png" id="39_ayuxd"]
+[ext_resource type="Texture2D" uid="uid://d1kttbkowgh0s" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_37.png" id="39_ht2gv"]
+[ext_resource type="Texture2D" uid="uid://dxwfh0w4gkst3" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_38.png" id="40_mrckj"]
+[ext_resource type="Texture2D" uid="uid://bne6s82dksauh" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_038.png" id="40_nyf5p"]
+[ext_resource type="Texture2D" uid="uid://botkhd5iwc0cd" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_39.png" id="41_tketm"]
+[ext_resource type="Texture2D" uid="uid://pgpjf34kxiix" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_039.png" id="41_wugtj"]
+[ext_resource type="Texture2D" uid="uid://cur2laombrblo" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_040.png" id="42_g67kq"]
+[ext_resource type="Texture2D" uid="uid://cihha0uedjwwa" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_40.png" id="42_l1t20"]
+[ext_resource type="Texture2D" uid="uid://bvbh1gw7q2rwb" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_041.png" id="43_wq5un"]
+[ext_resource type="Texture2D" uid="uid://b7aba5o6bfpld" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_41.png" id="43_ywupp"]
+[ext_resource type="Texture2D" uid="uid://c1l5ujl1pc805" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_042.png" id="44_7aylh"]
+[ext_resource type="Texture2D" uid="uid://di22kig8m6ej5" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_00.png" id="44_bipl1"]
+[ext_resource type="Texture2D" uid="uid://b12a5eeh1jxvi" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_043.png" id="45_phi8j"]
+[ext_resource type="Texture2D" uid="uid://m3735amuvn1h" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_01.png" id="45_xnlr2"]
+[ext_resource type="Texture2D" uid="uid://cn2e2qraic6xr" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_044.png" id="46_7b4kk"]
+[ext_resource type="Texture2D" uid="uid://bmrjpmfts1wh1" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_02.png" id="46_bb8n8"]
+[ext_resource type="Texture2D" uid="uid://6308jv7ehqpy" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_03.png" id="47_44dr8"]
+[ext_resource type="Texture2D" uid="uid://v4dl7pabnq8h" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_045.png" id="47_u15ct"]
+[ext_resource type="Texture2D" uid="uid://cf1atlnby8eol" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_04.png" id="48_50xu4"]
+[ext_resource type="Texture2D" uid="uid://cqld0201r8tfk" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_046.png" id="48_w4666"]
+[ext_resource type="Texture2D" uid="uid://cqggynl3acuqh" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_05.png" id="49_m1p4x"]
+[ext_resource type="Texture2D" uid="uid://b7j7kvof5t2ku" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_047.png" id="49_q4da0"]
+[ext_resource type="Texture2D" uid="uid://b57122voohp0n" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_048.png" id="50_7rsip"]
+[ext_resource type="Texture2D" uid="uid://dmbhhnec3wm38" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_06.png" id="50_yfyle"]
+[ext_resource type="Texture2D" uid="uid://b51gjqns8t77" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_07.png" id="51_2tskg"]
+[ext_resource type="Texture2D" uid="uid://1ap5t0oulqw1" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_049.png" id="51_q5i31"]
+[ext_resource type="Texture2D" uid="uid://bvoelmusak8q5" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_08.png" id="52_dsurl"]
+[ext_resource type="Texture2D" uid="uid://c50muwre2x1qf" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_050.png" id="52_mxcdf"]
+[ext_resource type="Texture2D" uid="uid://cyof5x6o6ecb4" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_09.png" id="53_qux14"]
+[ext_resource type="Texture2D" uid="uid://ylhptdeoukj4" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_051.png" id="53_ttmxh"]
+[ext_resource type="Texture2D" uid="uid://d32oly64djrxo" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_052.png" id="54_0bbi2"]
+[ext_resource type="Texture2D" uid="uid://bbyhryundos8y" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_10.png" id="54_o8xo5"]
+[ext_resource type="Texture2D" uid="uid://bcfvgjhwpo82h" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_11.png" id="55_4ycih"]
+[ext_resource type="Texture2D" uid="uid://ct0flkg6lbh4v" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_053.png" id="55_m5pf8"]
+[ext_resource type="Texture2D" uid="uid://dcsubwlu7ydke" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_12.png" id="56_dx8cr"]
+[ext_resource type="Texture2D" uid="uid://dj32tf2ci4cwt" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_054.png" id="56_ju5ng"]
+[ext_resource type="Texture2D" uid="uid://c15t4eojm02lh" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_055.png" id="57_huu5t"]
+[ext_resource type="Texture2D" uid="uid://42bx1a6fm4e1" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_13.png" id="57_tjycn"]
+[ext_resource type="Texture2D" uid="uid://dlctkhscv66cf" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_056.png" id="58_363jv"]
+[ext_resource type="Texture2D" uid="uid://d3wc4fcn7s3nw" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_14.png" id="58_wegfp"]
+[ext_resource type="Texture2D" uid="uid://tphtg6r62m0o" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_057.png" id="59_jno5a"]
+[ext_resource type="Texture2D" uid="uid://eym7t0mfwj2s" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_15.png" id="59_no3si"]
+[ext_resource type="Texture2D" uid="uid://b570pj3tfepkk" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_058.png" id="60_ayng7"]
+[ext_resource type="Texture2D" uid="uid://dxvskjj3pvyx1" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_16.png" id="60_eyvwx"]
+[ext_resource type="Texture2D" uid="uid://c0n5nkbyw7235" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_17.png" id="61_3gtxn"]
+[ext_resource type="Texture2D" uid="uid://r6nyj71lqw8l" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_059.png" id="61_qg06r"]
+[ext_resource type="Texture2D" uid="uid://bb3c0tew10n6" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_18.png" id="62_14guo"]
+[ext_resource type="Texture2D" uid="uid://c3xuedubble86" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_060.png" id="62_p0fc2"]
+[ext_resource type="Texture2D" uid="uid://dq3islmlufi4v" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_061.png" id="63_1i554"]
+[ext_resource type="Texture2D" uid="uid://d1ppskgh0e7eh" path="res://resource/character/role/rosmon/die/char_391_rosmon-Die_19.png" id="63_di6l6"]
+[ext_resource type="Texture2D" uid="uid://b5lxojcrrxs7v" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_062.png" id="64_d6px4"]
+[ext_resource type="Texture2D" uid="uid://dg5ln1kqy0viu" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_063.png" id="65_gmxx2"]
+[ext_resource type="Texture2D" uid="uid://cirrlt0qft4m7" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_064.png" id="66_iax44"]
+[ext_resource type="Texture2D" uid="uid://cm2duwwot3g0p" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_065.png" id="67_aan0u"]
+[ext_resource type="Texture2D" uid="uid://boryyld81kpfl" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_066.png" id="68_7s7b7"]
+[ext_resource type="Texture2D" uid="uid://clc1mg2254tju" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_067.png" id="69_4ujt2"]
+[ext_resource type="Texture2D" uid="uid://btvaibtq8c86j" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_068.png" id="70_yww58"]
+[ext_resource type="Texture2D" uid="uid://c8tms5swfealr" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_069.png" id="71_tqa7e"]
+[ext_resource type="Texture2D" uid="uid://r76ve5y03gh7" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_070.png" id="72_qrk82"]
+[ext_resource type="Texture2D" uid="uid://cyl6ud6ssnnws" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_071.png" id="73_tstrf"]
+[ext_resource type="Texture2D" uid="uid://dxgnctj3j754y" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_072.png" id="74_afav6"]
+[ext_resource type="Texture2D" uid="uid://v3x8s1isla1y" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_073.png" id="75_cmk2a"]
+[ext_resource type="Texture2D" uid="uid://crawuas43xxf6" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_074.png" id="76_v5462"]
+[ext_resource type="Texture2D" uid="uid://20jho22wesa3" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_075.png" id="77_k0wla"]
+[ext_resource type="Texture2D" uid="uid://dcym1reedqgu1" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_076.png" id="78_5ka4r"]
+[ext_resource type="Texture2D" uid="uid://cavtm6ryejjwi" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_077.png" id="79_1k8qb"]
+[ext_resource type="Texture2D" uid="uid://c06awful1ayek" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_078.png" id="80_83cyr"]
+[ext_resource type="Texture2D" uid="uid://dtfavk1kgk342" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_079.png" id="81_hekgd"]
+[ext_resource type="Texture2D" uid="uid://bx5c4uiulpja3" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_080.png" id="82_qmmto"]
+[ext_resource type="Texture2D" uid="uid://ctrc8fxgr6oc4" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_081.png" id="83_kuy20"]
+[ext_resource type="Texture2D" uid="uid://bkq8706xelsaw" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_082.png" id="84_tggxo"]
+[ext_resource type="Texture2D" uid="uid://b15duwq7k0jck" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_083.png" id="85_7sacp"]
+[ext_resource type="Texture2D" uid="uid://dggajomk5yrmo" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_084.png" id="86_vx0rm"]
+[ext_resource type="Texture2D" uid="uid://bk7uif48vhamc" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_085.png" id="87_8j5wv"]
+[ext_resource type="Texture2D" uid="uid://chlmoqebecfat" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_086.png" id="88_xs73w"]
+[ext_resource type="Texture2D" uid="uid://b7swq4ggaciw1" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_087.png" id="89_iu1yn"]
+[ext_resource type="Texture2D" uid="uid://bu4rqnl67qevx" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_088.png" id="90_ybe6r"]
+[ext_resource type="Texture2D" uid="uid://befwjx0layjhb" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_089.png" id="91_5i3ff"]
+[ext_resource type="Texture2D" uid="uid://cec8g4h3dat4j" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_090.png" id="92_ejoik"]
+[ext_resource type="Texture2D" uid="uid://vb818ynewn22" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_091.png" id="93_un0y1"]
+[ext_resource type="Texture2D" uid="uid://dwwulvkx04pvo" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_092.png" id="94_nm0da"]
+[ext_resource type="Texture2D" uid="uid://bd8e6jps1td6f" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_093.png" id="95_51upc"]
+[ext_resource type="Texture2D" uid="uid://co5ew6hp0dy0f" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_094.png" id="96_4tmic"]
+[ext_resource type="Texture2D" uid="uid://3lvardeeogoq" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_095.png" id="97_2ymi1"]
+[ext_resource type="Texture2D" uid="uid://bqeb3jxgub0dm" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_096.png" id="98_a56j5"]
+[ext_resource type="Texture2D" uid="uid://bymwi2e0a6f2b" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_097.png" id="99_b2i06"]
+[ext_resource type="Texture2D" uid="uid://cjnnhvdiitmw1" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_098.png" id="100_pt6ub"]
+[ext_resource type="Texture2D" uid="uid://rg81iye5dxoy" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_099.png" id="101_r24o4"]
+[ext_resource type="Texture2D" uid="uid://dc6gdtleicwtk" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_100.png" id="102_hrcku"]
+[ext_resource type="Texture2D" uid="uid://bb32cgy7fim37" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_101.png" id="103_th114"]
+[ext_resource type="Texture2D" uid="uid://kpx5inat2swg" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_102.png" id="104_qe0u5"]
+[ext_resource type="Texture2D" uid="uid://sgn8iiswmwls" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_103.png" id="105_a0ipy"]
+[ext_resource type="Texture2D" uid="uid://dxhwk2al8c2ch" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_104.png" id="106_4seks"]
+[ext_resource type="Texture2D" uid="uid://ecbl2fqldxvl" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_105.png" id="107_1nexs"]
+[ext_resource type="Texture2D" uid="uid://dlabiu1v8ue32" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_106.png" id="108_n2gf8"]
+[ext_resource type="Texture2D" uid="uid://bvyhmfa33vrwr" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_107.png" id="109_g6ojn"]
+[ext_resource type="Texture2D" uid="uid://ck5r1wimv6t1c" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_108.png" id="110_cwnte"]
+[ext_resource type="Texture2D" uid="uid://dptbo628sk2eg" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_109.png" id="111_6ivtb"]
+[ext_resource type="Texture2D" uid="uid://dpck42fcadotd" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_110.png" id="112_ib4vl"]
+[ext_resource type="Texture2D" uid="uid://b3c47871fn32" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_111.png" id="113_3jqnw"]
+[ext_resource type="Texture2D" uid="uid://ssod36k2abus" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_112.png" id="114_oakoc"]
+[ext_resource type="Texture2D" uid="uid://d4mpaoxxii0th" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_113.png" id="115_u1lub"]
+[ext_resource type="Texture2D" uid="uid://dpcqbk4x63lus" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_114.png" id="116_gssq3"]
+[ext_resource type="Texture2D" uid="uid://203avbsiroi" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_115.png" id="117_d87ai"]
+[ext_resource type="Texture2D" uid="uid://wmbr785ywqyu" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_116.png" id="118_nwv37"]
+[ext_resource type="Texture2D" uid="uid://boj55c15bdeda" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_117.png" id="119_4ymd3"]
+[ext_resource type="Texture2D" uid="uid://dxoxioiddqelc" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_118.png" id="120_35nb0"]
+[ext_resource type="Texture2D" uid="uid://bcgugjlwxrp12" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_119.png" id="121_dbkiw"]
+[ext_resource type="Texture2D" uid="uid://cj1pa33pltan" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_00.png" id="184_535qj"]
+[ext_resource type="Texture2D" uid="uid://di26yqk5alceg" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_01.png" id="185_n880w"]
+[ext_resource type="Texture2D" uid="uid://cfh2445xwn5nq" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_02.png" id="186_27xaf"]
+[ext_resource type="Texture2D" uid="uid://cvfekuf373m4f" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_03.png" id="187_3xu73"]
+[ext_resource type="Texture2D" uid="uid://c1tobnromic4t" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_04.png" id="188_2ox3l"]
+[ext_resource type="Texture2D" uid="uid://cws8a3y5j7v7y" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_05.png" id="189_s12t8"]
+[ext_resource type="Texture2D" uid="uid://ckpq1y18s280h" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_06.png" id="190_8k3jn"]
+[ext_resource type="Texture2D" uid="uid://rplgv0aueiym" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_07.png" id="191_bubje"]
+[ext_resource type="Texture2D" uid="uid://c74tjvhpmaujs" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_08.png" id="192_ehfk3"]
+[ext_resource type="Texture2D" uid="uid://11c47xgog77k" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_09.png" id="193_nrw03"]
+[ext_resource type="Texture2D" uid="uid://ce2qcesfryqlk" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_10.png" id="194_4g4sw"]
+[ext_resource type="Texture2D" uid="uid://ck40hxfpvnunu" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_11.png" id="195_1wqtg"]
+[ext_resource type="Texture2D" uid="uid://ckc2vuexqh85v" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_12.png" id="196_rmspl"]
+[ext_resource type="Texture2D" uid="uid://bddn4wfpyt2t5" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_13.png" id="197_e6hha"]
+[ext_resource type="Texture2D" uid="uid://b8ca3wati6nm4" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_14.png" id="198_u0ckq"]
+[ext_resource type="Texture2D" uid="uid://c6dl1gs4alx8j" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_15.png" id="199_5twh8"]
+[ext_resource type="Texture2D" uid="uid://cgp5xxf1us2yv" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_16.png" id="200_orhwk"]
+[ext_resource type="Texture2D" uid="uid://rp7fdaoo3nb6" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_17.png" id="201_yhtui"]
+[ext_resource type="Texture2D" uid="uid://bpsgq13f7wnqc" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_18.png" id="202_u4juq"]
+[ext_resource type="Texture2D" uid="uid://84wew8k0264c" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_19.png" id="203_wgkg5"]
+[ext_resource type="Texture2D" uid="uid://jxpodwdim7ep" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_20.png" id="204_cpgm5"]
+[ext_resource type="Texture2D" uid="uid://ceawou2jnfbmc" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_21.png" id="205_5f0vn"]
+[ext_resource type="Texture2D" uid="uid://4brgx5xc0djl" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_22.png" id="206_olcd8"]
+[ext_resource type="Texture2D" uid="uid://cv5bigh20f6kc" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_23.png" id="207_bm6ca"]
+[ext_resource type="Texture2D" uid="uid://d1t45f3wdchus" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_24.png" id="208_p2wad"]
+[ext_resource type="Texture2D" uid="uid://cw5e2yv2724hb" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_25.png" id="209_pb36x"]
+[ext_resource type="Texture2D" uid="uid://vjl07xquhvjy" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_26.png" id="210_ghcvr"]
+[ext_resource type="Texture2D" uid="uid://hjbo5873e5yl" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_27.png" id="211_6p7tm"]
+[ext_resource type="Texture2D" uid="uid://cbhpaft85f6jj" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_28.png" id="212_12spg"]
+[ext_resource type="Texture2D" uid="uid://lt3cmkpvlive" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_29.png" id="213_d6ov1"]
+[ext_resource type="Texture2D" uid="uid://bwuoarx2pv8cf" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_30.png" id="214_ytma5"]
+[ext_resource type="Texture2D" uid="uid://bccxbafk1uhq5" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_31.png" id="215_dyjly"]
+[ext_resource type="Texture2D" uid="uid://d231hwvb1onwq" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_32.png" id="216_gpo4g"]
+[ext_resource type="Texture2D" uid="uid://cicjmvq444urc" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_33.png" id="217_clua0"]
+[ext_resource type="Texture2D" uid="uid://csv527mxxiw0v" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_34.png" id="218_55pa3"]
+[ext_resource type="Texture2D" uid="uid://bdfctnpv5jxui" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_35.png" id="219_c1tdv"]
+[ext_resource type="Texture2D" uid="uid://besyk5xlfamg" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_36.png" id="220_s32qs"]
+[ext_resource type="Texture2D" uid="uid://dp4hi5l8baxqt" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_37.png" id="221_hkmof"]
+[ext_resource type="Texture2D" uid="uid://wgleut60mx5r" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_38.png" id="222_p6xoh"]
+[ext_resource type="Texture2D" uid="uid://hi3ryhr8yh3e" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_39.png" id="223_cjbx8"]
+[ext_resource type="Texture2D" uid="uid://bxooj8tb0hgqu" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_40.png" id="224_awxsp"]
+[ext_resource type="Texture2D" uid="uid://dscgkv8c2q3ti" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_41.png" id="225_svgtb"]
+[ext_resource type="Texture2D" uid="uid://dfe3li46wkkj0" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_42.png" id="226_7eufm"]
+[ext_resource type="Texture2D" uid="uid://4fg1pvug3xot" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_43.png" id="227_pc0ut"]
+[ext_resource type="Texture2D" uid="uid://dou7kf30urqxt" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_44.png" id="228_k1tdi"]
+[ext_resource type="Texture2D" uid="uid://bvxn3ky8k2eyn" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_45.png" id="229_4abp6"]
+[ext_resource type="Texture2D" uid="uid://b7nmqtrdwd2tv" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_46.png" id="230_i53l0"]
+[ext_resource type="Texture2D" uid="uid://pfmdd8e4f3k1" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_47.png" id="231_thf5l"]
+[ext_resource type="Texture2D" uid="uid://ytfr6jbnm6p3" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_48.png" id="232_itruy"]
+[ext_resource type="Texture2D" uid="uid://k4frj5gf3p6q" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_49.png" id="233_2g2xx"]
+[ext_resource type="Texture2D" uid="uid://dsgg76rc3vb4w" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_50.png" id="234_xdpp2"]
+[ext_resource type="Texture2D" uid="uid://crr2bo2wy21el" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_51.png" id="235_el0qu"]
+[ext_resource type="Texture2D" uid="uid://cek26sx7xu22l" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_52.png" id="236_be4it"]
+[ext_resource type="Texture2D" uid="uid://3km4qxcgry4t" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_53.png" id="237_dxrkd"]
+[ext_resource type="Texture2D" uid="uid://nhow30vlkbcp" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_54.png" id="238_lfyu2"]
+[ext_resource type="Texture2D" uid="uid://b5u3njewavavr" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_55.png" id="239_djdou"]
+[ext_resource type="Texture2D" uid="uid://bamg0psymh8vl" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_56.png" id="240_0t5vg"]
+[ext_resource type="Texture2D" uid="uid://dr8bb68v2mh7f" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_57.png" id="241_38ru3"]
+[ext_resource type="Texture2D" uid="uid://kh11mc6urd4h" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_58.png" id="242_7yutl"]
+[ext_resource type="Texture2D" uid="uid://bgrmtal3e2w8y" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_59.png" id="243_d7bdg"]
+[ext_resource type="Texture2D" uid="uid://caem5tffyn66e" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_60.png" id="244_vm2d7"]
+[ext_resource type="Texture2D" uid="uid://dncnj5kdbmthf" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_61.png" id="245_vlp15"]
+[ext_resource type="Texture2D" uid="uid://dlk02m4uv4qb4" path="res://resource/character/role/rosmon/Skill/char_391_rosmon-Skill_2_62.png" id="246_b7mr6"]
+[ext_resource type="Texture2D" uid="uid://gh175q5qrv6t" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_000.png" id="247_kurjc"]
+[ext_resource type="Texture2D" uid="uid://bk7ivpkqr35wk" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_001.png" id="248_8jus0"]
+[ext_resource type="Texture2D" uid="uid://k8ioghyn1x3w" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_002.png" id="249_uug4e"]
+[ext_resource type="Texture2D" uid="uid://bv20tup70bep4" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_003.png" id="250_64i04"]
+[ext_resource type="Texture2D" uid="uid://djahaw2a7ekqe" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_004.png" id="251_7n3ib"]
+[ext_resource type="Texture2D" uid="uid://2cb1fl4c33wn" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_005.png" id="252_o6lke"]
+[ext_resource type="Texture2D" uid="uid://k464pqhr8dxx" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_006.png" id="253_3cp45"]
+[ext_resource type="Texture2D" uid="uid://ljhuh18h58mt" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_007.png" id="254_k7qx4"]
+[ext_resource type="Texture2D" uid="uid://cvsyfgvwlfvwt" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_008.png" id="255_mkwj1"]
+[ext_resource type="Texture2D" uid="uid://y0g1c5rca5xf" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_009.png" id="256_iq54i"]
+[ext_resource type="Texture2D" uid="uid://u1ucw2ougq7y" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_010.png" id="257_3q6sx"]
+[ext_resource type="Texture2D" uid="uid://ccuqdoebvvth4" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_011.png" id="258_enenb"]
+[ext_resource type="Texture2D" uid="uid://bgc33v7wwm57o" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_012.png" id="259_ioqxe"]
+[ext_resource type="Texture2D" uid="uid://dndogjwiwgyod" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_013.png" id="260_o0328"]
+[ext_resource type="Texture2D" uid="uid://coxef7kmjiybn" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_014.png" id="261_iahjv"]
+[ext_resource type="Texture2D" uid="uid://dsmlwh0qf466h" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_015.png" id="262_m4wxb"]
+[ext_resource type="Texture2D" uid="uid://bkt6oaskb2rng" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_016.png" id="263_l86a2"]
+[ext_resource type="Texture2D" uid="uid://cr82xebkao5gu" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_017.png" id="264_yros4"]
+[ext_resource type="Texture2D" uid="uid://1yupi4qcrs6h" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_018.png" id="265_yg5yy"]
+[ext_resource type="Texture2D" uid="uid://ci0w6c5nevm2m" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_019.png" id="266_b5b1v"]
+[ext_resource type="Texture2D" uid="uid://bte1jwxdvhbw6" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_020.png" id="267_q3rh5"]
+[ext_resource type="Texture2D" uid="uid://qw62k75kv5hi" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_021.png" id="268_nxd4b"]
+[ext_resource type="Texture2D" uid="uid://cg0yg4emdk14t" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_022.png" id="269_xxwyg"]
+[ext_resource type="Texture2D" uid="uid://cybkklr0lb21y" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_023.png" id="270_qpb4i"]
+[ext_resource type="Texture2D" uid="uid://0jex4mturhlg" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_024.png" id="271_tb8jg"]
+[ext_resource type="Texture2D" uid="uid://bafmw2qrbbt24" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_025.png" id="272_5t6td"]
+[ext_resource type="Texture2D" uid="uid://c255xj0bfidwa" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_026.png" id="273_b24lo"]
+[ext_resource type="Texture2D" uid="uid://d0nx1lr0nxwbn" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_027.png" id="274_vvhk1"]
+[ext_resource type="Texture2D" uid="uid://bxwas4q8pcmyd" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_028.png" id="275_7qwn6"]
+[ext_resource type="Texture2D" uid="uid://bgemgg517gl4c" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_029.png" id="276_ktmmr"]
+[ext_resource type="Texture2D" uid="uid://bn1k1lffxej1e" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_030.png" id="277_t7i3f"]
+[ext_resource type="Texture2D" uid="uid://dfvksiesqfrm5" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_031.png" id="278_bww3d"]
+[ext_resource type="Texture2D" uid="uid://c31rxkn5tiwmv" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_032.png" id="279_q60sx"]
+[ext_resource type="Texture2D" uid="uid://b7mpf4dahwd6v" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_033.png" id="280_pq8ux"]
+[ext_resource type="Texture2D" uid="uid://cgfrfggfynlg4" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_034.png" id="281_udack"]
+[ext_resource type="Texture2D" uid="uid://dogtn6yygjl71" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_035.png" id="282_7tlro"]
+[ext_resource type="Texture2D" uid="uid://c5so2qf6wndxh" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_036.png" id="283_skqgl"]
+[ext_resource type="Texture2D" uid="uid://cqy0ut3g7kq4l" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_037.png" id="284_mknhk"]
+[ext_resource type="Texture2D" uid="uid://bhvidkk7ln0u2" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_038.png" id="285_atnv8"]
+[ext_resource type="Texture2D" uid="uid://4drx6w2bn5pf" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_039.png" id="286_8lv5w"]
+[ext_resource type="Texture2D" uid="uid://dbh5a7w4f12y4" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_040.png" id="287_wg6qi"]
+[ext_resource type="Texture2D" uid="uid://b5d5dyxwui55j" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_041.png" id="288_47h56"]
+[ext_resource type="Texture2D" uid="uid://cjts7eovjht2t" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_042.png" id="289_6bsp6"]
+[ext_resource type="Texture2D" uid="uid://bw5k1j702ll3a" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_043.png" id="290_hvpjx"]
+[ext_resource type="Texture2D" uid="uid://dye2dho620yei" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_044.png" id="291_om3uj"]
+[ext_resource type="Texture2D" uid="uid://p6ws0d53obxj" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_045.png" id="292_xwnv3"]
+[ext_resource type="Texture2D" uid="uid://2speup66bjc4" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_046.png" id="293_u678g"]
+[ext_resource type="Texture2D" uid="uid://b7ehi7kh7gkli" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_047.png" id="294_j2uiu"]
+[ext_resource type="Texture2D" uid="uid://bqhmp5lut2mk3" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_048.png" id="295_d5u7e"]
+[ext_resource type="Texture2D" uid="uid://cb864qfow3fda" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_049.png" id="296_waqox"]
+[ext_resource type="Texture2D" uid="uid://ch5pmmc3npve3" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_050.png" id="297_jqmec"]
+[ext_resource type="Texture2D" uid="uid://cxdr7cdcx5npd" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_051.png" id="298_73joi"]
+[ext_resource type="Texture2D" uid="uid://bv3tmehghakr4" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_052.png" id="299_e73dl"]
+[ext_resource type="Texture2D" uid="uid://d1oafcwty2ivj" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_053.png" id="300_lsvut"]
+[ext_resource type="Texture2D" uid="uid://df1av47cr575g" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_054.png" id="301_3tpef"]
+[ext_resource type="Texture2D" uid="uid://clqhh1tu4ivor" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_055.png" id="302_evg5j"]
+[ext_resource type="Texture2D" uid="uid://ckoakiohm8s3i" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_056.png" id="303_6n4ib"]
+[ext_resource type="Texture2D" uid="uid://cgy0nqmkqspxe" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_057.png" id="304_33h2a"]
+[ext_resource type="Texture2D" uid="uid://cpubdokbamrc6" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_058.png" id="305_pf0vw"]
+[ext_resource type="Texture2D" uid="uid://dc3mcu3io3liw" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_059.png" id="306_p6edg"]
+[ext_resource type="Texture2D" uid="uid://bljbunv1q3v3o" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_060.png" id="307_hwe2t"]
+[ext_resource type="Texture2D" uid="uid://41ra05effa31" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_061.png" id="308_0tyvy"]
+[ext_resource type="Texture2D" uid="uid://dyb6ks4hg4o37" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_062.png" id="309_rmlps"]
+[ext_resource type="Texture2D" uid="uid://brkg3apylpkqp" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_063.png" id="310_p503l"]
+[ext_resource type="Texture2D" uid="uid://cn6dy750y3qxx" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_064.png" id="311_8pyxr"]
+[ext_resource type="Texture2D" uid="uid://pghxoburi6fj" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_065.png" id="312_vshxs"]
+[ext_resource type="Texture2D" uid="uid://cant2co2xidj8" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_066.png" id="313_24n0g"]
+[ext_resource type="Texture2D" uid="uid://5degrc7wemtu" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_067.png" id="314_2ewp2"]
+[ext_resource type="Texture2D" uid="uid://ckwwa3pdkgxtt" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_068.png" id="315_tvp36"]
+[ext_resource type="Texture2D" uid="uid://d2ho6whu5ea0y" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_069.png" id="316_ff5nd"]
+[ext_resource type="Texture2D" uid="uid://cgcmgr3k3eihq" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_070.png" id="317_ojtys"]
+[ext_resource type="Texture2D" uid="uid://c5mhiggt5inlf" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_071.png" id="318_vfxqj"]
+[ext_resource type="Texture2D" uid="uid://dndyi614sx3ud" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_072.png" id="319_m0723"]
+[ext_resource type="Texture2D" uid="uid://xwr71m2u8t8i" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_073.png" id="320_jj7rg"]
+[ext_resource type="Texture2D" uid="uid://7ggnr00xy50e" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_074.png" id="321_pxbu5"]
+[ext_resource type="Texture2D" uid="uid://c4c3jswitduf5" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_075.png" id="322_pm413"]
+[ext_resource type="Texture2D" uid="uid://ra2uaj8obn31" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_076.png" id="323_2la2q"]
+[ext_resource type="Texture2D" uid="uid://uxna2o644yiv" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_077.png" id="324_o643b"]
+[ext_resource type="Texture2D" uid="uid://c38debt804w3y" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_078.png" id="325_r8uqy"]
+[ext_resource type="Texture2D" uid="uid://bs56kl1c6b6d" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_079.png" id="326_fcfn7"]
+[ext_resource type="Texture2D" uid="uid://cgynkxixsvhay" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_080.png" id="327_gq82u"]
+[ext_resource type="Texture2D" uid="uid://2f5or76blh0l" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_081.png" id="328_annaq"]
+[ext_resource type="Texture2D" uid="uid://dxicueh4ygrdl" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_082.png" id="329_njpls"]
+[ext_resource type="Texture2D" uid="uid://d0hlu8gtu6vcp" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_083.png" id="330_5a2lp"]
+[ext_resource type="Texture2D" uid="uid://bmiq1quj2jnkv" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_084.png" id="331_swv8n"]
+[ext_resource type="Texture2D" uid="uid://dq7jssfc2cfwm" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_085.png" id="332_l14ww"]
+[ext_resource type="Texture2D" uid="uid://des8moy1ft47c" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_086.png" id="333_n5cb8"]
+[ext_resource type="Texture2D" uid="uid://cmymbww3sgyau" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_087.png" id="334_oi8bg"]
+[ext_resource type="Texture2D" uid="uid://cela2f3kx6vy7" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_088.png" id="335_gs24k"]
+[ext_resource type="Texture2D" uid="uid://bix1y5jqq3j4b" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_089.png" id="336_qnb3x"]
+[ext_resource type="Texture2D" uid="uid://bv66n54l6r8kf" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_090.png" id="337_odexq"]
+[ext_resource type="Texture2D" uid="uid://xxvn4ikd4pxp" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_091.png" id="338_hip2s"]
+[ext_resource type="Texture2D" uid="uid://de5yjlfikrbid" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_092.png" id="339_acmok"]
+[ext_resource type="Texture2D" uid="uid://2tker5g1igd6" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_093.png" id="340_10h86"]
+[ext_resource type="Texture2D" uid="uid://ckymlf2rtnd7a" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_094.png" id="341_qqx0v"]
+[ext_resource type="Texture2D" uid="uid://7wlme0fvouus" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_095.png" id="342_alyac"]
+[ext_resource type="Texture2D" uid="uid://br2to43ml5ma5" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_096.png" id="343_0fely"]
+[ext_resource type="Texture2D" uid="uid://cqupid64r4mcr" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_097.png" id="344_by7h2"]
+[ext_resource type="Texture2D" uid="uid://cuw0vnu0q5ie5" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_098.png" id="345_ruu8j"]
+[ext_resource type="Texture2D" uid="uid://cwqavmi4bmj0b" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_099.png" id="346_86c7j"]
+[ext_resource type="Texture2D" uid="uid://hcyiqd4bjwcc" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_100.png" id="347_3koef"]
+[ext_resource type="Texture2D" uid="uid://jvu1blykgtu7" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_101.png" id="348_p5yud"]
+[ext_resource type="Texture2D" uid="uid://cq4om0dimnr4o" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_102.png" id="349_5m71n"]
+[ext_resource type="Texture2D" uid="uid://dx6eem70jny7a" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_103.png" id="350_e0gar"]
+[ext_resource type="Texture2D" uid="uid://becyr0o8wvuhl" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_104.png" id="351_wipui"]
+[ext_resource type="Texture2D" uid="uid://b2ivefo2a83gn" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_105.png" id="352_1k07y"]
+[ext_resource type="Texture2D" uid="uid://bsi6pucullkhl" path="res://resource/character/role/rosmon/walk/char_391_rosmon-walk_106.png" id="353_uasjd"]
+[ext_resource type="AudioStream" uid="uid://bqyu2hdtghehj" path="res://resource/character/role/rosmon/audio/die.mp3" id="355_kwha1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gg1iu"]
+radius = 17.0
+height = 50.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x4jo5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d4ddx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gg1iu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kwha1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c05n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8qj80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_enxqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_brugo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4hwx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_4foan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6hgfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2i18u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vvlwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ka7ss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_64p1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_41mwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ubtik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_v3xtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5nkxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_dei4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_7o2lf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_g51nu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rjunn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lohub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_e67ca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7iyri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_a3m0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8sjjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_8by2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_kxab2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0vtwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_0hrvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_vu0f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_msju4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_b7v7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_md5qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_1k7h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_yk5rl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ht2gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_mrckj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_tketm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_l1t20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ywupp")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 40.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_bipl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_xnlr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_bb8n8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_44dr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_50xu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_m1p4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_yfyle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_2tskg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_dsurl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_qux14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_o8xo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_4ycih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_dx8cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_tjycn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_wegfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_no3si")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_eyvwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_3gtxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_14guo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_di6l6")
+}],
+"loop": false,
+"name": &"die",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1pkls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_krmqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lwc21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o6eqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1v43g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3pup0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_iw4br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0032l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0ep7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5x0ad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_h7g2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_su2bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2wu0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5pimv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_me543")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_u00p5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1pej8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_c5jgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_scth4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_klyxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_y2kc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_cbyvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_8j5ch")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3g157")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_4ate8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_aibs3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_trm57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_jvb8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_y7aat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_v4bbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_3rffh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_vqggu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_d8itc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_tm05o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_iptgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_32sfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_jo8yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ayuxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_nyf5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_wugtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_g67kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_wq5un")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_7aylh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_phi8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_7b4kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_u15ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_w4666")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_q4da0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_7rsip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_q5i31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_mxcdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_ttmxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_0bbi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_m5pf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ju5ng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_huu5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_363jv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_jno5a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ayng7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_qg06r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_p0fc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_1i554")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_d6px4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_gmxx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_iax44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_aan0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_7s7b7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_4ujt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_yww58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_tqa7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_qrk82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_tstrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_afav6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_cmk2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_v5462")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_k0wla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_5ka4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_1k8qb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_83cyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_hekgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_qmmto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_kuy20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_tggxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_7sacp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_vx0rm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_8j5wv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_xs73w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_iu1yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_ybe6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_5i3ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_ejoik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_un0y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_nm0da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_51upc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_4tmic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_2ymi1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_a56j5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_b2i06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_pt6ub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_r24o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_hrcku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_th114")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_qe0u5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_a0ipy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_4seks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_1nexs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_n2gf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_g6ojn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_cwnte")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_6ivtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_ib4vl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_3jqnw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_oakoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_u1lub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_gssq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_d87ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_nwv37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_4ymd3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_35nb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_dbkiw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("184_535qj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_n880w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_27xaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_3xu73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_2ox3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_s12t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_8k3jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_bubje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_ehfk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_nrw03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_4g4sw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_1wqtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_rmspl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_e6hha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_u0ckq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_5twh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_orhwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_yhtui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_u4juq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_wgkg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_cpgm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_5f0vn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_olcd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_bm6ca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_p2wad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_pb36x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_ghcvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_6p7tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_12spg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_d6ov1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_ytma5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_dyjly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_gpo4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_clua0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_55pa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_c1tdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_s32qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_hkmof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_p6xoh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_cjbx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_awxsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_svgtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_7eufm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_pc0ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_k1tdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_4abp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_i53l0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_thf5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_itruy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_2g2xx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_xdpp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_el0qu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_be4it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_dxrkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_lfyu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_djdou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_0t5vg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_38ru3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_7yutl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_d7bdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_vm2d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_vlp15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_b7mr6")
+}],
+"loop": false,
+"name": &"skill",
+"speed": 40.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("247_kurjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_8jus0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_uug4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_64i04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_7n3ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_o6lke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_3cp45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("254_k7qx4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_mkwj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_iq54i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("257_3q6sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_enenb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_ioqxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_o0328")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_iahjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_m4wxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_l86a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_yros4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_yg5yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("266_b5b1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_q3rh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_nxd4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_xxwyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_qpb4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_tb8jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_5t6td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_b24lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_vvhk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_7qwn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_ktmmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_t7i3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_bww3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_q60sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_pq8ux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_udack")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_7tlro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_skqgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_mknhk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_atnv8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_8lv5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_wg6qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_47h56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("289_6bsp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_hvpjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_om3uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_xwnv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_u678g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_j2uiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_d5u7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_waqox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_jqmec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_73joi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_e73dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_lsvut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_3tpef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_evg5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_6n4ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_33h2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_pf0vw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_p6edg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_hwe2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_0tyvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_rmlps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_p503l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_8pyxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_vshxs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_24n0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_2ewp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("315_tvp36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_ff5nd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_ojtys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_vfxqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("319_m0723")
+}, {
+"duration": 1.0,
+"texture": ExtResource("320_jj7rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("321_pxbu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("322_pm413")
+}, {
+"duration": 1.0,
+"texture": ExtResource("323_2la2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("324_o643b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("325_r8uqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("326_fcfn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("327_gq82u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_annaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_njpls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_5a2lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_swv8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("332_l14ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("333_n5cb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("334_oi8bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("335_gs24k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("336_qnb3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("337_odexq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("338_hip2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("339_acmok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("340_10h86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("341_qqx0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("342_alyac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_0fely")
+}, {
+"duration": 1.0,
+"texture": ExtResource("344_by7h2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_ruu8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_86c7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_3koef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_p5yud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_5m71n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_e0gar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_wipui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_1k07y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_uasjd")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 30.0
+}]
+
+[node name="RosmonRole" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_gg1iu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24)
+shape = SubResource("CapsuleShape2D_gg1iu")
+
+[node name="body" type="Node2D" parent="."]
+position = Vector2(0, -32)
+
+[node name="Sprite2D" type="Sprite2D" parent="body"]
+modulate = Color(0.336608, 0.336608, 0.336608, 0.596078)
+position = Vector2(-1.19209e-07, 33)
+scale = Vector2(0.287356, 0.228411)
+texture = ExtResource("1_iengy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="body"]
+position = Vector2(-5, -19)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_x4jo5")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("355_kwha1")
+
+[connection signal="animation_finished" from="body/AnimatedSprite2D" to="." method="_on_animation_finished"]
