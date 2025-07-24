@@ -55,7 +55,7 @@ public partial class rosmon_role : RoleBase
 		}
 		if (state == Global.State.HUD)
 		{
-			Hud.CD_Bar.Value = t / SpeedSkill;
+			Hud.Instance.CD_Bar.Value = t / SpeedSkill;
 		}
 		t1 = t1 >= SpeedAtk ? SpeedAtk : t1;
 
@@ -118,7 +118,7 @@ public partial class rosmon_role : RoleBase
 		HP -= sum;
 		if (state == Global.State.HUD)
 		{
-			Hud.HP_Bar.Value = HP;
+			Hud.Instance.HP_Bar.Value = HP;
 		}
 	}
 	public override void Move(Vector2 inputVector)
@@ -136,7 +136,7 @@ public partial class rosmon_role : RoleBase
 		state = stat;
 		if (stat == Global.State.HUD)
 		{
-			Hud.HP_Bar.Value = HP;
+			Hud.Instance.HP_Bar.Value = HP;
 		}
 	}
 	public void SetPointPos(Vector2 _pos)

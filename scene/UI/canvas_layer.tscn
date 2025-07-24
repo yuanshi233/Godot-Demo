@@ -27,7 +27,7 @@ corner_radius_bottom_left = 4
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
-[node name="HUD" type="Control" parent="."]
+[node name="HUD" type="Control" parent="." node_paths=PackedStringArray("HP_Bar", "CD_Bar")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,6 +35,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jyuir")
+HP_Bar = NodePath("HpBar")
+CD_Bar = NodePath("CdBar")
 
 [node name="HpBar" type="ProgressBar" parent="HUD"]
 layout_mode = 0
@@ -46,7 +48,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_8dpka")
 theme_override_styles/fill = SubResource("StyleBoxFlat_8f0ss")
 value = 100.0
 
-[node name="Label" type="Label" parent="HUD"]
+[node name="HP" type="Label" parent="HUD"]
 layout_mode = 0
 offset_left = 19.0
 offset_top = 18.0
@@ -68,7 +70,7 @@ theme_override_styles/background = SubResource("StyleBoxFlat_7oo3f")
 max_value = 1.0
 show_percentage = false
 
-[node name="Label2" type="Label" parent="HUD"]
+[node name="CD" type="Label" parent="HUD"]
 layout_mode = 0
 offset_left = 22.0
 offset_top = 53.0

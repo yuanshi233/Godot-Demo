@@ -1,5 +1,7 @@
 using Godot;
 using System;
+using System.Diagnostics;
+using System.Dynamic;
 public partial class CardA : Panel
 {
 	
@@ -7,11 +9,10 @@ public partial class CardA : Panel
 	[Export] protected Button skill2;
 	[Export] public PackedScene Role;
 
-	private RoleBase RoleInstance;
+	public RoleBase RoleInstance{ get; private set; }
 
 	protected HBoxContainer cardBContainer;
 	public CardB cardBInstance;
-
 	public override void _Ready()
 	{
 		skill1.Toggled += OnSkill1Toggled;
@@ -20,33 +21,23 @@ public partial class CardA : Panel
 		skill2.ButtonPressed = false;
 		skill1.ButtonPressed = true;
 		RoleInstance = Role.Instantiate<RoleBase>();
-		Global.RoleTeam.Add(RoleInstance);
 	}
 
 	private void OnSkill1Toggled(bool toggledOn)
 	{
-		OnSkillToggled(toggledOn, skill1);
+		if (toggledOn)
+			skill2.ButtonPressed = false;
 	}
 	private void OnSkill2Toggled(bool toggledOn)
 	{
-		OnSkillToggled(toggledOn, skill2);
+		if (toggledOn)
+			skill1.ButtonPressed = false;
 	}
 
-	private void OnSkillToggled(bool pressed, Button button)
-	{
-		if (pressed)
-		{
-			if (button == skill1)
-				skill2.ButtonPressed = false;
-			else
-				skill1.ButtonPressed = false;
-		}
-	}
 	private void SpawnNewCardB()
 	{
 		Global.RoleTeam.Remove(RoleInstance);
 		cardBContainer.AddChild(cardBInstance);
-		RoleSeleUI.Instance.len--;
 		GetParent().RemoveChild(this);
 	}
 

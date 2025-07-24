@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bx3kd2tryku6m"]
+[gd_scene load_steps=10 format=3 uid="uid://bx3kd2tryku6m"]
 
 [ext_resource type="Script" uid="uid://b6248eexhmhuj" path="res://script/UI/card/CardB.cs" id="1_boojt"]
 [ext_resource type="Texture2D" uid="uid://c8jh1uwob31qt" path="res://resource/character/role/jesica/card/基建.png" id="1_ym58m"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://bgi60s7mgrnob" path="res://resource/character/role/jesica/card/速射手.png" id="3_aps3u"]
 [ext_resource type="Texture2D" uid="uid://b3l25rhs5l4tb" path="res://resource/background/阴影.png" id="3_boojt"]
 [ext_resource type="Texture2D" uid="uid://csiwv4dd1apki" path="res://resource/character/role/jesica/card/图标_职业_狙击_大图.png" id="3_tgu8o"]
-[ext_resource type="PackedScene" uid="uid://d4iy8x4nb3e1q" path="res://scene/character/role/jesica/jesica_role.tscn" id="3_wqh7c"]
 [ext_resource type="Texture2D" uid="uid://drp5f25ligrtv" path="res://resource/character/role/jesica/card/技能_强力击·β型.png" id="6_tgu8o"]
 [ext_resource type="Texture2D" uid="uid://44riipm8qk3a" path="res://resource/character/role/jesica/card/技能_掩护烟幕.png" id="7_boojt"]
 
@@ -17,9 +16,8 @@ offset_right = 144.0
 offset_bottom = 392.0
 script = ExtResource("1_boojt")
 CardAScene = ExtResource("2_7tt4x")
-Role = ExtResource("3_wqh7c")
 
-[node name="TextureRect3" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 144.0
@@ -73,7 +71,7 @@ scale = Vector2(0.9, 0.9)
 texture = ExtResource("7_boojt")
 stretch_mode = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="TypeName" type="Label" parent="."]
 visible = false
 layout_mode = 0
 offset_left = -1.0
@@ -84,7 +82,7 @@ text = "速射手"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="EnglishName" type="Label" parent="."]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 227.0
@@ -94,7 +92,7 @@ text = "Jesica"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="."]
+[node name="ChineseName" type="Label" parent="."]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 247.0

@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bux103vg306ac"]
+[gd_scene load_steps=10 format=3 uid="uid://bux103vg306ac"]
 
 [ext_resource type="Script" uid="uid://b6248eexhmhuj" path="res://script/UI/card/CardB.cs" id="1_rx2qc"]
 [ext_resource type="PackedScene" uid="uid://do16ke4rawafl" path="res://scene/character/role/rosmon/card/rosmon_card_A.tscn" id="2_n6r7j"]
 [ext_resource type="Texture2D" uid="uid://dcf6goemglojk" path="res://resource/character/role/rosmon/card/投掷手.png" id="2_pavdk"]
 [ext_resource type="Texture2D" uid="uid://ckfeqyyhtmill" path="res://resource/background/橙.png" id="2_rx2qc"]
 [ext_resource type="Texture2D" uid="uid://b3rvuhrjkfmxm" path="res://resource/character/role/rosmon/card/技能_思维膨大.png" id="3_4o38n"]
-[ext_resource type="PackedScene" uid="uid://cm7iuty7mykep" path="res://scene/character/role/rosmon/rosmon_role.tscn" id="3_ftu4l"]
 [ext_resource type="Texture2D" uid="uid://b3l25rhs5l4tb" path="res://resource/background/阴影.png" id="3_n6r7j"]
 [ext_resource type="Texture2D" uid="uid://rbb7dp6sr021" path="res://resource/character/role/rosmon/card/图标_职业_狙击_大图.png" id="3_rx2qc"]
 [ext_resource type="Texture2D" uid="uid://cs5got8pf7xm1" path="res://resource/character/role/rosmon/card/技能_末梢阻断.png" id="4_rx2qc"]
@@ -22,9 +21,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_rx2qc")
 CardAScene = ExtResource("2_n6r7j")
-Role = ExtResource("3_ftu4l")
 
-[node name="TextureRect3" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 offset_right = 145.0
 offset_bottom = 394.0
@@ -78,7 +76,7 @@ scale = Vector2(0.9, 0.9)
 texture = ExtResource("4_rx2qc")
 stretch_mode = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="TypeName" type="Label" parent="."]
 visible = false
 layout_mode = 0
 offset_left = -14.0
@@ -89,7 +87,7 @@ text = "投掷手"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="EnglishName" type="Label" parent="."]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 228.0
@@ -99,7 +97,7 @@ text = "rosmon"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="."]
+[node name="ChineseName" type="Label" parent="."]
 layout_mode = 0
 offset_left = 5.0
 offset_top = 246.0

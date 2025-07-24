@@ -16,6 +16,10 @@ public partial class UserUI : Control
 	}
 	private void OnButtonDownStart()
 	{
-        GetTree().ChangeSceneToPacked(sele_scene);
+		GetTree().ChangeSceneToPacked(sele_scene);
+	}
+	private void OnQuit()
+	{
+		GetTree().Quit();
 	}
 }
