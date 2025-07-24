@@ -20,8 +20,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_syoff")
-containerB = NodePath("Panel/ScrollContainer/HBoxContainer")
-containerA = NodePath("PanelContainer/HBoxContainer")
+containerB = NodePath("Panel/ScrollContainer/CandidateCards")
+containerA = NodePath("PanelContainer/SelectedCards")
 
 [node name="Panel" type="PanelContainer" parent="."]
 layout_mode = 0
@@ -32,14 +32,14 @@ offset_bottom = 392.0
 layout_mode = 2
 horizontal_scroll_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/ScrollContainer"]
+[node name="CandidateCards" type="HBoxContainer" parent="Panel/ScrollContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="jesica_card_B" parent="Panel/ScrollContainer/HBoxContainer" instance=ExtResource("2_dycu8")]
+[node name="jesica_card_B" parent="Panel/ScrollContainer/CandidateCards" instance=ExtResource("2_dycu8")]
 layout_mode = 2
 
-[node name="RosmonCardB" parent="Panel/ScrollContainer/HBoxContainer" instance=ExtResource("3_xtx73")]
+[node name="RosmonCardB" parent="Panel/ScrollContainer/CandidateCards" instance=ExtResource("3_xtx73")]
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -49,10 +49,10 @@ offset_top = 400.0
 offset_right = 1160.0
 offset_bottom = 592.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+[node name="SelectedCards" type="HBoxContainer" parent="PanelContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="Enter" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1176.0
 offset_top = 400.0
@@ -61,7 +61,7 @@ offset_bottom = 488.0
 theme_override_font_sizes/font_size = 40
 text = "进入"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Return" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1176.0
 offset_top = 504.0
@@ -103,4 +103,4 @@ popup/item_7/text = "特种"
 popup/item_7/icon = ExtResource("9_ej01b")
 popup/item_7/id = 3
 
-[connection signal="button_down" from="Button2" to="." method="BackUserUI"]
+[connection signal="button_down" from="Return" to="." method="BackUserUI"]

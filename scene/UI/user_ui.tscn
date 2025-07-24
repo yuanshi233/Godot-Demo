@@ -21,16 +21,17 @@ offset_right = 271.0
 offset_bottom = 368.0
 dragging_enabled = false
 
-[node name="Button" type="Button" parent="VSplitContainer"]
+[node name="Start" type="Button" parent="VSplitContainer"]
 custom_minimum_size = Vector2(210, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "开始游戏"
 
-[node name="Button2" type="Button" parent="VSplitContainer"]
+[node name="Quit" type="Button" parent="VSplitContainer"]
 custom_minimum_size = Vector2(210, 50)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "退出游戏"
 
-[connection signal="button_down" from="VSplitContainer/Button" to="." method="OnButtonDownStart"]
+[connection signal="button_down" from="VSplitContainer/Start" to="." method="OnButtonDownStart"]
+[connection signal="button_down" from="VSplitContainer/Quit" to="." method="OnQuit"]

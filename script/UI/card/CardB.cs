@@ -9,15 +9,15 @@ public partial class CardB : Panel
 	
 	public override void _Ready()
 	{
-		cardAInstance = CardAScene.Instantiate() as CardA;
+		cardAInstance = CardAScene.Instantiate<CardA>();
 		cardAInstance.cardBInstance = this;
 	}
 	private void OnFreeButton()
 	{
-		if (RoleSeleUI.Instance.len < 4)
+		if (Global.RoleTeam.Count < 4)
 		{
-			RoleSeleUI.Instance.len++;
 			RoleSeleUI.Instance.containerA.AddChild(cardAInstance);
+			Global.RoleTeam.Add(cardAInstance.RoleInstance);
 			GetParent().RemoveChild(this);
 		}
 	}

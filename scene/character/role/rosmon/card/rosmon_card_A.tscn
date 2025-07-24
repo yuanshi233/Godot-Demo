@@ -49,7 +49,7 @@ offset_bottom = 141.0
 texture = ExtResource("1_356c4")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Name" type="Label" parent="."]
 layout_mode = 0
 offset_left = 12.0
 offset_top = 148.0
@@ -60,7 +60,7 @@ text = "迷迭香"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="Attributes" type="Label" parent="."]
 layout_mode = 0
 offset_left = 149.0
 offset_top = 73.0
@@ -74,7 +74,7 @@ text = "物理伤害：50
 技能：手动"
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="."]
+[node name="Rarity" type="Label" parent="."]
 clip_contents = true
 layout_mode = 0
 offset_left = 144.0

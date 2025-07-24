@@ -48,7 +48,7 @@ offset_bottom = 128.0
 texture = ExtResource("2_5vhat")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Name" type="Label" parent="."]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 148.0
@@ -59,7 +59,7 @@ text = "杰西卡"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="Attributes" type="Label" parent="."]
 layout_mode = 0
 offset_left = 146.0
 offset_top = 75.0
@@ -73,7 +73,7 @@ text = "物理伤害：10
 技能：自动"
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="."]
+[node name="Rarity" type="Label" parent="."]
 clip_contents = true
 layout_mode = 0
 offset_left = 144.0
