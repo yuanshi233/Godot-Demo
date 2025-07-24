@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlqsftxglmsdd"]
+[gd_scene load_steps=3 format=3 uid="uid://dlqsftxglmsdd"]
 
 [ext_resource type="Script" uid="uid://u2ac5ftptbar" path="res://script/UI/UserUI.cs" id="1_qksmw"]
+[ext_resource type="PackedScene" uid="uid://pxb2hsx5r81j" path="res://scene/UI/role_sele_ui.tscn" id="2_4ft1b"]
 
 [node name="UserUI" type="Control"]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qksmw")
+sele_scene = ExtResource("2_4ft1b")
 
 [node name="VSplitContainer" type="VSplitContainer" parent="."]
 layout_mode = 0

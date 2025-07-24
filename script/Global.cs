@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Numerics;
 
 public partial class Global : Node
@@ -9,10 +10,5 @@ public partial class Global : Node
     {
         HUD
     }
-    public enum Role
-    {
-        jesica,
-        rosmon
-    }
-    public static ArrayList RoleTeam;
+    public static List<RoleBase> RoleTeam=new();
 }

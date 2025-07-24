@@ -4,6 +4,8 @@ using System;
 public partial class UserUI : Control
 {
 	// Called when the node enters the scene tree for the first time.
+	[Export]
+	PackedScene sele_scene;
 	public override void _Ready()
 	{
 	}
@@ -14,7 +16,6 @@ public partial class UserUI : Control
 	}
 	private void OnButtonDownStart()
 	{
-		var scene = GD.Load<PackedScene>("res://scene/UI/role_sele_ui.tscn");
-        GetTree().ChangeSceneToPacked(scene);
+        GetTree().ChangeSceneToPacked(sele_scene);
 	}
 }
