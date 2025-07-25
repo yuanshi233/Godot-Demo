@@ -26,6 +26,7 @@ settings/stdout/print_fps=true
 [display]
 
 window/size/viewport_width=1300
+window/stretch/mode="canvas_items"
 window/vsync/vsync_mode=0
 
 [dotnet]

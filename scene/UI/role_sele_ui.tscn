@@ -15,11 +15,7 @@
 
 [node name="RoleSeleUI" type="Control" node_paths=PackedStringArray("containerB", "containerA")]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("1_syoff")
 containerB = NodePath("Panel/ScrollContainer/CandidateCards")
 containerA = NodePath("PanelContainer/SelectedCards")
@@ -42,6 +38,12 @@ theme_override_constants/separation = 10
 layout_mode = 2
 
 [node name="RosmonCardB" parent="Panel/ScrollContainer/CandidateCards" instance=ExtResource("3_xtx73")]
+layout_mode = 2
+
+[node name="jesica_card_B2" parent="Panel/ScrollContainer/CandidateCards" instance=ExtResource("2_dycu8")]
+layout_mode = 2
+
+[node name="RosmonCardB2" parent="Panel/ScrollContainer/CandidateCards" instance=ExtResource("3_xtx73")]
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
