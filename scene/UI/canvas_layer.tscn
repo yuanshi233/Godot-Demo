@@ -119,3 +119,10 @@ Q键切换角色
 by yuanshi"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="RolePane" type="VBoxContainer" parent="HUD"]
+custom_minimum_size = Vector2(150, 50)
+offset_left = 1143.0
+offset_top = 201.0
+offset_right = 1293.0
+offset_bottom = 251.0

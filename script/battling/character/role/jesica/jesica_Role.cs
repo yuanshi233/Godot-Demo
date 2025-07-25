@@ -5,6 +5,7 @@ public partial class jesica_Role : RoleBase
 {
 	[Signal] public delegate void ShootEventHandler(int type, double val, Vector2 pos);
 
+	[Export] public PackedScene CardC { get; set; }
 	[Export] public double SpeedMove { get; set; } = 200;
 	[Export] public float Acceleration { get; set; } = 15.0f;
 	[Export] public float Friction { get; set; } = 10.0f;
@@ -24,6 +25,9 @@ public partial class jesica_Role : RoleBase
 	private Global.State state;
 	//private Vector2 pos;
 	public override Vector2 pos{ set; get; }
+	private Node cardC_;
+	private ProgressBar cardC_HpBar;
+	private ProgressBar cardC_CdBar;
 
 
 
@@ -42,7 +46,7 @@ public partial class jesica_Role : RoleBase
 	private double t1 = 0;
 	private bool skillReady = false;
 
-	public override void _PhysicsProcess(double delta)
+	public override void _Process(double delta)
 	{
 		if (HP <= 0)
 		{
@@ -68,7 +72,22 @@ public partial class jesica_Role : RoleBase
 			Hud.Instance.CD_Bar.Value = t/SpeedSkill;
 		}
 		t1 = t1 >= SpeedAtk ? SpeedAtk : t1;
+		UpdateCardC(delta);
+	}
 
+	public override void CardCInit(int id)
+	{
+		cardC_ = CardC.Instantiate();
+		cardC_HpBar = cardC_.GetNode<ProgressBar>("HpBar");
+		cardC_CdBar = cardC_.GetNode<ProgressBar>("CdBar");
+		cardC_.GetNode<Label>("id").Text = "[" + id.ToString() + "]";
+		Hud.RolePane.AddChild(cardC_);
+	}
+
+	private void UpdateCardC(double delta)
+	{
+		cardC_HpBar.Value = HP;
+		cardC_CdBar.Value = t / SpeedSkill;
 	}
 
 	private void HandleFlipAndAnimatioWeapon()

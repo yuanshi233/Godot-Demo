@@ -10,6 +10,7 @@ public partial class Player : Node2D
 	public int? id;
 	public static Player player;
 	private Node camera2D;
+
 	public override void _Ready()
 	{
 		camera2D = GD.Load<PackedScene>("res://scene/UI/camera.tscn").Instantiate();
@@ -43,6 +44,7 @@ public partial class Player : Node2D
 			role.SetState(Global.State.NUL);
 			role.RemoveChild(camera2D);
 			RemoveChild(role);
+			r.GlobalPosition = role.GlobalPosition;
 		}
 		role = r;
 		AddChild(role);

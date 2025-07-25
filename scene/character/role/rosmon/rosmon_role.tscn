@@ -1,9 +1,10 @@
-[gd_scene load_steps=358 format=3 uid="uid://cm7iuty7mykep"]
+[gd_scene load_steps=359 format=3 uid="uid://cm7iuty7mykep"]
 
 [ext_resource type="Script" uid="uid://mp0axknk1qhr" path="res://script/battling/character/role/rosmon/rosmon_role.cs" id="1_gg1iu"]
 [ext_resource type="Texture2D" uid="uid://cesh3gr0efsig" path="res://resource/character/role/rosmon/影子.png" id="1_iengy"]
 [ext_resource type="Texture2D" uid="uid://cyr3htilltidl" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_000.png" id="2_1pkls"]
 [ext_resource type="Texture2D" uid="uid://c4omiu1p0bxf6" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_00.png" id="2_d4ddx"]
+[ext_resource type="PackedScene" uid="uid://cl7rp66mrfxwr" path="res://scene/character/role/rosmon/card/rosmon_card_C.tscn" id="2_el0u6"]
 [ext_resource type="Texture2D" uid="uid://b2lsbes6dkcgx" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_01.png" id="3_gg1iu"]
 [ext_resource type="Texture2D" uid="uid://cyrr76qkxnlw5" path="res://resource/character/role/rosmon/idle/char_391_rosmon-Idle_001.png" id="3_krmqd"]
 [ext_resource type="Texture2D" uid="uid://bg7jpe5ajjt8e" path="res://resource/character/role/rosmon/Attack/char_391_rosmon-Attack_A_02.png" id="4_kwha1"]
@@ -1449,6 +1450,7 @@ y_sort_enabled = true
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_gg1iu")
+CardC = ExtResource("2_el0u6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -24)

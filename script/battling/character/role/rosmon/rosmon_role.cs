@@ -4,6 +4,7 @@ using System;
 public partial class rosmon_role : RoleBase
 {
 	// Called when the node enters the scene tree for the first time.
+	[Export] public PackedScene CardC;
 	[Export] public double SpeedMove { get; set; } = 200;
 	[Export] public float Acceleration { get; set; } = 15.0f;
 	[Export] public float Friction { get; set; } = 10.0f;
@@ -20,7 +21,10 @@ public partial class rosmon_role : RoleBase
 	private Sprite2D sprite2D;
 	private PackedScene jujian;
 	private bool skillReady;
-	public override Vector2 pos{ set; get; }
+	public override Vector2 pos { set; get; }
+	private Node cardC_;
+	private ProgressBar cardC_HpBar;
+	private ProgressBar cardC_CdBar;
 
 	private int sta;        //1死亡2后摇
 
@@ -29,7 +33,6 @@ public partial class rosmon_role : RoleBase
 		animatedSprite2D = GetNode<AnimatedSprite2D>("body/AnimatedSprite2D");
 		sprite2D = GetNode<Sprite2D>("body/Sprite2D");
 		jujian = GD.Load<PackedScene>("res://scene/character/role/rosmon/rosmon_weapon.tscn");
-
 	}
 
 	private double t1, t;
@@ -58,8 +61,22 @@ public partial class rosmon_role : RoleBase
 			Hud.Instance.CD_Bar.Value = t / SpeedSkill;
 		}
 		t1 = t1 >= SpeedAtk ? SpeedAtk : t1;
+		UpdateCardC(delta);
+	}
+	public override void CardCInit(int id)
+	{
+		cardC_ = CardC.Instantiate();
+		cardC_HpBar = cardC_.GetNode<ProgressBar>("HpBar");
+		cardC_CdBar = cardC_.GetNode<ProgressBar>("CdBar");
+		cardC_.GetNode<Label>("id").Text = "[" + id.ToString() + "]";
+		Hud.RolePane.AddChild(cardC_);
+		//RoleManager.RolePane.CallDeferred("add_child", cardC_);
+	}
 
-
+	private void UpdateCardC(double delta)
+	{
+		cardC_HpBar.Value = HP;
+		cardC_CdBar.Value = t / SpeedSkill;
 	}
 
 	private void HandleMovement(Vector2 inputVector)
@@ -147,7 +164,7 @@ public partial class rosmon_role : RoleBase
 	{
 		if (sta == 2)
 			return;
-		if (type == 1)
+		if (type == 1 && skillReady)
 		{
 			//技能
 			//翻转

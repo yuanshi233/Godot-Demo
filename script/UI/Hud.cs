@@ -10,9 +10,21 @@ public partial class Hud : Control
 	[Export]
 	public ProgressBar CD_Bar { get; set; }
 	public static Hud Instance;
+	public static VBoxContainer RolePane;
 	public override void _Ready()
 	{
 		Instance = this;
+		RolePane = GetNode<VBoxContainer>("RolePane");
+		InitCardC();
+	}
+	private void InitCardC()
+	{
+		int i = 1;
+		foreach (var r in Global.RoleTeam)
+		{
+			r.CardCInit(i);
+			i++;
+		}
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

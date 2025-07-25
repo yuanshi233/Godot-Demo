@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctlr7ox53qsnm"]
+
+[ext_resource type="Texture2D" uid="uid://y1xowfs87jlx" path="res://resource/character/role/jesica/card/大头.png" id="1_2tx2e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwblk"]
+bg_color = Color(0.0941176, 0.678431, 0.294118, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0np22"]
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="JesicaCardC" type="Panel"]
+custom_minimum_size = Vector2(150, 50)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1150.0
+offset_bottom = -598.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="image" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_right = 53.0
+offset_bottom = 50.0
+texture = ExtResource("1_2tx2e")
+expand_mode = 1
+
+[node name="name" type="Label" parent="."]
+offset_left = 56.0
+offset_right = 128.0
+offset_bottom = 23.0
+text = "杰西卡"
+
+[node name="id" type="Label" parent="."]
+offset_left = 110.0
+offset_top = -2.0
+offset_right = 150.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0, 0.741176, 0, 1)
+text = "[]"
+horizontal_alignment = 2
+
+[node name="HpBar" type="ProgressBar" parent="."]
+offset_left = 56.0
+offset_top = 24.0
+offset_right = 147.0
+offset_bottom = 35.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_cwblk")
+show_percentage = false
+
+[node name="CdBar" type="ProgressBar" parent="."]
+offset_left = 56.0
+offset_top = 37.0
+offset_right = 147.0
+offset_bottom = 48.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_0np22")
+max_value = 1.0
+show_percentage = false
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 50.0
+toggle_mode = true
+flat = true
