@@ -26,6 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="image" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 3.0
 offset_right = 53.0
 offset_bottom = 50.0
@@ -33,12 +34,14 @@ texture = ExtResource("1_2tx2e")
 expand_mode = 1
 
 [node name="name" type="Label" parent="."]
+layout_mode = 0
 offset_left = 56.0
 offset_right = 128.0
 offset_bottom = 23.0
 text = "杰西卡"
 
 [node name="id" type="Label" parent="."]
+layout_mode = 0
 offset_left = 110.0
 offset_top = -2.0
 offset_right = 150.0
@@ -48,6 +51,7 @@ text = "[]"
 horizontal_alignment = 2
 
 [node name="HpBar" type="ProgressBar" parent="."]
+layout_mode = 0
 offset_left = 56.0
 offset_top = 24.0
 offset_right = 147.0
@@ -56,6 +60,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_cwblk")
 show_percentage = false
 
 [node name="CdBar" type="ProgressBar" parent="."]
+layout_mode = 0
 offset_left = 56.0
 offset_top = 37.0
 offset_right = 147.0

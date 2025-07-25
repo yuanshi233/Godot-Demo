@@ -72,51 +72,60 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_exi3a")
 
 [node name="normal" type="Node2D" parent="."]
+visible = false
+y_sort_enabled = true
 rotation = -0.785398
 
 [node name="Sprite2D" type="Sprite2D" parent="normal"]
 modulate = Color(0.521569, 0.521569, 0.521569, 0.568627)
 material = SubResource("CanvasItemMaterial_31o40")
-position = Vector2(-24.0416, -29.6985)
+position = Vector2(1.02169, 0.113344)
 rotation = 0.794753
-scale = Vector2(1.28464, 0.809232)
+scale = Vector2(1.30511, 0.617738)
 texture = ExtResource("2_idr4p")
+offset = Vector2(-30.0286, 1.90735e-06)
 
 [node name="Sprite_3" type="Sprite2D" parent="normal"]
-position = Vector2(6.66666, -100)
+position = Vector2(1.39752, 0.361565)
 texture = ExtResource("1_ig41f")
+offset = Vector2(5.26914, -100.362)
 
 [node name="Sprite_3_1" type="Sprite2D" parent="normal"]
-position = Vector2(-20, -90)
+position = Vector2(-0.24106, 1.18088)
 rotation = 0.0162994
 scale = Vector2(3, 3.5)
 texture = ExtResource("2_ltkp6")
+offset = Vector2(-7.08081, -25.9562)
 
 [node name="Sprite_3_2" type="Sprite2D" parent="normal"]
-position = Vector2(20, -73.3333)
+position = Vector2(-1.06036, 0.36158)
 rotation = 0.0516845
 scale = Vector2(3, 4)
 texture = ExtResource("2_ltkp6")
+offset = Vector2(5.74168, -18.6711)
 
 [node name="Sprite_3_3" type="Sprite2D" parent="normal"]
 material = SubResource("CanvasItemMaterial_o8eaa")
-position = Vector2(-7.07105, -15.5563)
+position = Vector2(4.76837e-07, 0)
 scale = Vector2(1.49838, 1.45467)
 texture = ExtResource("4_udvrv")
+offset = Vector2(-4.71913, -10.694)
 
 [node name="PointLight2D" type="PointLight2D" parent="normal"]
-position = Vector2(5.65685, -101.823)
+position = Vector2(-8.58307e-06, 7.62939e-06)
 scale = Vector2(2.30279, 6.83197)
 color = Color(0.027451, 1, 1, 1)
 energy = 1.5
 texture = SubResource("GradientTexture2D_eohbx")
+offset = Vector2(2.45652, -14.9039)
 texture_scale = 0.5
 
 [node name="Sprite_3_0" type="Sprite2D" parent="normal"]
-position = Vector2(31.1127, -22.6274)
+position = Vector2(-2.30323, 1.97601)
 rotation = 0.801211
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_exi3a")
+offset = Vector2(9.30319, -68.5321)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="normal"]
 position = Vector2(4.24264, -15.5564)
@@ -140,62 +149,71 @@ shape = SubResource("CircleShape2D_idr4p")
 stream = ExtResource("8_31o40")
 
 [node name="skill" type="Node2D" parent="."]
-visible = false
+y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="skill"]
 modulate = Color(0.305882, 0.305882, 0.305882, 0.490196)
 material = SubResource("CanvasItemMaterial_eohbx")
-position = Vector2(2, 4.76837e-07)
+position = Vector2(2.0701, -4.02894)
 rotation = 0.0173969
 scale = Vector2(1.60498, 1.01659)
 texture = ExtResource("2_idr4p")
+offset = Vector2(2.38419e-07, 3.9638)
 
 [node name="Sprite_3" type="Sprite2D" parent="skill"]
-position = Vector2(-38, -108)
+position = Vector2(0.0232658, 0.480904)
 rotation = -0.0741619
 texture = ExtResource("1_ig41f")
+offset = Vector2(-29.881, -111)
 
 [node name="Sprite_3_" type="Sprite2D" parent="skill"]
-position = Vector2(32, -106)
+position = Vector2(-1.48969, -0.374275)
 rotation = -0.0143318
 texture = ExtResource("1_ig41f")
+offset = Vector2(35, -105.135)
 
 [node name="Sprite_3_1" type="Sprite2D" parent="skill"]
-position = Vector2(-66, -88)
+position = Vector2(1.11153, 1.8503)
 rotation = 0.0162994
 scale = Vector2(3, 3.5)
 texture = ExtResource("2_ltkp6")
+offset = Vector2(-22.8557, -25.3556)
 
 [node name="Sprite_3_1_" type="Sprite2D" parent="skill"]
-position = Vector2(-20, -84)
+position = Vector2(-1.20575, 1.27097)
 rotation = 0.0162994
 scale = Vector2(3, 3.5)
 texture = ExtResource("2_ltkp6")
+offset = Vector2(-6.72719, -24.2724)
 
 [node name="Sprite_3_2" type="Sprite2D" parent="skill"]
-position = Vector2(66, -78)
+position = Vector2(-0.626442, 1.8503)
 rotation = 0.0516845
 scale = Vector2(3, 4)
 texture = ExtResource("2_ltkp6")
+offset = Vector2(20.8041, -20.7964)
 
 [node name="Sprite_3_2_" type="Sprite2D" parent="skill"]
-position = Vector2(-1.99999, -82)
+position = Vector2(2.2702, 0.112297)
 rotation = 0.0516845
 scale = Vector2(3, 4)
 texture = ExtResource("2_ltkp6")
+offset = Vector2(-2.83551, -20.4455)
 
 [node name="Sprite_3_3" type="Sprite2D" parent="skill"]
 material = SubResource("CanvasItemMaterial_o8eaa")
-position = Vector2(0, -14)
+position = Vector2(0, 1.90735e-06)
 scale = Vector2(2.07006, 1.95824)
 texture = ExtResource("4_udvrv")
+offset = Vector2(0, -7.14928)
 
 [node name="PointLight2D" type="PointLight2D" parent="skill"]
-position = Vector2(4, -106)
+position = Vector2(0, 6)
 scale = Vector2(5.75, 7.4375)
 color = Color(0.027451, 1, 1, 1)
 energy = 1.5
 texture = SubResource("GradientTexture2D_eohbx")
+offset = Vector2(0.695652, -15.0588)
 texture_scale = 0.5
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="skill"]
@@ -208,16 +226,18 @@ explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_ohm3w")
 
 [node name="Sprite_3_0" type="Sprite2D" parent="skill"]
-position = Vector2(56, -38)
+position = Vector2(-0.626431, 1.85029)
 rotation = -0.0167964
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_exi3a")
+offset = Vector2(95.4796, -64.8227)
 
 [node name="Sprite_3_0_" type="Sprite2D" parent="skill"]
-position = Vector2(-50, -38)
+position = Vector2(1.69089, 3.00896)
 rotation = -0.0167964
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_exi3a")
+offset = Vector2(-84.9914, -69.7856)
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="skill"]

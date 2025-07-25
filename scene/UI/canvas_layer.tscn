@@ -122,6 +122,7 @@ vertical_alignment = 1
 
 [node name="RolePane" type="VBoxContainer" parent="HUD"]
 custom_minimum_size = Vector2(150, 50)
+layout_mode = 0
 offset_left = 1143.0
 offset_top = 201.0
 offset_right = 1293.0

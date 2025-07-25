@@ -4,7 +4,7 @@ using System;
 public partial class rosmon_role : RoleBase
 {
 	// Called when the node enters the scene tree for the first time.
-	[Export] public PackedScene CardC;
+	[Export] public new PackedScene CardC;
 	[Export] public double SpeedMove { get; set; } = 200;
 	[Export] public float Acceleration { get; set; } = 15.0f;
 	[Export] public float Friction { get; set; } = 10.0f;
@@ -30,8 +30,8 @@ public partial class rosmon_role : RoleBase
 
 	public override void _Ready()
 	{
-		animatedSprite2D = GetNode<AnimatedSprite2D>("body/AnimatedSprite2D");
-		sprite2D = GetNode<Sprite2D>("body/Sprite2D");
+		animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		sprite2D = GetNode<Sprite2D>("Sprite2D");
 		jujian = GD.Load<PackedScene>("res://scene/character/role/rosmon/rosmon_weapon.tscn");
 	}
 
@@ -176,7 +176,8 @@ public partial class rosmon_role : RoleBase
 			jj.GlobalPosition = pos;
 			jj.way = 1;
 			jj.pos_ = pos;
-			GetTree().Root.AddChild(jj);
+			//GetTree().Root.AddChild(jj);
+			AddChild(jj);
 			skillReady = false;
 			t = 0;
 			return;
@@ -193,7 +194,8 @@ public partial class rosmon_role : RoleBase
 			jj.GlobalPosition = pos;
 			jj.way = 0;
 			jj.pos_ = pos;
-			GetTree().Root.AddChild(jj);
+			//GetTree().Root.AddChild(jj);
+			AddChild(jj);
 			t1 = 0;
 			return;
 		}

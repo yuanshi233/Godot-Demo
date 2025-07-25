@@ -28,6 +28,7 @@ public partial class jesica_Role : RoleBase
 	private Node cardC_;
 	private ProgressBar cardC_HpBar;
 	private ProgressBar cardC_CdBar;
+	private Sprite2D sprite2D;
 
 
 
@@ -36,6 +37,7 @@ public partial class jesica_Role : RoleBase
 		_sprite = GetNode<Sprite2D>("body/Sprite2D");
 		animatedSprite2D = GetNode<AnimatedSprite2D>("body/AnimatedSprite2D");
 		weaponNode = GetNode<Node2D>("body/weaponNode2D");
+		sprite2D = GetNode<Sprite2D>("body/Sprite2D");
 		player = GetNode<Node2D>("body");
 		Weapon._Init(SpeedAtk, SpeedSkill);
 
@@ -95,6 +97,7 @@ public partial class jesica_Role : RoleBase
 		//翻转
 		var Vec = pos;
 		animatedSprite2D.FlipH = Vec.X < Position.X;
+		sprite2D.Offset = Vec.X < 0 ? new Vector2(-15, 0) : new Vector2(0, 0);
 		weaponNode.Scale = Vec.X < Position.X ? new Vector2(1, -1) : new Vector2(1, 1);
 		weaponNode.LookAt(Vec);
 	}
@@ -121,6 +124,7 @@ public partial class jesica_Role : RoleBase
 		{
 			//翻转
 			animatedSprite2D.FlipH = inputVector.X < 0;
+			sprite2D.Offset = inputVector.X < 0 ? new Vector2(-15, 0) : new Vector2(0, 0);
 		}
 
 		//根据速度播放动画

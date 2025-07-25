@@ -5,7 +5,6 @@ using System;
 public partial class RosmonWeapon : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
-	private Vector2 pos;
 	private Vector2 _direction;
 	private Sprite2D Sprite_3_0;
 	private Sprite2D Sprite_3_1;
@@ -34,8 +33,7 @@ public partial class RosmonWeapon : Node2D
 			GetNode<Node2D>("normal").Visible = true;
 			GetNode<Node2D>("skill").Visible = false;
 
-			pos = GlobalPosition;
-			GlobalPosition = new Vector2(GlobalPosition.X - 300, GlobalPosition.Y - 300);
+			GlobalPosition = new Vector2(pos_.X - 300, pos_.Y - 300);
 			_direction = GlobalPosition.DirectionTo(pos_);
 
 			yz = GetNode<Sprite2D>("normal/Sprite2D");
@@ -58,8 +56,7 @@ public partial class RosmonWeapon : Node2D
 			GetNode<Node2D>("normal").Visible = false;
 			GetNode<Node2D>("skill").Visible = true;
 
-			pos = GlobalPosition;
-			GlobalPosition = new Vector2(GlobalPosition.X, GlobalPosition.Y - 300);
+			GlobalPosition = new Vector2(pos_.X, pos_.Y - 300);
 			_direction = GlobalPosition.DirectionTo(pos_);
 
 			yz = GetNode<Sprite2D>("skill/Sprite2D");
@@ -80,7 +77,6 @@ public partial class RosmonWeapon : Node2D
 			Sprite_3_0.Visible = false;
 			yz.Visible = false;
 			collisionShape2D.Disabled = true;
-			GD.Print(collisionShape2D.Disabled);
 			return;
 		}
 
@@ -91,7 +87,7 @@ public partial class RosmonWeapon : Node2D
 
 	public override void _Process(double delta)
 	{
-		if (GlobalPosition.X >= pos.X && GlobalPosition.Y >= pos.Y)
+		if (GlobalPosition.X >= pos_.X && GlobalPosition.Y >= pos_.Y)
 		{
 			if (way == 0)
 			{
@@ -111,7 +107,7 @@ public partial class RosmonWeapon : Node2D
 				Sprite_3_0.Visible = true;
 				if (time1 >= 1)
 					QueueFree();
-			
+
 				return;
 			}
 			if (way == 1)
@@ -137,10 +133,10 @@ public partial class RosmonWeapon : Node2D
 				Sprite_3_0.Visible = true;
 				if (time1 >= 1)
 					QueueFree();
-				
+
 				return;
 			}
-			
+
 		}
 		else
 		{
