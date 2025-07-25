@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwckn6ubr6ari"]
+[gd_scene load_steps=4 format=3 uid="uid://dwckn6ubr6ari"]
 
 [ext_resource type="PackedScene" uid="uid://b0c2ad6flhua2" path="res://scene/UI/canvas_layer.tscn" id="1_blmjb"]
 [ext_resource type="Script" uid="uid://c2o4sts6q041a" path="res://script/battling/Player.cs" id="2_t03a0"]
+[ext_resource type="Script" uid="uid://cxfjok1sj778l" path="res://script/battling/RoleManager.cs" id="3_wwo40"]
 
 [node name="Bat" type="Node2D"]
 
@@ -13,5 +14,6 @@
 script = ExtResource("2_t03a0")
 
 [node name="RoleManager" type="Node2D" parent="."]
+script = ExtResource("3_wwo40")
 
 [node name="EnemyManager" type="Node2D" parent="."]

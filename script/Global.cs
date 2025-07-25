@@ -8,7 +8,8 @@ public partial class Global : Node
 {
     public enum State
     {
-        HUD
+        HUD,
+        NUL
     }
-    public static List<RoleBase> RoleTeam=new();
+    public static List<RoleBase> RoleTeam = new();
 }

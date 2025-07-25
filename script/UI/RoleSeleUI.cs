@@ -19,12 +19,14 @@ public partial class RoleSeleUI : Control
 		GetTree().ChangeSceneToPacked(scene);
 	}
 	private void OnButtonEnter()
-	{
-		
+    {
+        GetTree().ChangeSceneToPacked(batScene);
 	}
 	[Export]
 	public HBoxContainer containerB;
 	[Export]
 	public HBoxContainer containerA;
+	[Export]
+	public PackedScene batScene;
 
 }
