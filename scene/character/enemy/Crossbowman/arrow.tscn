@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://6ownwn8vh4ck"]
+
+[ext_resource type="Script" uid="uid://dmhydwh444i1f" path="res://script/battling/character/enemy/Crossbowman/Arrow.cs" id="1_4mtky"]
+[ext_resource type="Texture2D" uid="uid://bw3fir7du0jps" path="res://resource/character/enemy/普通弩手/weapon/Arrow.png" id="1_05pmh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mtky"]
+size = Vector2(59.1184, 3)
+
+[node name="Arrow" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_4mtky")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+scale = Vector2(1.05209, 1.04492)
+shape = SubResource("RectangleShape2D_4mtky")
+debug_color = Color(0.410892, 0.49201, 0.923196, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.0217829, -0.0997033)
+rotation = -0.174533
+scale = Vector2(0.8, 0.597)
+texture = ExtResource("1_05pmh")
+offset = Vector2(1.50288, 1.81506)
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

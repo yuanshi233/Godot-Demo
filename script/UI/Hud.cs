@@ -9,11 +9,14 @@ public partial class Hud : Control
 	public ProgressBar HP_Bar { get; set; }
 	[Export]
 	public ProgressBar CD_Bar { get; set; }
+
+	public Label KillCount;
 	public static Hud Instance;
 	public static VBoxContainer RolePane;
 	public override void _Ready()
 	{
 		Instance = this;
+		KillCount = GetNode<Label>("Label3");
 		RolePane = GetNode<VBoxContainer>("RolePane");
 		InitCardC();
 	}

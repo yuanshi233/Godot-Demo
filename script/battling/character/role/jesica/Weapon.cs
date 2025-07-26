@@ -41,8 +41,8 @@ public partial class Weapon : Node2D
     private void shoot(int type, Double val, Vector2 pos)
     {
         var instance = BulletScene.Instantiate() as Bullet;
-        instance.GlobalPosition = issue.GlobalPosition;
-        instance._direction = GlobalPosition.DirectionTo(pos);
+        instance.pos = issue.GlobalPosition;
+        instance._direction = issue.GlobalPosition.DirectionTo(pos);
         instance.atkVal = val;
         gpuParticles2D.Emitting = true;
         GetTree().Root.AddChild(instance);

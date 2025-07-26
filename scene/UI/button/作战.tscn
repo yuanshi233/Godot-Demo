@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://br0geytwqhjiu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrl3e"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_01isp"]
+bg_color = Color(0.703198, 0.457739, 0.978784, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vb6jg"]
+bg_color = Color(0.6, 0.6, 0.6, 0.568627)
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="作战" type="Panel"]
+custom_minimum_size = Vector2(250, 120)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1050.0
+offset_bottom = -528.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nrl3e")
+
+[node name="Panel1" type="Panel" parent="."]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_01isp")
+
+[node name="Label" type="Label" parent="Panel1"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 40
+text = "Lv1-A-1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 0
+offset_top = 60.0
+offset_right = 200.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vb6jg")
+
+[node name="Label" type="Label" parent="Panel2"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "COMBAT OPS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 30
+flat = true

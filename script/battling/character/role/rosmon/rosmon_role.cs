@@ -16,7 +16,7 @@ public partial class rosmon_role : RoleBase
 	[Export] public double SpellDef { get; set; } = 0;
 	[Export] public double SpeedAtk { get; set; } = 0;
 	[Export] public double SpeedSkill { get; set; } = 5;
-	private Global.State state;
+	public override Global.State state { set; get; }
 	private AnimatedSprite2D animatedSprite2D;
 	private Sprite2D sprite2D;
 	private PackedScene jujian;
@@ -46,6 +46,7 @@ public partial class rosmon_role : RoleBase
 			sta = 1;
 			GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D").Play();
 			animatedSprite2D.Play("die");
+
 			return;
 		}
 
@@ -61,7 +62,7 @@ public partial class rosmon_role : RoleBase
 			Hud.Instance.CD_Bar.Value = t / SpeedSkill;
 		}
 		t1 = t1 >= SpeedAtk ? SpeedAtk : t1;
-		UpdateCardC(delta);
+		UpdateCardC();
 	}
 	public override void CardCInit(int id)
 	{
@@ -73,7 +74,7 @@ public partial class rosmon_role : RoleBase
 		//RoleManager.RolePane.CallDeferred("add_child", cardC_);
 	}
 
-	private void UpdateCardC(double delta)
+	private void UpdateCardC()
 	{
 		cardC_HpBar.Value = HP;
 		cardC_CdBar.Value = t / SpeedSkill;
@@ -101,7 +102,7 @@ public partial class rosmon_role : RoleBase
 		{
 			//翻转
 			animatedSprite2D.FlipH = inputVector.X < 0;
-			sprite2D.Offset = inputVector.X < 0 ? new Vector2(-40, 0) : new Vector2(0, 0);
+			sprite2D.Offset = inputVector.X < 0 ? new Vector2(-40, 4) : new Vector2(0, 4);
 
 		}
 
@@ -140,29 +141,21 @@ public partial class rosmon_role : RoleBase
 	}
 	public override void Move(Vector2 inputVector)
 	{
-		if (sta == 2)
+		if (sta == 2 || sta == 1)
 			return;
 		//处理移动和动画
 		HandleMovement(inputVector);
 		//处理翻转和动画
 		HandleFlipAndAnimation(inputVector);
 	}
-	//用于role权限
-	public override void SetState(Global.State stat)
-	{
-		state = stat;
-		if (stat == Global.State.HUD)
-		{
-			Hud.Instance.HP_Bar.Value = HP;
-		}
-	}
+
 	public void SetPointPos(Vector2 _pos)
 	{
 		pos = _pos;
 	}
 	public override void Attack(int type)
 	{
-		if (sta == 2)
+		if (sta == 2 || sta == 1)
 			return;
 		if (type == 1 && skillReady)
 		{
@@ -176,6 +169,8 @@ public partial class rosmon_role : RoleBase
 			jj.GlobalPosition = pos;
 			jj.way = 1;
 			jj.pos_ = pos;
+			jj.atkVal = AtkVal;
+			jj.SkillVal = SkillVal;
 			//GetTree().Root.AddChild(jj);
 			AddChild(jj);
 			skillReady = false;
@@ -194,6 +189,8 @@ public partial class rosmon_role : RoleBase
 			jj.GlobalPosition = pos;
 			jj.way = 0;
 			jj.pos_ = pos;
+			jj.atkVal = AtkVal;
+			jj.SkillVal = SkillVal;
 			//GetTree().Root.AddChild(jj);
 			AddChild(jj);
 			t1 = 0;
@@ -203,7 +200,10 @@ public partial class rosmon_role : RoleBase
 	public void _on_animation_finished()
 	{
 		if (sta == 1)
-			QueueFree();
+		{
+			RoleManager.roleManager.RoleDie();
+			UpdateCardC();
+		}
 		if (sta == 2)
 			sta = 0;
 	}

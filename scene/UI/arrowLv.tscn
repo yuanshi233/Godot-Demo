@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://req2ycg8yit4"]
+
+[node name="ArrowLv" type="Line2D"]
+width = 1.0

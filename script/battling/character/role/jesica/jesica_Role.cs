@@ -21,10 +21,9 @@ public partial class jesica_Role : RoleBase
 	private Sprite2D _sprite;
 	private AnimatedSprite2D animatedSprite2D;
 	private Node2D weaponNode;
-	private Node2D player;
-	private Global.State state;
+	public override Global.State state { set; get; }
 	//private Vector2 pos;
-	public override Vector2 pos{ set; get; }
+	public override Vector2 pos { set; get; }
 	private Node cardC_;
 	private ProgressBar cardC_HpBar;
 	private ProgressBar cardC_CdBar;
@@ -34,11 +33,10 @@ public partial class jesica_Role : RoleBase
 
 	public override void _Ready()
 	{
-		_sprite = GetNode<Sprite2D>("body/Sprite2D");
-		animatedSprite2D = GetNode<AnimatedSprite2D>("body/AnimatedSprite2D");
-		weaponNode = GetNode<Node2D>("body/weaponNode2D");
-		sprite2D = GetNode<Sprite2D>("body/Sprite2D");
-		player = GetNode<Node2D>("body");
+		_sprite = GetNode<Sprite2D>("Sprite2D");
+		animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		weaponNode = GetNode<Node2D>("weaponNode2D");
+		sprite2D = GetNode<Sprite2D>("Sprite2D");
 		Weapon._Init(SpeedAtk, SpeedSkill);
 
 	}
@@ -71,10 +69,10 @@ public partial class jesica_Role : RoleBase
 		}
 		if (state == Global.State.HUD)
 		{
-			Hud.Instance.CD_Bar.Value = t/SpeedSkill;
+			Hud.Instance.CD_Bar.Value = t / SpeedSkill;
 		}
 		t1 = t1 >= SpeedAtk ? SpeedAtk : t1;
-		UpdateCardC(delta);
+		UpdateCardC();
 	}
 
 	public override void CardCInit(int id)
@@ -86,7 +84,7 @@ public partial class jesica_Role : RoleBase
 		Hud.RolePane.AddChild(cardC_);
 	}
 
-	private void UpdateCardC(double delta)
+	private void UpdateCardC()
 	{
 		cardC_HpBar.Value = HP;
 		cardC_CdBar.Value = t / SpeedSkill;
@@ -167,6 +165,8 @@ public partial class jesica_Role : RoleBase
 	}
 	public override void Attack(int type)
 	{
+		if (sta)
+			return;
 		if (skillReady)
 		{
 			//技能1
@@ -183,28 +183,23 @@ public partial class jesica_Role : RoleBase
 	}
 	public override void Move(Vector2 inputVector)
 	{
+		if (sta)
+			return;
 		//处理移动和动画
 		HandleMovement(inputVector);
 		//处理翻转和动画
 		HandleFlipAndAnimation(inputVector);
 		HandleFlipAndAnimatioWeapon();
 	}
-	//用于role权限
-	public override void SetState(Global.State stat)
-	{
-		state = stat;
-		if (stat == Global.State.HUD)
-		{
-			Hud.Instance.HP_Bar.Value = HP;
-		}
-	}
+
 	public void _on_animation_finished()
 	{
-		QueueFree();
+		RoleManager.roleManager.RoleDie();
+		UpdateCardC();
 	}
 	public override void _ExitTree()
 	{
-		
-	}   
-	
+
+	}
+
 }

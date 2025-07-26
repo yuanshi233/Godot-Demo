@@ -23,6 +23,7 @@ public partial class RosmonWeapon : Node2D
 	private float Speed = 3000f;
 	public Vector2 pos_;
 	public double atkVal;
+	public double SkillVal;
 	public int way = 0;
 	private bool state = false;
 	public override void _Ready()
@@ -84,11 +85,13 @@ public partial class RosmonWeapon : Node2D
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	private float time1 = 0f;
+	private bool ready = false;
 
 	public override void _Process(double delta)
 	{
 		if (GlobalPosition.X >= pos_.X && GlobalPosition.Y >= pos_.Y)
 		{
+			ready = true;
 			if (way == 0)
 			{
 				yz.Visible = true;
@@ -105,7 +108,7 @@ public partial class RosmonWeapon : Node2D
 				}
 				time1 += (float)delta;
 				Sprite_3_0.Visible = true;
-				if (time1 >= 1)
+				if (time1 >= 0.8)
 					QueueFree();
 
 				return;
@@ -131,7 +134,7 @@ public partial class RosmonWeapon : Node2D
 				}
 				time1 += (float)delta;
 				Sprite_3_0.Visible = true;
-				if (time1 >= 1)
+				if (time1 >= 0.8)
 					QueueFree();
 
 				return;
@@ -143,22 +146,29 @@ public partial class RosmonWeapon : Node2D
 			GlobalPosition += _direction * Speed * (float)delta;
 		}
 	}
-
+	private ulong _lastBodyId = 0;
 	private void OnBodyEntered(Node2D body)
 	{
+		if (!ready)
+			return;
+		ulong currentId = body.GetInstanceId();
+		if (currentId == _lastBodyId)
+			return;
 		//对实体造成伤害
-        if (body is EnemyBase enemy && way == 1)
-        { 
-            //技能伤害
-            enemy.Attacked(atkVal, 0);
-            return;
-        }
-        if (body is EnemyBase enemy1 && way == 0)
-        {
-            //普通伤害
-            enemy1.Attacked(atkVal, 0);
-            return;
-        }
+		if (body is EnemyBase enemy && way == 1)
+		{
+			//技能伤害
+			enemy.Attacked(SkillVal, 0);
+			_lastBodyId = currentId;
+			return;
+		}
+		if (body is EnemyBase enemy1 && way == 0)
+		{
+			//普通伤害
+			enemy1.Attacked(atkVal, 0);
+			_lastBodyId = currentId;
+			return;
+		}
 	}
 
 }

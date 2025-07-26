@@ -9,6 +9,7 @@ public partial class Global : Node
     public enum State
     {
         HUD,
+        DIE,
         NUL
     }
     public static List<RoleBase> RoleTeam = new();

@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://lo4shmbs1xau"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xw61a"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d530"]
+bg_color = Color(0.891688, 0.346197, 0.260406, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st1lh"]
+bg_color = Color(0.6, 0.6, 0.6, 0.568627)
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="紧急作战" type="Panel"]
+custom_minimum_size = Vector2(250, 120)
+offset_right = 250.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xw61a")
+
+[node name="Panel1" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 60.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6d530")
+
+[node name="Label" type="Label" parent="Panel1"]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 40
+text = "Lv1-A-1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 250.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_st1lh")
+
+[node name="Label" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "EMERGENCY OPS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 250.0
+offset_bottom = 120.0
+theme_override_font_sizes/font_size = 30
+flat = true

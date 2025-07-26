@@ -81,9 +81,9 @@ text = "CD"
 [node name="Label3" type="Label" parent="HUD"]
 layout_mode = 0
 offset_left = 944.0
-offset_top = 10.0
+offset_top = 8.0
 offset_right = 1185.0
-offset_bottom = 79.0
+offset_bottom = 77.0
 theme_override_colors/font_color = Color(0, 0.739715, 1.92523e-07, 1)
 theme_override_colors/font_outline_color = Color(0.10044, 0.337709, 1, 1)
 theme_override_font_sizes/font_size = 50
@@ -104,19 +104,14 @@ text = "击杀
 [node name="Label5" type="Label" parent="HUD"]
 visible = false
 layout_mode = 0
-offset_left = 496.0
-offset_top = 54.0
-offset_right = 1085.0
-offset_bottom = 366.0
+offset_left = 501.0
+offset_top = 251.0
+offset_right = 729.0
+offset_bottom = 354.0
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_xjm6n")
-text = "byd玩家:
-按ESC查看或关闭本提示
-Q键切换角色
-杰西卡鼠标左键(普攻和技能一体，技能自动)
-迷迭香鼠标左键为普攻，右键为技能
-请看好技能CD
-by yuanshi"
+text = "The End
+请重进exe("
 horizontal_alignment = 1
 vertical_alignment = 1
 

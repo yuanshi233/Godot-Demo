@@ -10,7 +10,7 @@ public partial class Bullet : Node2D
 
     public float Lifetime = 0.5f; // 子弹存在时间(S)
 
-    public Vector2 _direction = Vector2.Zero;
+    public Vector2 _direction = Vector2.Right;
 
     public double atkVal;
 
@@ -18,10 +18,13 @@ public partial class Bullet : Node2D
     public bool ready_ = false;
     private GpuParticles2D gpuParticles2D;
 
+    public Vector2 pos;
+
     public override void _Ready()
     {
         gpuParticles2D = GetNode<GpuParticles2D>("GPUParticles2D");
-        
+        GlobalPosition = pos;
+        Rotation = _direction.Angle();
     }
     public override void _PhysicsProcess(double delta)
     {
@@ -30,7 +33,6 @@ public partial class Bullet : Node2D
         {
             gpuParticles2D.Emitting = true;
         }
-        Rotation = _direction.Angle();
         GlobalPosition += _direction * Speed * (float)delta;
         //生命周期计时
         _timer += (float)delta;

@@ -6,21 +6,24 @@ public partial class Player : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 	private Vector2 inputVector;
-	private RoleBase role;
-	public int? id;
+	public RoleBase role;
+	public int id = -1;
 	public static Player player;
 	private Node camera2D;
+	private Node2D node2D;
+	public bool _lock = false;
 
 	public override void _Ready()
 	{
 		camera2D = GD.Load<PackedScene>("res://scene/UI/camera.tscn").Instantiate();
+		node2D = GetNode<Node2D>("../character");
 		player = this;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (role == null)
+		if (role == null || Global.RoleTeam[id].state == Global.State.DIE || _lock)
 			return;
 		inputVector = Input.GetVector("move_left", "move_right", "move_up", "move_down");
 		role.Move(inputVector);
@@ -41,15 +44,15 @@ public partial class Player : Node2D
 	{
 		if (role != null)
 		{
-			role.SetState(Global.State.NUL);
+			role.state = Global.RoleTeam[id].state == Global.State.DIE ? Global.State.DIE : Global.State.NUL;
 			role.RemoveChild(camera2D);
-			RemoveChild(role);
 			r.GlobalPosition = role.GlobalPosition;
+			node2D.RemoveChild(role);
 		}
 		role = r;
-		AddChild(role);
+		node2D.AddChild(role);
 		role.AddChild(camera2D);
-		role.SetState(Global.State.HUD);
+		role.state = Global.State.HUD;
 	}
 
 }

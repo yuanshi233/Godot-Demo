@@ -9,7 +9,7 @@ public abstract partial class RoleBase : CharacterBody2D
 	public abstract void Move(Vector2 inputVector);
 	//public void SetPointPos(Vector2 _pos);
 	public abstract Vector2 pos { set; get; }
-	public abstract void SetState(Global.State stat);
+	public abstract Global.State state { set; get; }
 	public PackedScene CardC { get; set; }
 
 	public abstract void CardCInit(int id);

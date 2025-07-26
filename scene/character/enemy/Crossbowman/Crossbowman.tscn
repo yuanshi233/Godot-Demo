@@ -1,0 +1,530 @@
+[gd_scene load_steps=111 format=3 uid="uid://bshglk0rgis6k"]
+
+[ext_resource type="Script" uid="uid://da2t8gqdbgkto" path="res://script/battling/character/enemy/Crossbowman/Crossbowman.cs" id="1_4h5el"]
+[ext_resource type="PackedScene" uid="uid://6ownwn8vh4ck" path="res://scene/character/enemy/Crossbowman/arrow.tscn" id="2_2gv68"]
+[ext_resource type="Texture2D" uid="uid://cesh3gr0efsig" path="res://resource/character/role/rosmon/影子.png" id="2_cwd0t"]
+[ext_resource type="Texture2D" uid="uid://cydf1wkjrtk3n" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_00.png" id="3_2gv68"]
+[ext_resource type="Texture2D" uid="uid://bj24n6bdc3x4w" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_01.png" id="4_5iito"]
+[ext_resource type="Texture2D" uid="uid://bl65orqjkwst4" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_02.png" id="5_rlqhe"]
+[ext_resource type="Texture2D" uid="uid://c3ojq3ofbvs5t" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_03.png" id="6_ahgqw"]
+[ext_resource type="Texture2D" uid="uid://bixx0ibbvaksc" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_04.png" id="7_1pwp4"]
+[ext_resource type="Texture2D" uid="uid://d0kkb8c5fqart" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_05.png" id="8_isl47"]
+[ext_resource type="Texture2D" uid="uid://cnb4r642kyrum" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_06.png" id="9_brlml"]
+[ext_resource type="Texture2D" uid="uid://fojrxtic4uxc" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_07.png" id="10_jmbl1"]
+[ext_resource type="Texture2D" uid="uid://chpcnyd3vg6r" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_08.png" id="11_4hyh5"]
+[ext_resource type="Texture2D" uid="uid://beewxfs3y677l" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_09.png" id="12_roy3s"]
+[ext_resource type="Texture2D" uid="uid://b5fvp72g4ye7l" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_10.png" id="13_sojaf"]
+[ext_resource type="Texture2D" uid="uid://dcrasawgtienh" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_11.png" id="14_4drnt"]
+[ext_resource type="Texture2D" uid="uid://c0h8ih1l3el1e" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_12.png" id="15_p8p2a"]
+[ext_resource type="Texture2D" uid="uid://pnags7aslupx" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_13.png" id="16_ohua8"]
+[ext_resource type="Texture2D" uid="uid://cbb2aqovxrbdw" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_14.png" id="17_biegw"]
+[ext_resource type="Texture2D" uid="uid://dtchejeffjr0c" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_15.png" id="18_wdy1r"]
+[ext_resource type="Texture2D" uid="uid://bs8gtdwo4xpcr" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_16.png" id="19_4oc1r"]
+[ext_resource type="Texture2D" uid="uid://bqt766ds8xp2s" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_17.png" id="20_57h4s"]
+[ext_resource type="Texture2D" uid="uid://ms8kwj0u0n42" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_18.png" id="21_otcmp"]
+[ext_resource type="Texture2D" uid="uid://cjc8wlolphyji" path="res://resource/character/enemy/普通弩手/attack/enemy_1003_ncbow-Attack_19.png" id="22_uqiy8"]
+[ext_resource type="Texture2D" uid="uid://ttqtkb4kaalg" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_00.png" id="23_l6iln"]
+[ext_resource type="Texture2D" uid="uid://7f15b83gwy2d" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_01.png" id="24_afvmb"]
+[ext_resource type="Texture2D" uid="uid://bhr2ybst4ykpq" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_02.png" id="25_fp0di"]
+[ext_resource type="Texture2D" uid="uid://0p5k7sx6liml" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_03.png" id="26_pqru3"]
+[ext_resource type="Texture2D" uid="uid://wxlrfcggf7ar" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_04.png" id="27_akiml"]
+[ext_resource type="Texture2D" uid="uid://cp0t3wc3nyn1b" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_05.png" id="28_8ddxw"]
+[ext_resource type="Texture2D" uid="uid://gybsbgy7n6m4" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_06.png" id="29_igdp0"]
+[ext_resource type="Texture2D" uid="uid://d4bvatbeodi6w" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_07.png" id="30_djqqd"]
+[ext_resource type="Texture2D" uid="uid://4bnu3pwn2rwu" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_08.png" id="31_pc5ly"]
+[ext_resource type="Texture2D" uid="uid://dxn6c3yvcghf3" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_09.png" id="32_xgiac"]
+[ext_resource type="Texture2D" uid="uid://buxaxhpooktiv" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_10.png" id="33_pxrqd"]
+[ext_resource type="Texture2D" uid="uid://c5wjs18qnjrb7" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_11.png" id="34_qex2r"]
+[ext_resource type="Texture2D" uid="uid://blts182cs2nvr" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_12.png" id="35_h5wfc"]
+[ext_resource type="Texture2D" uid="uid://di8l5kfap6k" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_13.png" id="36_56ee4"]
+[ext_resource type="Texture2D" uid="uid://cvp4umtippwoa" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_14.png" id="37_10hba"]
+[ext_resource type="Texture2D" uid="uid://cihvmusiyxpxk" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_15.png" id="38_08hca"]
+[ext_resource type="Texture2D" uid="uid://d27ve0n04h8i7" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_16.png" id="39_53rpo"]
+[ext_resource type="Texture2D" uid="uid://sj750ai50jrg" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_17.png" id="40_5wfxv"]
+[ext_resource type="Texture2D" uid="uid://iduuy7ndq5rm" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_18.png" id="41_s6ev0"]
+[ext_resource type="Texture2D" uid="uid://dgqulxxjplell" path="res://resource/character/enemy/普通弩手/combat/enemy_1003_ncbow-Combat_19.png" id="42_3u4fx"]
+[ext_resource type="Texture2D" uid="uid://cdrmnmvphj3gj" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_00.png" id="43_lunrr"]
+[ext_resource type="Texture2D" uid="uid://1i6a5s1fgr64" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_01.png" id="44_urc4v"]
+[ext_resource type="Texture2D" uid="uid://iddrhjigqp76" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_02.png" id="45_ylqhv"]
+[ext_resource type="Texture2D" uid="uid://bsckodr3fg0ey" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_03.png" id="46_i5oa8"]
+[ext_resource type="Texture2D" uid="uid://kseiyqonw70y" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_04.png" id="47_r7ms5"]
+[ext_resource type="Texture2D" uid="uid://ba0ikbjgutn4e" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_05.png" id="48_to41s"]
+[ext_resource type="Texture2D" uid="uid://dtwg8rvr3p1ak" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_06.png" id="49_ut2tq"]
+[ext_resource type="Texture2D" uid="uid://dfnr8woc08gd5" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_07.png" id="50_bivaw"]
+[ext_resource type="Texture2D" uid="uid://djjm8qhyq3wtr" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_08.png" id="51_ysphy"]
+[ext_resource type="Texture2D" uid="uid://bs2m71jfl2quc" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_09.png" id="52_6avue"]
+[ext_resource type="Texture2D" uid="uid://cxibihm8th1cn" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_10.png" id="53_f6aoi"]
+[ext_resource type="Texture2D" uid="uid://b3mkcalidr35u" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_11.png" id="54_5224y"]
+[ext_resource type="Texture2D" uid="uid://bhjquebjbmknp" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_12.png" id="55_p2mv4"]
+[ext_resource type="Texture2D" uid="uid://b5x2ds23gfnnl" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_13.png" id="56_k2cs6"]
+[ext_resource type="Texture2D" uid="uid://po6p46spjdt8" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_14.png" id="57_q3thv"]
+[ext_resource type="Texture2D" uid="uid://dfqjq6ftbh8hw" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_15.png" id="58_wgw11"]
+[ext_resource type="Texture2D" uid="uid://ck5kypvt06awr" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_16.png" id="59_lc2ql"]
+[ext_resource type="Texture2D" uid="uid://b0j1cjjvcengh" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_17.png" id="60_x7ib8"]
+[ext_resource type="Texture2D" uid="uid://65j1aotrkaka" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_18.png" id="61_6qnnf"]
+[ext_resource type="Texture2D" uid="uid://de6vc3i3s23nq" path="res://resource/character/enemy/普通弩手/die/enemy_1003_ncbow-Die_19.png" id="62_07an4"]
+[ext_resource type="Texture2D" uid="uid://bdfpu12i11v3t" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_00.png" id="63_adav1"]
+[ext_resource type="Texture2D" uid="uid://68unregjyds" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_01.png" id="64_ltl0m"]
+[ext_resource type="Texture2D" uid="uid://cpwu5e4hesdas" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_02.png" id="65_2msbb"]
+[ext_resource type="Texture2D" uid="uid://bktbdfm4cnaxu" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_03.png" id="66_rhx7o"]
+[ext_resource type="Texture2D" uid="uid://dcobo1yrmogcn" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_04.png" id="67_1x5d2"]
+[ext_resource type="Texture2D" uid="uid://bhhbkdnsbeyg7" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_05.png" id="68_c2604"]
+[ext_resource type="Texture2D" uid="uid://bickqhbtjf0ae" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_06.png" id="69_v36rf"]
+[ext_resource type="Texture2D" uid="uid://dlqoks8jcucke" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_07.png" id="70_2vbcy"]
+[ext_resource type="Texture2D" uid="uid://cuu8h7xa24rst" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_08.png" id="71_jwg1t"]
+[ext_resource type="Texture2D" uid="uid://b1ea66ppgl1j3" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_09.png" id="72_i5u5x"]
+[ext_resource type="Texture2D" uid="uid://4hoheykpqp6x" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_10.png" id="73_rhf3q"]
+[ext_resource type="Texture2D" uid="uid://bee8vfsbpu0i1" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_11.png" id="74_1j3g8"]
+[ext_resource type="Texture2D" uid="uid://2wrtp3r3ya23" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_12.png" id="75_81p72"]
+[ext_resource type="Texture2D" uid="uid://csssjg5qpfhul" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_13.png" id="76_feim1"]
+[ext_resource type="Texture2D" uid="uid://r467kuttv26i" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_14.png" id="77_48m6u"]
+[ext_resource type="Texture2D" uid="uid://mha5vrh1x4re" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_15.png" id="78_es27f"]
+[ext_resource type="Texture2D" uid="uid://dyk4q6827sk81" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_16.png" id="79_sdo65"]
+[ext_resource type="Texture2D" uid="uid://cgh6q3anctey6" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_17.png" id="80_3hh65"]
+[ext_resource type="Texture2D" uid="uid://binu6a7e0c4h8" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_18.png" id="81_xbbkw"]
+[ext_resource type="Texture2D" uid="uid://cqcjy712a2m47" path="res://resource/character/enemy/普通弩手/idle/enemy_1003_ncbow-Idle_19.png" id="82_86oj6"]
+[ext_resource type="Texture2D" uid="uid://wp024yd14gsl" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_00.png" id="83_nr1uj"]
+[ext_resource type="Texture2D" uid="uid://c63gaul7ywi0d" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_01.png" id="84_07omn"]
+[ext_resource type="Texture2D" uid="uid://dfuddnrfj0hv2" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_02.png" id="85_xv1d5"]
+[ext_resource type="Texture2D" uid="uid://du6qhaqki30mg" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_03.png" id="86_ogwg1"]
+[ext_resource type="Texture2D" uid="uid://ddvjcka8i871y" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_04.png" id="87_e2c0g"]
+[ext_resource type="Texture2D" uid="uid://dgoui8clg1g7u" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_05.png" id="88_wipib"]
+[ext_resource type="Texture2D" uid="uid://ltxv104al6f6" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_06.png" id="89_padcq"]
+[ext_resource type="Texture2D" uid="uid://7av0nvkhmpct" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_07.png" id="90_j51ki"]
+[ext_resource type="Texture2D" uid="uid://b8b2ger6fkbbu" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_08.png" id="91_ke3sq"]
+[ext_resource type="Texture2D" uid="uid://bjek12rrpw33" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_09.png" id="92_jl0fr"]
+[ext_resource type="Texture2D" uid="uid://b5ulmg6ippiwt" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_10.png" id="93_b60lh"]
+[ext_resource type="Texture2D" uid="uid://58clru6y7sst" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_11.png" id="94_kef0k"]
+[ext_resource type="Texture2D" uid="uid://cfsfultppm7xs" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_12.png" id="95_tmrx1"]
+[ext_resource type="Texture2D" uid="uid://1prgghyr41i" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_13.png" id="96_fywpe"]
+[ext_resource type="Texture2D" uid="uid://dae7pysffkusy" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_14.png" id="97_u5ro5"]
+[ext_resource type="Texture2D" uid="uid://peeay41470we" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_15.png" id="98_1ap5n"]
+[ext_resource type="Texture2D" uid="uid://cnlmwjrd34rvx" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_16.png" id="99_edsvg"]
+[ext_resource type="Texture2D" uid="uid://b2g5tqjxup6xv" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_17.png" id="100_cdbsy"]
+[ext_resource type="Texture2D" uid="uid://btv3db3kx6j30" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_18.png" id="101_y48nf"]
+[ext_resource type="Texture2D" uid="uid://cd3p3h0cnfdmv" path="res://resource/character/enemy/普通弩手/walk/enemy_1003_ncbow-Move_Loop_19.png" id="102_jiqbp"]
+[ext_resource type="AudioStream" uid="uid://bqyu2hdtghehj" path="res://resource/character/role/rosmon/audio/die.mp3" id="103_lfaax"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8w8r"]
+radius = 17.0
+height = 56.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u0kt1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2gv68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5iito")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rlqhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ahgqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1pwp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_isl47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_brlml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jmbl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4hyh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_roy3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_sojaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4drnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_p8p2a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ohua8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_biegw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wdy1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4oc1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_57h4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_otcmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_uqiy8")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_l6iln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_afvmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fp0di")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_pqru3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_akiml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8ddxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_igdp0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_djqqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_pc5ly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_xgiac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_pxrqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_qex2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_h5wfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_56ee4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_10hba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_08hca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_53rpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_5wfxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_s6ev0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_3u4fx")
+}],
+"loop": false,
+"name": &"combat",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_lunrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_urc4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_ylqhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_i5oa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_r7ms5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_to41s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ut2tq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_bivaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ysphy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_6avue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_f6aoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_5224y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_p2mv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_k2cs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_q3thv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_wgw11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_lc2ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_x7ib8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_6qnnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_07an4")
+}],
+"loop": false,
+"name": &"die",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("63_adav1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ltl0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_2msbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_rhx7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_1x5d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_c2604")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_v36rf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_2vbcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_jwg1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_i5u5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_rhf3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_1j3g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_81p72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_feim1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_48m6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_es27f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_sdo65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_3hh65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_xbbkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_86oj6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("83_nr1uj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_07omn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_xv1d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_ogwg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_e2c0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_wipib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_padcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_j51ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_ke3sq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_jl0fr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_b60lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_kef0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_tmrx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_fywpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_u5ro5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_1ap5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_edsvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_cdbsy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_y48nf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_jiqbp")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2gv68"]
+radius = 221.773
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cwd0t"]
+radius = 27.0185
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4h5el"]
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwd0t"]
+bg_color = Color(0.6, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Crossbowman" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_4h5el")
+arrow = ExtResource("2_2gv68")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -25)
+shape = SubResource("CapsuleShape2D_v8w8r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.336608, 0.336608, 0.336608, 0.596078)
+y_sort_enabled = true
+position = Vector2(9.62965e-35, 0)
+scale = Vector2(0.287356, 0.228411)
+texture = ExtResource("2_cwd0t")
+offset = Vector2(-1.52588e-05, -17.5123)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_u0kt1")
+animation = &"attack"
+autoplay = "idle"
+frame = 10
+frame_progress = 0.111947
+offset = Vector2(36.6666, -73.3333)
+
+[node name="issue" type="Node2D" parent="AnimatedSprite2D"]
+position = Vector2(126.667, -130)
+scale = Vector2(3.33333, 3.33333)
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2(160, -5)
+scale = Vector2(7.36563, 0.944073)
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(-21.7225, -21.1848)
+scale = Vector2(0.15, 1)
+shape = SubResource("CircleShape2D_2gv68")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -25)
+shape = SubResource("CircleShape2D_cwd0t")
+debug_color = Color(0.626628, 0.526073, 0.212617, 0.42)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("103_lfaax")
+
+[node name="HpBar" type="ProgressBar" parent="."]
+offset_left = -25.0
+offset_top = -61.0
+offset_right = 25.0
+offset_bottom = -57.0
+pivot_offset = Vector2(25, 57)
+theme_override_styles/background = SubResource("StyleBoxFlat_4h5el")
+theme_override_styles/fill = SubResource("StyleBoxFlat_cwd0t")
+value = 100.0
+show_percentage = false
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="AniFinished"]
+[connection signal="body_entered" from="Area2D2" to="." method="OnBodyEnteredRemote"]
+[connection signal="body_exited" from="Area2D2" to="." method="OnBodyExitedRemote"]
+[connection signal="body_entered" from="Area2D" to="." method="OnBodyEnteredMelee"]
+[connection signal="body_exited" from="Area2D" to="." method="OnBodyExitedMelee"]

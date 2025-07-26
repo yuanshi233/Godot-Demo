@@ -1447,35 +1447,37 @@ animations = [{
 
 [node name="RosmonRole" type="CharacterBody2D"]
 y_sort_enabled = true
-collision_layer = 2
-collision_mask = 0
+collision_mask = 3
 script = ExtResource("1_gg1iu")
 CardC = ExtResource("2_el0u6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -25)
+shape = SubResource("CapsuleShape2D_gg1iu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.336608, 0.336608, 0.336608, 0.596078)
 y_sort_enabled = true
-position = Vector2(3.8147e-06, 0)
+position = Vector2(1, -1)
 scale = Vector2(0.287356, 0.228411)
 texture = ExtResource("1_iengy")
 offset = Vector2(-1.52588e-05, 4.37807)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -24)
-shape = SubResource("CapsuleShape2D_gg1iu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_x4jo5")
-animation = &"idle"
+animation = &"die"
 autoplay = "idle"
 offset = Vector2(-16.6667, -170)
 
-[node name="body" type="Node2D" parent="."]
-position = Vector2(0, -32)
-
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -24)
+shape = SubResource("CapsuleShape2D_gg1iu")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("355_kwha1")

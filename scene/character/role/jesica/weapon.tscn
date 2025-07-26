@@ -38,7 +38,6 @@ color_ramp = SubResource("GradientTexture1D_mkrst")
 alpha_curve = SubResource("CurveTexture_68jcf")
 
 [node name="Weapon" type="Node2D"]
-y_sort_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(13, -2.42144e-08)
