@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Game2.0"
 run/main_scene="uid://bsaa3egb307w7"
-config/features=PackedStringArray("4.4", "Mobile")
+config/features=PackedStringArray("4.4", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -27,7 +27,6 @@ settings/stdout/print_fps=true
 
 window/size/viewport_width=1300
 window/stretch/mode="canvas_items"
-window/vsync/vsync_mode=0
 
 [dotnet]
 
@@ -70,3 +69,7 @@ skill={
 
 2d_physics/layer_1="玩家"
 2d_physics/layer_2="敌人"
+
+[rendering]
+
+textures/lossless_compression/force_png=true

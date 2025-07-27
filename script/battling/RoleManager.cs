@@ -58,11 +58,6 @@ public partial class RoleManager : Node2D
 			Player.player._lock = false;
 		}
 
-		foreach (var i in Global.RoleTeam)
-		{
-			GD.Print(i.state);
-		}
-
 	}
 
 

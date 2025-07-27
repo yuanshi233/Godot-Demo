@@ -50,9 +50,9 @@ public partial class Player : Node2D
 			node2D.RemoveChild(role);
 		}
 		role = r;
+		role.state = Global.State.HUD;
 		node2D.AddChild(role);
 		role.AddChild(camera2D);
-		role.state = Global.State.HUD;
 	}
 
 }
