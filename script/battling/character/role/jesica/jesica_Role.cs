@@ -5,25 +5,9 @@ public partial class jesica_Role : RoleBase
 {
 	[Signal] public delegate void ShootEventHandler(int type, double val, Vector2 pos);
 
-	[Export] public PackedScene CardC { get; set; }
-	[Export] public double SpeedMove { get; set; } = 200;
-	[Export] public float Acceleration { get; set; } = 15.0f;
-	[Export] public float Friction { get; set; } = 10.0f;
-
-	[Export] public double HP { get; set; } = 100;
-	[Export] public double AtkVal { get; set; } = 10;
-	[Export] public double SkillVal { get; set; } = 50;
-	[Export] public double PhyDef { get; set; } = 0;
-	[Export] public double SpellDef { get; set; } = 0;
-	[Export] public double SpeedAtk { get; set; } = 0.2;
-	[Export] public double SpeedSkill { get; set; } = 5;
-
 	private Sprite2D _sprite;
 	private AnimatedSprite2D animatedSprite2D;
 	private Node2D weaponNode;
-	public override Global.State state { set; get; }
-	//private Vector2 pos;
-	public override Vector2 pos { set; get; }
 	private Node cardC_;
 	private ProgressBar cardC_HpBar;
 	private ProgressBar cardC_CdBar;
@@ -37,18 +21,15 @@ public partial class jesica_Role : RoleBase
 		animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		weaponNode = GetNode<Node2D>("weaponNode2D");
 		sprite2D = GetNode<Sprite2D>("Sprite2D");
-		Weapon._Init(SpeedAtk, SpeedSkill);
-
+		Weapon._Init(state.SpeedAtk, state.SpeedSkill);
 	}
 
 	private bool sta = false;
-	private double t = 0;
-	private double t1 = 0;
 	private bool skillReady = false;
 
 	public override void _Process(double delta)
 	{
-		if (HP <= 0)
+		if (state.HP <= 0)
 		{
 			if (sta == false)
 			{
@@ -62,38 +43,24 @@ public partial class jesica_Role : RoleBase
 
 		t1 += delta;
 		t += delta;
-		if (t >= SpeedSkill)
+		if (t >= state.SpeedSkill)
 		{
-			t = SpeedSkill;
+			t = state.SpeedSkill;
 			skillReady = true;
 		}
-		if (state == Global.State.HUD)
+		if (IsPresent)
 		{
-			Hud.Instance.CD_Bar.Value = t / SpeedSkill;
+			Hud.Instance.CD_Bar.Value = t / state.SpeedSkill;
 		}
-		t1 = t1 >= SpeedAtk ? SpeedAtk : t1;
+		t1 = t1 >= state.SpeedAtk ? state.SpeedAtk : t1;
 		UpdateCardC();
 	}
 
-	public override void CardCInit(int id)
-	{
-		cardC_ = CardC.Instantiate();
-		cardC_HpBar = cardC_.GetNode<ProgressBar>("HpBar");
-		cardC_CdBar = cardC_.GetNode<ProgressBar>("CdBar");
-		cardC_.GetNode<Label>("id").Text = "[" + id.ToString() + "]";
-		Hud.RolePane.AddChild(cardC_);
-	}
-
-	private void UpdateCardC()
-	{
-		cardC_HpBar.Value = HP;
-		cardC_CdBar.Value = t / SpeedSkill;
-	}
 
 	private void HandleFlipAndAnimatioWeapon()
 	{
 		//翻转
-		var Vec = pos;
+		var Vec = state.pos;
 		animatedSprite2D.FlipH = Vec.X < Position.X;
 		sprite2D.Offset = Vec.X < 0 ? new Vector2(-15, 0) : new Vector2(0, 0);
 		weaponNode.Scale = Vec.X < Position.X ? new Vector2(1, -1) : new Vector2(1, 1);
@@ -105,13 +72,13 @@ public partial class jesica_Role : RoleBase
 		if (inputVector != Vector2.Zero)
 		{
 			//加速到目标速度
-			Velocity = Velocity.Lerp(inputVector * (int)SpeedMove, (float)(Acceleration * GetProcessDeltaTime()));
+			Velocity = Velocity.Lerp(inputVector * (int)state.SpeedMove, (float)(state.Acceleration * GetProcessDeltaTime()));
 			MoveAndSlide();
 		}
 		else
 		{
 			//没有输入时施加摩擦力
-			Velocity = Velocity.Lerp(Vector2.Zero, (float)(Friction * GetProcessDeltaTime()));
+			Velocity = Velocity.Lerp(Vector2.Zero, (float)(state.Friction * GetProcessDeltaTime()));
 			MoveAndSlide();
 		}
 	}
@@ -136,32 +103,9 @@ public partial class jesica_Role : RoleBase
 		}
 	}
 
-	//被攻击，0物理，1法术, 2治疗
-
-	public override void Attacked(double value, int type)
-	{
-		double sum = 1.0;
-		if (type == 0)
-		{
-			sum = (value - PhyDef) <= 0 ? 1 : value - PhyDef;
-		}
-		else if (type == 1)
-		{
-			sum = (value - SpellDef) <= 0 ? 1 : value - SpellDef;
-		}
-		else if (type == 2)
-		{
-			sum = -value;
-		}
-		HP -= sum;
-		if (state == Global.State.HUD)
-		{
-			Hud.Instance.HP_Bar.Value = HP;
-		}
-	}
 	public void SetPointPos(Vector2 _pos)
 	{
-		pos = _pos;
+		state.pos = _pos;
 	}
 	public override void Attack(int type)
 	{
@@ -170,14 +114,14 @@ public partial class jesica_Role : RoleBase
 		if (skillReady)
 		{
 			//技能1
-			EmitSignal(SignalName.Shoot, 1, SkillVal, pos);
+			EmitSignal(SignalName.Shoot, 1, state.SkillVal, state.pos);
 			skillReady = false;
 			t = 0;
 		}
-		if (!skillReady && SpeedAtk <= t1)
+		if (!skillReady && state.SpeedAtk <= t1)
 		{
 			//普通
-			EmitSignal(SignalName.Shoot, 0, AtkVal, pos);
+			EmitSignal(SignalName.Shoot, 0, state.AtkVal, state.pos);
 			t1 = 0;
 		}
 	}

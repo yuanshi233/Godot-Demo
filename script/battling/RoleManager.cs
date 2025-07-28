@@ -24,7 +24,7 @@ public partial class RoleManager : Node2D
 			{
 				Global.RoleTeam[i]._Process(delta);
 			}
-			if (Input.IsKeyPressed((Key)((int)Key.Key1 + i)) && Player.player.id != i && Global.RoleTeam[i].state != Global.State.DIE)
+			if (Input.IsKeyPressed((Key)((int)Key.Key1 + i)) && Player.player.id != i && !Global.RoleTeam[i].IsDied)
 			{
 				Player.player.ChangeRole(Global.RoleTeam[i]);
 				Player.player.id = i;
@@ -34,14 +34,11 @@ public partial class RoleManager : Node2D
 
 	public void RoleDie()
 	{
-
-
 		_lock = true;
 		Player.player._lock = true;
-		Global.RoleTeam[Player.player.id].state = Global.State.DIE;
 		for (int i = 0; i < Global.RoleTeam.Count; i++)
 		{
-			if (Global.RoleTeam[i].state != Global.State.DIE)
+			if (!Global.RoleTeam[i].IsDied)
 			{
 				Player.player.ChangeRole(Global.RoleTeam[i]);
 				Player.player.id = i;
