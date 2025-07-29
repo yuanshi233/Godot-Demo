@@ -6,10 +6,11 @@ public partial class Hud : Control
 {
 	// Called when the node enters the scene tree for the first time.
 	[Export]
-	public ProgressBar HP_Bar { get; set; }
+	ProgressBar HP_Bar { get; set; }
 	[Export]
-	public ProgressBar CD_Bar { get; set; }
-
+	ProgressBar CD_Bar { get; set; }
+	public static double HP{ set => Instance.HP_Bar.Value = value; }
+	public static double CD{ set => Instance.CD_Bar.Value = value; }
 	public Label KillCount;
 	public static Hud Instance;
 	public VBoxContainer RolePane;

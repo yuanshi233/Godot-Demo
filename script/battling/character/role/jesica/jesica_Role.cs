@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 public partial class jesica_Role : RoleBase
 {
@@ -26,21 +27,20 @@ public partial class jesica_Role : RoleBase
 
 	private bool sta = false;
 	private bool skillReady = false;
-
+	protected override void OnDie()
+	{
+		if (!sta)
+		{
+			GetNode<AudioStreamPlayer2D>("die2D").Play();
+			sta = true;
+			animatedSprite2D.Play("die");
+			UpdateCardC();
+		}
+	}
 	public override void _Process(double delta)
 	{
-		if (state.HP <= 0)
-		{
-			if (sta == false)
-			{
-				GetNode<AudioStreamPlayer2D>("die2D").Play();
-				sta = true;
-				animatedSprite2D.Play("die");
-
-			}
+		if (sta)
 			return;
-		}
-
 		t1 += delta;
 		t += delta;
 		if (t >= state.SpeedSkill)
@@ -50,9 +50,9 @@ public partial class jesica_Role : RoleBase
 		}
 		if (IsPresent)
 		{
-			Hud.Instance.CD_Bar.Value = t / state.SpeedSkill;
+			Hud.CD = Math.Min(1,t / state.SpeedSkill);
 		}
-		t1 = t1 >= state.SpeedAtk ? state.SpeedAtk : t1;
+		t1 = Math.Min(state.SpeedAtk,t1);
 		UpdateCardC();
 	}
 
@@ -139,7 +139,6 @@ public partial class jesica_Role : RoleBase
 	public void _on_animation_finished()
 	{
 		RoleManager.roleManager.RoleDie();
-		UpdateCardC();
 	}
 	public override void _ExitTree()
 	{
