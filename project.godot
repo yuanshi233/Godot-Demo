@@ -72,4 +72,5 @@ skill={
 
 [rendering]
 
+renderer/rendering_method="mobile"
 textures/lossless_compression/force_png=true

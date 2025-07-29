@@ -12,7 +12,7 @@ public partial class Hud : Control
 
 	public Label KillCount;
 	public static Hud Instance;
-	public static VBoxContainer RolePane;
+	public VBoxContainer RolePane;
 	public override void _Ready()
 	{
 		Instance = this;
@@ -25,7 +25,7 @@ public partial class Hud : Control
 		int i = 1;
 		foreach (var r in Global.RoleTeam)
 		{
-			r.CardCInit(i);
+			RolePane.AddChild(r.CardCInit(i));
 			i++;
 		}
 	}

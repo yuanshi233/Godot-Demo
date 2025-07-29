@@ -23,12 +23,12 @@ public partial class Player : Node2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if (role == null || Global.RoleTeam[id].state == Global.State.DIE || _lock)
+		if (role == null || Global.RoleTeam[id].IsDied || _lock)
 			return;
 		inputVector = Input.GetVector("move_left", "move_right", "move_up", "move_down");
 		role.Move(inputVector);
 		//role.SetPointPos(GetGlobalMousePosition());
-		role.pos = GetGlobalMousePosition();
+		role.state.pos = GetGlobalMousePosition();
 		if (Input.IsActionPressed("fire"))
 		{
 			role.Attack(0);
@@ -44,13 +44,11 @@ public partial class Player : Node2D
 	{
 		if (role != null)
 		{
-			role.state = Global.RoleTeam[id].state == Global.State.DIE ? Global.State.DIE : Global.State.NUL;
 			role.RemoveChild(camera2D);
 			r.GlobalPosition = role.GlobalPosition;
 			node2D.RemoveChild(role);
 		}
 		role = r;
-		role.state = Global.State.HUD;
 		node2D.AddChild(role);
 		role.AddChild(camera2D);
 	}
