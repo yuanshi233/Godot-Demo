@@ -9,6 +9,8 @@ public partial class RoleManager : Node2D
 	{
 		Player.player.id = 0;
 		Player.player.ChangeRole(Global.RoleTeam[0]);
+		foreach (var role in Global.RoleTeam)
+			role.UpdateCardC();
 		roleManager = this;
 	}
 
@@ -56,8 +58,4 @@ public partial class RoleManager : Node2D
 		}
 
 	}
-
-
-
-
 }

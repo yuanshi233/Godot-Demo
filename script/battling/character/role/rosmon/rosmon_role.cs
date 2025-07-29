@@ -6,7 +6,7 @@ public partial class rosmon_role : RoleBase
 	private AnimatedSprite2D animatedSprite2D;
 	private Sprite2D sprite2D;
 	private PackedScene jujian;
-	private bool skillReady;
+	private bool skillReady => t >= state.SpeedSkill;
 	private Node cardC_;
 	private ProgressBar cardC_HpBar;
 	private ProgressBar cardC_CdBar;
@@ -20,32 +20,28 @@ public partial class rosmon_role : RoleBase
 		jujian = GD.Load<PackedScene>("res://scene/character/role/rosmon/rosmon_weapon.tscn");
 	}
 
-
+	protected override void OnDie()
+	{
+		if (sta!=1)
+		{
+			UpdateCardC();
+			sta = 1;
+			GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D").Play();
+			animatedSprite2D.Play("die");
+			return;
+		}
+	}
 	public override void _Process(double delta)
 	{
 		if (sta == 1)
 			return;
-		if (state.HP <= 0)
-		{
-			sta = 1;
-			GetNode<AudioStreamPlayer2D>("AudioStreamPlayer2D").Play();
-			animatedSprite2D.Play("die");
-
-			return;
-		}
-
 		t1 += delta;
 		t += delta;
-		if (t >= state.SpeedSkill)
-		{
-			t = state.SpeedSkill;
-			skillReady = true;
-		}
 		if (IsPresent)
 		{
-			Hud.Instance.CD_Bar.Value = t / state.SpeedSkill;
+			Hud.CD = Math.Min(1,t / state.SpeedSkill);
 		}
-		t1 = t1 >= state.SpeedAtk ? state.SpeedAtk : t1;
+		t1 = Math.Min(t1,state.SpeedAtk);
 		UpdateCardC();
 	}
 
@@ -120,7 +116,6 @@ public partial class rosmon_role : RoleBase
 			jj.SkillVal = state.SkillVal;
 			//GetTree().Root.AddChild(jj);
 			AddChild(jj);
-			skillReady = false;
 			t = 0;
 			return;
 		}
@@ -149,7 +144,6 @@ public partial class rosmon_role : RoleBase
 		if (sta == 1)
 		{
 			RoleManager.roleManager.RoleDie();
-			UpdateCardC();
 		}
 		if (sta == 2)
 			sta = 0;

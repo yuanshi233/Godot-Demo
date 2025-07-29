@@ -35,9 +35,9 @@ public partial class Player : Node2D
 		}
 		if (Input.IsActionPressed("skill"))
 		{
-
 			role.Attack(1);
 		}
+		role.UpdateHud();
 	}
 
 	public void ChangeRole(RoleBase r)
@@ -49,6 +49,8 @@ public partial class Player : Node2D
 			node2D.RemoveChild(role);
 		}
 		role = r;
+		role.UpdateCardC();
+		role.UpdateHud();
 		node2D.AddChild(role);
 		role.AddChild(camera2D);
 	}
