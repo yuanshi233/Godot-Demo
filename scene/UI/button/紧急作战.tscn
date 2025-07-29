@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://lo4shmbs1xau"]
+[gd_scene load_steps=5 format=3 uid="uid://lo4shmbs1xau"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xw61a"]
-draw_center = false
+[ext_resource type="Script" uid="uid://cva2e0lnbmji3" path="res://script/UI/card/CardLv.cs" id="1_6d530"]
+[ext_resource type="PackedScene" uid="uid://req2ycg8yit4" path="res://scene/UI/arrowLv.tscn" id="2_st1lh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d530"]
 bg_color = Color(0.891688, 0.346197, 0.260406, 1)
@@ -13,11 +13,16 @@ bg_color = Color(0.6, 0.6, 0.6, 0.568627)
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="紧急作战" type="Panel"]
+[node name="紧急作战" type="Control"]
 custom_minimum_size = Vector2(250, 120)
+layout_mode = 3
+anchors_preset = 0
 offset_right = 250.0
 offset_bottom = 120.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_xw61a")
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_6d530")
+line = ExtResource("2_st1lh")
+Lv = 2
 
 [node name="Panel1" type="Panel" parent="."]
 layout_mode = 0

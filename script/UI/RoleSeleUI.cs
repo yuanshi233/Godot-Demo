@@ -15,6 +15,7 @@ public partial class RoleSeleUI : Control
 
 	private void BackUserUI()
 	{
+		Global.RoleTeam.Clear();
 		var scene = GD.Load<PackedScene>("res://scene/UI/user_ui.tscn");
 		GetTree().ChangeSceneToPacked(scene);
 	}

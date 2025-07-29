@@ -30,11 +30,10 @@ public abstract partial class RoleBase : CharacterBody2D
 			HitType.health => -value,
 			_ => 0
 		};
-		Hud.HP = HP;
+		if(IsPresent)
+			Hud.HP = HP;
 		if (IsDied)
-		{
 			OnDie();
-		}
 	}
 	public void UpdateCardC()
 	{

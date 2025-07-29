@@ -39,7 +39,7 @@ public partial class Player : Node2D
 		}
 		role.UpdateHud();
 	}
-
+	
 	public void ChangeRole(RoleBase r)
 	{
 		if (role != null)

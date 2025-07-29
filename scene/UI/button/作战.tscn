@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://br0geytwqhjiu"]
+[gd_scene load_steps=5 format=3 uid="uid://br0geytwqhjiu"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nrl3e"]
-draw_center = false
+[ext_resource type="Script" uid="uid://cva2e0lnbmji3" path="res://script/UI/card/CardLv.cs" id="1_vb6jg"]
+[ext_resource type="PackedScene" uid="uid://req2ycg8yit4" path="res://scene/UI/arrowLv.tscn" id="2_nrl3e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_01isp"]
 bg_color = Color(0.703198, 0.457739, 0.978784, 1)
@@ -13,8 +13,9 @@ bg_color = Color(0.6, 0.6, 0.6, 0.568627)
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="作战" type="Panel"]
+[node name="作战" type="Control"]
 custom_minimum_size = Vector2(250, 120)
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,7 +23,10 @@ offset_right = -1050.0
 offset_bottom = -528.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_nrl3e")
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_vb6jg")
+line = ExtResource("2_nrl3e")
+Lv = 1
 
 [node name="Panel1" type="Panel" parent="."]
 custom_minimum_size = Vector2(250, 0)

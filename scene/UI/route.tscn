@@ -1,14 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://ch3ub461h372v"]
+[gd_scene load_steps=6 format=3 uid="uid://ch3ub461h372v"]
 
 [ext_resource type="Texture2D" uid="uid://ch2xb5qg23tr1" path="res://resource/background/关卡背景.png" id="1_drqvw"]
+[ext_resource type="Script" uid="uid://dxhcnqaill8re" path="res://script/UI/Route.cs" id="1_m1boh"]
+[ext_resource type="PackedScene" uid="uid://br0geytwqhjiu" path="res://scene/UI/button/作战.tscn" id="2_br7ua"]
+[ext_resource type="PackedScene" uid="uid://lo4shmbs1xau" path="res://scene/UI/button/紧急作战.tscn" id="3_5n6du"]
+[ext_resource type="PackedScene" uid="uid://tmvq1tvd3gir" path="res://scene/UI/button/险路恶敌.tscn" id="4_gkjc7"]
 
 [node name="Route" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -650.0
+offset_top = -324.0
+offset_right = -650.0
+offset_bottom = -324.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_m1boh")
+CardLv1 = ExtResource("2_br7ua")
+CardLv2 = ExtResource("3_5n6du")
+CardLv3 = ExtResource("4_gkjc7")
 
 [node name="background" type="TextureRect" parent="."]
 layout_mode = 0
@@ -16,3 +30,19 @@ offset_right = 1300.0
 offset_bottom = 648.0
 texture = ExtResource("1_drqvw")
 expand_mode = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1300.0
+offset_bottom = 648.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 1300.0
+offset_bottom = 648.0
+follow_focus = true
+draw_focus_border = true
+horizontal_scroll_mode = 3
+
+[node name="Control" type="Control" parent="Panel/ScrollContainer"]
+layout_mode = 2
