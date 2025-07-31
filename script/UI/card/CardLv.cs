@@ -11,55 +11,24 @@ public partial class CardLv : Control
 	[Export] public int Lv { get; set; }
 	public Control Con { get; set; }
 	public List<Vector2> Pos1 = [];
-	public int BranchNum { get; set; }
+	public List<(CardLv card,int pos)> Nexts=[];
+	public int PreCount=0;
 	private float Spacing { get; set; } = 5f;
-
+	static float[][] PreY=new Func<float[][]>(()=>
+	{
+		throw new NotImplementedException();
+	})(), NextY=new Func<float[][]>(()=>
+	{
+		throw new NotImplementedException();
+	})();
+	float PreX => throw new NotImplementedException();
+	float NextX=>throw new NotImplementedException();
 	public override void _Ready()
 	{
-		float x0 = Position.X + 125.0f;
-		float y0 = Position.Y + BranchNum switch
-		{
-			0 => 0,
-			1 => 120f / 4f,
-			2 => 120f / 4f - Spacing / 2f,
-			3 => 120f / 4f - Spacing,
-			_ => throw new NotImplementedException(),
-		};
-		List<(float x1, float y1)> pos1 = [];
-		List<(float x0, float y0)> pos0 = [];
-		switch (BranchNum)
-		{
-			case 1:
-				{
-					pos0.Add((x0, y0));
-					pos1.Add((x0 + 300f - 125f, y0));
-					break;
-				}
-			case 2:
-				{
-					pos0.Add((x0, y0));
-					pos0.Add((x0, y0 + Spacing));
-					pos1.Add((Pos1[0].X, Pos1[0].Y + 30));
-					pos1.Add((Pos1[1].X, Pos1[1].Y + 30));
-					break;
-				}
-			case 3:
-				{
-					pos0.Add((x0, y0 + Spacing));
-					pos0.Add((x0, y0));
-					pos0.Add((x0, y0+ Spacing * 2));
-					pos1.Add((Pos1[0].X, Pos1[0].Y + 30));
-					pos1.Add((Pos1[1].X, Pos1[1].Y + 30));
-					pos1.Add((Pos1[2].X, Pos1[2].Y + 30));
-					break;
-				}
-			default:
-				return;
-		}
-		for(int i = 0; i < BranchNum; i++)
+		for (int i = 0; i < Nexts.Count; i++)
 		{
 			ArrowLv arrowLv = line.Instantiate<ArrowLv>();
-			arrowLv.Points = GenerateSinusoidalTransition(pos0[i].x0, pos0[i].y0, pos1[i].x1, pos1[i].y1).ToArray();
+			arrowLv.Points = GenerateSinusoidalTransition(NextX,NextY[Nexts.Count - 1][i], Nexts[i].card.PreX, PreY[Nexts[i].card.PreCount][Nexts[i].pos]).ToArray();
 			Con.AddChild(arrowLv);
 		}
 

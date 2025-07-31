@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ch3ub461h372v"]
+[gd_scene load_steps=3 format=3 uid="uid://ch3ub461h372v"]
 
 [ext_resource type="Texture2D" uid="uid://ch2xb5qg23tr1" path="res://resource/background/关卡背景.png" id="1_drqvw"]
 [ext_resource type="Script" uid="uid://dxhcnqaill8re" path="res://script/UI/Route.cs" id="1_m1boh"]
-[ext_resource type="PackedScene" uid="uid://br0geytwqhjiu" path="res://scene/UI/button/作战.tscn" id="2_br7ua"]
-[ext_resource type="PackedScene" uid="uid://lo4shmbs1xau" path="res://scene/UI/button/紧急作战.tscn" id="3_5n6du"]
-[ext_resource type="PackedScene" uid="uid://tmvq1tvd3gir" path="res://scene/UI/button/险路恶敌.tscn" id="4_gkjc7"]
 
 [node name="Route" type="Control"]
 layout_mode = 3
@@ -20,9 +17,11 @@ offset_bottom = -324.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m1boh")
-CardLv1 = ExtResource("2_br7ua")
-CardLv2 = ExtResource("3_5n6du")
-CardLv3 = ExtResource("4_gkjc7")
+CardLvs = Dictionary[PackedScene, float]({})
+RowCountProbably = Dictionary[PackedScene, float]({})
+CowCountProbably = Dictionary[PackedScene, float]({})
+cardx = Array[float]([])
+cardy = Dictionary[PackedScene, float]({})
 
 [node name="background" type="TextureRect" parent="."]
 layout_mode = 0
