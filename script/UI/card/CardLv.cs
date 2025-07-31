@@ -1,63 +1,142 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-
 public partial class CardLv : Control
 {
-	// Called when the node enters the scene tree for the first time.
-	[Export] public PackedScene line { get; set; }
-	[Export] public int Lv { get; set; }
-	public Control Con { get; set; }
-	public List<Vector2> Pos1 = [];
-	public List<(CardLv card,int pos)> Nexts=[];
-	public int PreCount=0;
-	private float Spacing { get; set; } = 5f;
-	static float[][] PreY=new Func<float[][]>(()=>
-	{
-		throw new NotImplementedException();
-	})(), NextY=new Func<float[][]>(()=>
-	{
-		throw new NotImplementedException();
-	})();
-	float PreX => throw new NotImplementedException();
-	float NextX=>throw new NotImplementedException();
-	public override void _Ready()
-	{
-		for (int i = 0; i < Nexts.Count; i++)
-		{
-			ArrowLv arrowLv = line.Instantiate<ArrowLv>();
-			arrowLv.Points = GenerateSinusoidalTransition(NextX,NextY[Nexts.Count - 1][i], Nexts[i].card.PreX, PreY[Nexts[i].card.PreCount][Nexts[i].pos]).ToArray();
-			Con.AddChild(arrowLv);
-		}
+    // 导出的属性，可在Godot编辑器中配置
+    
+    /// <summary>
+    /// 连接线（箭头）的场景资源
+    /// </summary>
+    [Export] 
+    public PackedScene line { get; set; }
+    
+    /// <summary>
+    /// 关卡的等级/层级
+    /// </summary>
+    [Export] 
+    public int Lv { get; set; }
+    
+    /// <summary>
+    /// 父容器控件，用于添加连接线
+    /// </summary>
+    public Control Con { get; set; }
+    
+    /// <summary>
+    /// 位置点列表（当前未使用）
+    /// </summary>
+    public List<Vector2> Pos1 = [];
+    
+    /// <summary>
+    /// 连接的下一张关卡列表，包含关卡引用和位置索引
+    /// </summary>
+    public List<(CardLv card, int pos)> Nexts = [];
+    
+    /// <summary>
+    /// 前置关卡数量（有多少关卡连接到此关卡）
+    /// </summary>
+    public int PreCount = 0;
+    
+    /// <summary>
+    /// 间距参数（当前未使用）
+    /// </summary>
+    private float Spacing { get; set; } = 5f;
+    
+    /// <summary>
+    /// 前置关卡连接点的Y坐标数组（未实现）
+    /// 格式: [前置关卡数量][位置索引]
+    /// </summary>
+    static float[][] PreY = new Func<float[][]>(() =>
+    {
+        throw new NotImplementedException();
+    })(), 
+    
+    /// <summary>
+    /// 下一张关卡连接点的Y坐标数组（未实现）
+    /// 格式: [连接关卡数量][位置索引]
+    /// </summary>
+    NextY = new Func<float[][]>(() =>
+    {
+        throw new NotImplementedException();
+    })();
+    
+    /// <summary>
+    /// 前置关卡连接点的X坐标（未实现）
+    /// </summary>
+    float PreX => throw new NotImplementedException();
+    
+    /// <summary>
+    /// 下一张关卡连接点的X坐标（未实现）
+    /// </summary>
+    float NextX => throw new NotImplementedException();
+    
+    /// <summary>
+    /// 节点进入场景树时调用
+    /// </summary>
+    public override void _Ready()
+    {
+        // 为每个下一张关卡创建连接线
+        for (int i = 0; i < Nexts.Count; i++)
+        {
+            // 实例化连接线
+            ArrowLv arrowLv = line.Instantiate<ArrowLv>();
+            
+            // 生成正弦过渡曲线点集
+            // 参数说明：
+            // - NextX: 当前关卡连接点的X坐标
+            // - NextY[Nexts.Count - 1][i]: 基于连接数量的Y坐标偏移
+            // - Nexts[i].card.PreX: 目标关卡连接点的X坐标
+            // - PreY[Nexts[i].card.PreCount][Nexts[i].pos]: 基于前置数量的Y坐标偏移
+            arrowLv.Points = GenerateSinusoidalTransition(
+                NextX, 
+                NextY[Nexts.Count - 1][i], 
+                Nexts[i].card.PreX, 
+                PreY[Nexts[i].card.PreCount][Nexts[i].pos]
+            ).ToArray();
+            
+            // 将连接线添加到容器
+            Con.AddChild(arrowLv);
+        }
+    }
 
+    /// <summary>
+    /// 每帧调用的更新方法（当前为空）
+    /// </summary>
+    /// <param name="delta">自上一帧以来的时间（秒）</param>
+    public override void _Process(double delta)
+    {
+    }
 
-	}
+    /// <summary>
+    /// 生成正弦过渡曲线
+    /// </summary>
+    /// <param name="x0">起始点X坐标</param>
+    /// <param name="y0">起始点Y坐标</param>
+    /// <param name="x1">结束点X坐标</param>
+    /// <param name="y1">结束点Y坐标</param>
+    /// <param name="numPoints">生成的点的数量（默认100）</param>
+    /// <returns>包含曲线点坐标的列表</returns>
+    public static List<Vector2> GenerateSinusoidalTransition(
+        float x0, float y0, float x1, float y1, int numPoints = 100)
+    {
+        List<Vector2> points = [];
+        float deltaX = x1 - x0;
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-
-
-	public static List<Vector2> GenerateSinusoidalTransition(
-		float x0, float y0, float x1, float y1, int numPoints = 100)
-	{
-		List<Vector2> points = [];
-		float deltaX = x1 - x0;
-
-		for (int i = 0; i < numPoints; i++)
-		{
-			float t = i / (float)(numPoints - 1);
-			float x = x0 + t * deltaX;
-			float y = y0 + (y1 - y0) * (0.5f - 0.5f * MathF.Cos(MathF.PI * t));
-			points.Add(new Vector2(x, y));
-		}
-		return points;
-	}
-
-
-
-
+        // 生成numPoints个点
+        for (int i = 0; i < numPoints; i++)
+        {
+            // 计算插值参数t（0到1之间）
+            float t = i / (float)(numPoints - 1);
+            
+            // 线性插值X坐标
+            float x = x0 + t * deltaX;
+            
+            // 使用余弦函数插值Y坐标，创建平滑的S形曲线
+            float y = y0 + (y1 - y0) * (0.5f - 0.5f * MathF.Cos(MathF.PI * t));
+            
+            // 添加点到列表
+            points.Add(new Vector2(x, y));
+        }
+        return points;
+    }
 }
