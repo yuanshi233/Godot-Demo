@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://uekxo5id3ci2" path="res://script/UI/ArrowLv.cs" id="1_ty4v8"]
 
 [node name="ArrowLv" type="Line2D"]
-texture_filter = 2
+texture_filter = 6
 width = 5.0
 default_color = Color(0.568973, 0.568973, 0.568973, 1)
 texture_mode = 2
+round_precision = 32
 antialiased = true
 script = ExtResource("1_ty4v8")

@@ -80,22 +80,27 @@ public partial class CardLv : Control
 		{
 			// 实例化连接线
 			ArrowLv arrowLv = line.Instantiate<ArrowLv>();
-			
+
 			// 生成正弦过渡曲线点集
 			// 参数说明：
 			// - NextX: 当前关卡连接点的X坐标
 			// - NextY[Nexts.Count - 1][i]: 基于连接数量的Y坐标偏移
 			// - Nexts[i].card.PreX: 目标关卡连接点的X坐标
 			// - PreY[Nexts[i].card.PreCount][Nexts[i].pos]: 基于前置数量的Y坐标偏移
-			arrowLv.Points = GenerateSinusoidalTransition(
-				NextX, 
-				NextY(i), 
-				Nexts[i].card.PreX, 
+			arrowLv.Points = [.. GenerateSinusoidalTransition(
+				NextX,
+				NextY(i),
+				Nexts[i].card.PreX,
 				Nexts[i].card.PreY(Nexts[i].pos)
-			).ToArray();
-			
+			)];
 			// 将连接线添加到容器
+			/*
+			arrowLv.par = GetParent();
+			arrowLv.Line = line;
+			*/
 			Con.AddChild(arrowLv);
+			
+			//GetParent().AddChild(arrowLv);
 		}
 	}
 
@@ -117,7 +122,7 @@ public partial class CardLv : Control
 	/// <param name="numPoints">生成的点的数量（默认100）</param>
 	/// <returns>包含曲线点坐标的列表</returns>
 	public static List<Vector2> GenerateSinusoidalTransition(
-		float x0, float y0, float x1, float y1, int numPoints = 100)
+		float x0, float y0, float x1, float y1, int numPoints = 20)
 	{
 		List<Vector2> points = [];
 		float deltaX = x1 - x0;

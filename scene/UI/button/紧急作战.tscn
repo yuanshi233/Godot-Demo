@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://lo4shmbs1xau"]
+[gd_scene load_steps=6 format=3 uid="uid://lo4shmbs1xau"]
 
 [ext_resource type="Script" uid="uid://cva2e0lnbmji3" path="res://script/UI/card/CardLv.cs" id="1_6d530"]
 [ext_resource type="PackedScene" uid="uid://req2ycg8yit4" path="res://scene/UI/arrowLv.tscn" id="2_st1lh"]
@@ -9,11 +9,19 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_st1lh"]
-bg_color = Color(0.6, 0.6, 0.6, 0.568627)
+bg_color = Color(1, 1, 1, 1)
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecust"]
+bg_color = Color(0.207843, 0.207843, 0.207843, 0.843137)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="紧急作战" type="Control"]
+z_index = 1
 custom_minimum_size = Vector2(250, 120)
 layout_mode = 3
 anchors_preset = 0
@@ -50,6 +58,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_st1lh")
 layout_mode = 0
 offset_right = 250.0
 offset_bottom = 60.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "EMERGENCY OPS"
 horizontal_alignment = 1
@@ -61,3 +70,8 @@ offset_right = 250.0
 offset_bottom = 120.0
 theme_override_font_sizes/font_size = 30
 flat = true
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 250.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ecust")

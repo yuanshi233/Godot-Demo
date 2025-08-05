@@ -26,10 +26,12 @@ ExtResource("3_5n6du"): 9.0,
 ExtResource("4_gkjc7"): 1.0
 })
 RowCountProbably = Dictionary[int, float]({
-3: 100.0
+3: 90.0,
+4: 9.0,
+5: 1.0
 })
 CowCountProbably = Dictionary[int, float]({
-3: 100.0
+8: 100.0
 })
 
 [node name="background" type="TextureRect" parent="."]
