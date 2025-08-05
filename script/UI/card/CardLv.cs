@@ -30,8 +30,11 @@ public partial class CardLv : Control
 	/// <summary>
 	/// 连接的下一张关卡列表，包含关卡引用和位置索引
 	/// </summary>
-	public List<(CardLv card, int pos)> Nexts = [];
-	
+	public List<(CardLv card, int pos,ArrowLv line)> Nexts = [];
+	public void Link(CardLv card, int pos)
+	{
+		Nexts.Add((card, pos, null));
+	}
 	/// <summary>
 	/// 前置关卡数量（有多少关卡连接到此关卡）
 	/// </summary>
@@ -42,10 +45,6 @@ public partial class CardLv : Control
 	/// </summary>
 	private float Spacing { get; set; } = 5f;
 
-	/// <summary>
-	/// 前置关卡连接点的Y坐标数组（未实现）
-	/// 格式: [前置关卡数量][位置索引]
-	/// </summary>
 	float PreY(int row) {
 		const float marginy=10,sizeY = 120/2-marginy*2;
 		return Position.Y + sizeY / (PreCount+1) * (row+1)+marginy;
@@ -54,19 +53,14 @@ public partial class CardLv : Control
 		const float marginy=10,sizeY = 120/2-marginy*2;
 		return Position.Y + sizeY / (Nexts.Count+1) * (row+1)+marginy;
 	}
-	
-	/// <summary>
-	/// 下一张关卡连接点的Y坐标数组（未实现）
-	/// 格式: [连接关卡数量][位置索引]
-	/// </summary>
 
 	/// <summary>
-	/// 前置关卡连接点的X坐标（未实现）
+	/// 前置关卡连接点的X坐标
 	/// </summary>
 	float PreX => Position.X;
 	
 	/// <summary>
-	/// 下一张关卡连接点的X坐标（未实现）
+	/// 下一张关卡连接点的X坐标
 	/// </summary>
 	float NextX => Position.X+125;
 	
@@ -87,11 +81,13 @@ public partial class CardLv : Control
 			// - NextY[Nexts.Count - 1][i]: 基于连接数量的Y坐标偏移
 			// - Nexts[i].card.PreX: 目标关卡连接点的X坐标
 			// - PreY[Nexts[i].card.PreCount][Nexts[i].pos]: 基于前置数量的Y坐标偏移
+			
+			var next = Nexts[i];
 			arrowLv.Points = [.. GenerateSinusoidalTransition(
 				NextX,
 				NextY(i),
-				Nexts[i].card.PreX,
-				Nexts[i].card.PreY(Nexts[i].pos)
+				next.card.PreX,
+				next.card.PreY(next.pos)
 			)];
 			// 将连接线添加到容器
 			/*
@@ -99,7 +95,8 @@ public partial class CardLv : Control
 			arrowLv.Line = line;
 			*/
 			Con.AddChild(arrowLv);
-			
+			next.line = arrowLv;
+			Nexts[i] = next;
 			//GetParent().AddChild(arrowLv);
 		}
 	}
