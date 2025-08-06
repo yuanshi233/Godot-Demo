@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://dwckn6ubr6ari"]
+[gd_scene load_steps=9 format=4 uid="uid://dwckn6ubr6ari"]
 
+[ext_resource type="Script" uid="uid://vv6pemv5t2qy" path="res://script/battling/Bat.cs" id="1_0kvxl"]
 [ext_resource type="PackedScene" uid="uid://b0c2ad6flhua2" path="res://scene/UI/canvas_layer.tscn" id="1_blmjb"]
 [ext_resource type="Texture2D" uid="uid://bhgvvt02bi68r" path="res://resource/map/Grass.png" id="1_h4g60"]
 [ext_resource type="Script" uid="uid://c2o4sts6q041a" path="res://script/battling/Player.cs" id="2_t03a0"]
@@ -94,6 +95,7 @@ physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_b4x1x")
 
 [node name="Bat" type="Node2D"]
+script = ExtResource("1_0kvxl")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 visible = false

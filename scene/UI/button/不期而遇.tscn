@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhyyadurqn032"]
+[gd_scene load_steps=10 format=3 uid="uid://dhyyadurqn032"]
+
+[ext_resource type="Script" uid="uid://cva2e0lnbmji3" path="res://script/UI/card/CardLv.cs" id="1_f7kpd"]
+[ext_resource type="Script" uid="uid://8mscea6evhea" path="res://script/UI/card/CardLvControl.cs" id="2_23pr7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ficj"]
 bg_color = Color(0.494118, 0.796078, 0.223529, 1)
@@ -9,6 +12,37 @@ corner_radius_top_right = 8
 bg_color = Color(1, 1, 1, 1)
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13t6n"]
+bg_color = Color(0.314316, 0.314316, 0.314316, 1)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_23pr7"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22l0e"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7kpd"]
+draw_center = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0wqp0"]
 bg_color = Color(0.207843, 0.207843, 0.207843, 0.843137)
@@ -29,6 +63,8 @@ offset_bottom = -528.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
+mouse_filter = 1
+script = ExtResource("1_f7kpd")
 
 [node name="Panel1" type="Panel" parent="."]
 custom_minimum_size = Vector2(250, 0)
@@ -70,10 +106,16 @@ vertical_alignment = 1
 layout_mode = 0
 offset_right = 250.0
 offset_bottom = 120.0
+mouse_filter = 1
 theme_override_font_sizes/font_size = 30
-flat = true
+theme_override_styles/focus = SubResource("StyleBoxFlat_13t6n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_23pr7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_22l0e")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f7kpd")
+script = ExtResource("2_23pr7")
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 0
 offset_right = 250.0
 offset_bottom = 120.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0wqp0")

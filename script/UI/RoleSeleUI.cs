@@ -13,6 +13,14 @@ public partial class RoleSeleUI : Control
 		Instance = this;
 	}
 
+    public override void _Ready()
+    {
+		Global.ChangeSceneWithStretch(GetTree().Root, Window.ContentScaleModeEnum.CanvasItems, Window.ContentScaleAspectEnum.Ignore);
+    }
+
+	
+
+
 	private void BackUserUI()
 	{
 		Global.RoleTeam.Clear();

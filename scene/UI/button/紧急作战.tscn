@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://lo4shmbs1xau"]
+[gd_scene load_steps=12 format=3 uid="uid://lo4shmbs1xau"]
 
 [ext_resource type="Script" uid="uid://cva2e0lnbmji3" path="res://script/UI/card/CardLv.cs" id="1_6d530"]
 [ext_resource type="PackedScene" uid="uid://req2ycg8yit4" path="res://scene/UI/arrowLv.tscn" id="2_st1lh"]
+[ext_resource type="Script" uid="uid://8mscea6evhea" path="res://script/UI/card/CardLvControl.cs" id="3_ecust"]
+[ext_resource type="PackedScene" uid="uid://cpb1lgtpaa4er" path="res://scene/UI/panel/紧急作战面板.tscn" id="4_ljbe4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d530"]
 bg_color = Color(0.891688, 0.346197, 0.260406, 1)
@@ -12,6 +14,37 @@ corner_radius_top_right = 8
 bg_color = Color(1, 1, 1, 1)
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljbe4"]
+bg_color = Color(0.314316, 0.314316, 0.314316, 1)
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fiyu3"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2xxy"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ntcmn"]
+draw_center = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ecust"]
 bg_color = Color(0.207843, 0.207843, 0.207843, 0.843137)
@@ -28,6 +61,7 @@ anchors_preset = 0
 offset_right = 250.0
 offset_bottom = 120.0
 scale = Vector2(0.5, 0.5)
+mouse_filter = 1
 script = ExtResource("1_6d530")
 line = ExtResource("2_st1lh")
 Lv = 2
@@ -68,10 +102,18 @@ vertical_alignment = 1
 layout_mode = 0
 offset_right = 250.0
 offset_bottom = 120.0
+mouse_filter = 1
 theme_override_font_sizes/font_size = 30
-flat = true
+theme_override_styles/focus = SubResource("StyleBoxFlat_ljbe4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fiyu3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t2xxy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ntcmn")
+script = ExtResource("3_ecust")
+Lv = 2
+LvPanelScene = ExtResource("4_ljbe4")
 
 [node name="Panel" type="Panel" parent="."]
+layout_mode = 0
 offset_right = 250.0
 offset_bottom = 120.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ecust")

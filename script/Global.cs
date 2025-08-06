@@ -12,5 +12,12 @@ public partial class Global : Node
         DIE,
         NUL
     }
-    public static List<RoleBase> RoleTeam = new();
+    public static List<RoleBase> RoleTeam = [];
+    
+    public static void ChangeSceneWithStretch(Window root, Window.ContentScaleModeEnum mode, Window.ContentScaleAspectEnum aspect)
+    {
+        // 设置拉伸模式
+        root.ContentScaleMode = mode;
+        root.ContentScaleAspect = aspect;
+    }
 }

@@ -1,31 +1,10 @@
 using Godot;
-using System.Linq;
-using System.Runtime.CompilerServices;
 
 public partial class ArrowLv : Line2D
 {
-	private PackedScene _line;
-	public Node par { get; set; }
-	public PackedScene Line
+	public void Init()
 	{
-		get => _line;
-		set
-		{
-			_line = value;
-			Init();
-		}
-	}
-	
-	private void Init()
-	{
-		Antialiased = true;
-		Width = 5.0f;
-		Curve2D curve = new();
-		foreach (Vector2 point in this.Points)
-		{
-			curve.AddPoint(point);
-		}
-		Points = curve.Tessellate(10);
+		DefaultColor = Color.Color8(45, 45, 45);
 		/*
 		Vector2[] pos = [Points[0], Points[^1]];
 
@@ -38,12 +17,7 @@ public partial class ArrowLv : Line2D
 			par.CallDeferred("add_child", arrowLv[i]);
 		}
 		*/
-
 	}
-
-
-
-
 	// Called when the node enters the scene tree for the first time.
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 }

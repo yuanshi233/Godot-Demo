@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public partial class CardLv : Control
 {
 	// 导出的属性，可在Godot编辑器中配置
-	
+
 	/// <summary>
 	/// 连接线（箭头）的场景资源
 	/// </summary>
@@ -26,12 +26,15 @@ public partial class CardLv : Control
 	/// 位置点列表（当前未使用）
 	/// </summary>
 	public List<Vector2> Pos1 = [];
-	
+
 	/// <summary>
 	/// 连接的下一张关卡列表，包含关卡引用和位置索引
 	/// </summary>
-	public List<(CardLv card, int pos)> Nexts = [];
-	
+	public List<(CardLv card, int pos, ArrowLv line)> Nexts = [];
+	public void Link(CardLv card, int pos)
+	{
+		Nexts.Add((card, pos, null));
+	}
 	/// <summary>
 	/// 前置关卡数量（有多少关卡连接到此关卡）
 	/// </summary>
@@ -42,10 +45,6 @@ public partial class CardLv : Control
 	/// </summary>
 	private float Spacing { get; set; } = 5f;
 
-	/// <summary>
-	/// 前置关卡连接点的Y坐标数组（未实现）
-	/// 格式: [前置关卡数量][位置索引]
-	/// </summary>
 	float PreY(int row) {
 		const float marginy=10,sizeY = 120/2-marginy*2;
 		return Position.Y + sizeY / (PreCount+1) * (row+1)+marginy;
@@ -54,27 +53,26 @@ public partial class CardLv : Control
 		const float marginy=10,sizeY = 120/2-marginy*2;
 		return Position.Y + sizeY / (Nexts.Count+1) * (row+1)+marginy;
 	}
-	
-	/// <summary>
-	/// 下一张关卡连接点的Y坐标数组（未实现）
-	/// 格式: [连接关卡数量][位置索引]
-	/// </summary>
 
 	/// <summary>
-	/// 前置关卡连接点的X坐标（未实现）
+	/// 前置关卡连接点的X坐标
 	/// </summary>
 	float PreX => Position.X;
 	
 	/// <summary>
-	/// 下一张关卡连接点的X坐标（未实现）
+	/// 下一张关卡连接点的X坐标
 	/// </summary>
 	float NextX => Position.X+125;
-	
+
+
 	/// <summary>
-	/// 节点进入场景树时调用
-	/// </summary>
-	public override void _Ready()
+	/// 遮掩节点
+	/// </summary> 
+	public Panel CoverNode { get; set; }
+	
+	public void Init()
 	{
+		CoverNode = GetNode<Panel>("Panel");
 		// 为每个下一张关卡创建连接线
 		for (int i = 0; i < Nexts.Count; i++)
 		{
@@ -87,19 +85,19 @@ public partial class CardLv : Control
 			// - NextY[Nexts.Count - 1][i]: 基于连接数量的Y坐标偏移
 			// - Nexts[i].card.PreX: 目标关卡连接点的X坐标
 			// - PreY[Nexts[i].card.PreCount][Nexts[i].pos]: 基于前置数量的Y坐标偏移
+
+			var next = Nexts[i];
 			arrowLv.Points = [.. GenerateSinusoidalTransition(
 				NextX,
 				NextY(i),
-				Nexts[i].card.PreX,
-				Nexts[i].card.PreY(Nexts[i].pos)
+				next.card.PreX,
+				next.card.PreY(next.pos)
 			)];
-			// 将连接线添加到容器
-			/*
-			arrowLv.par = GetParent();
-			arrowLv.Line = line;
-			*/
+
+			arrowLv.Init();
+			next.line = arrowLv;
+			Nexts[i] = next;
 			Con.AddChild(arrowLv);
-			
 			//GetParent().AddChild(arrowLv);
 		}
 	}
@@ -122,7 +120,7 @@ public partial class CardLv : Control
 	/// <param name="numPoints">生成的点的数量（默认100）</param>
 	/// <returns>包含曲线点坐标的列表</returns>
 	public static List<Vector2> GenerateSinusoidalTransition(
-		float x0, float y0, float x1, float y1, int numPoints = 20)
+		float x0, float y0, float x1, float y1, int numPoints = 30)
 	{
 		List<Vector2> points = [];
 		float deltaX = x1 - x0;
