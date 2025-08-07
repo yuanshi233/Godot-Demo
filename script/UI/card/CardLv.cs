@@ -33,7 +33,7 @@ public partial class CardLv : Control
 	public List<(CardLv card, int pos, ArrowLv line)> Nexts = [];
 	public void Link(CardLv card, int pos)
 	{
-		Nexts.Add((card, pos, null));
+		Nexts.Add((card, pos, line.Instantiate<ArrowLv>()));
 	}
 	/// <summary>
 	/// 前置关卡数量（有多少关卡连接到此关卡）
@@ -68,16 +68,15 @@ public partial class CardLv : Control
 	/// <summary>
 	/// 遮掩节点
 	/// </summary> 
-	public Panel CoverNode { get; set; }
+	public Godot.Panel CoverNode { get; set; }
 	
 	public void Init()
 	{
-		CoverNode = GetNode<Panel>("Panel");
+		CoverNode = GetNode<Godot.Panel>("Panel");
 		// 为每个下一张关卡创建连接线
 		for (int i = 0; i < Nexts.Count; i++)
 		{
 			// 实例化连接线
-			ArrowLv arrowLv = line.Instantiate<ArrowLv>();
 
 			// 生成正弦过渡曲线点集
 			// 参数说明：
@@ -87,17 +86,15 @@ public partial class CardLv : Control
 			// - PreY[Nexts[i].card.PreCount][Nexts[i].pos]: 基于前置数量的Y坐标偏移
 
 			var next = Nexts[i];
-			arrowLv.Points = [.. GenerateSinusoidalTransition(
+			next.line.Points = [.. GenerateSinusoidalTransition(
 				NextX,
 				NextY(i),
 				next.card.PreX,
 				next.card.PreY(next.pos)
 			)];
 
-			arrowLv.Init();
-			next.line = arrowLv;
-			Nexts[i] = next;
-			Con.AddChild(arrowLv);
+			next.line.Init();
+			Con.AddChild(next.line);
 			//GetParent().AddChild(arrowLv);
 		}
 	}

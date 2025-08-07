@@ -46,7 +46,7 @@ public partial class Route : Control
 		const float sizey = 120 / 2, spacey = 60;
 		return row * (sizey + spacey) + (GetViewportRect().Size.Y - rowCount * (sizey + spacey) + spacey) / 2;
 	}
-
+	public Panel panel=ResourceLoader.Load<PackedScene>("res://scene/UI/panel.tscn").Instantiate<Panel>();
 	/// <summary>
 	/// 探索级别/主关卡级别
 	/// </summary>
