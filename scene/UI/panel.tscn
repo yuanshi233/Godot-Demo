@@ -1,10 +1,15 @@
-[gd_scene format=3 uid="uid://ce842l8f5tb3"]
+[gd_scene load_steps=2 format=3 uid="uid://ce842l8f5tb3"]
 
-[node name="作战面板" type="Control"]
+[ext_resource type="Script" uid="uid://bugsk104jlwny" path="res://script/UI/Panel.cs" id="1_v8sjp"]
+
+[node name="作战面板" type="Control" node_paths=PackedStringArray("title", "info")]
 z_index = 1
 custom_minimum_size = Vector2(451, 414)
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_v8sjp")
+title = NodePath("Panel/Panel1/Title")
+info = NodePath("Panel/Panel2/Info")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0

@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://lo4shmbs1xau"]
+[gd_scene load_steps=11 format=3 uid="uid://lo4shmbs1xau"]
 
 [ext_resource type="Script" uid="uid://cva2e0lnbmji3" path="res://script/UI/card/CardLv.cs" id="1_6d530"]
 [ext_resource type="PackedScene" uid="uid://req2ycg8yit4" path="res://scene/UI/arrowLv.tscn" id="2_st1lh"]
 [ext_resource type="Script" uid="uid://8mscea6evhea" path="res://script/UI/card/CardLvControl.cs" id="3_ecust"]
-[ext_resource type="PackedScene" uid="uid://cpb1lgtpaa4er" path="res://scene/UI/panel/紧急作战面板.tscn" id="4_ljbe4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6d530"]
 bg_color = Color(0.891688, 0.346197, 0.260406, 1)
@@ -110,7 +109,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_t2xxy")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ntcmn")
 script = ExtResource("3_ecust")
 Lv = 2
-LvPanelScene = ExtResource("4_ljbe4")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
