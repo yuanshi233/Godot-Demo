@@ -7,6 +7,7 @@ z_index = 1
 custom_minimum_size = Vector2(451, 414)
 layout_mode = 3
 anchors_preset = 0
+mouse_filter = 1
 script = ExtResource("1_v8sjp")
 title = NodePath("Panel/Panel1/Title")
 info = NodePath("Panel/Panel2/Info")
@@ -15,11 +16,13 @@ info = NodePath("Panel/Panel2/Info")
 layout_mode = 0
 offset_right = 451.0
 offset_bottom = 414.0
+mouse_filter = 2
 
 [node name="Panel1" type="Panel" parent="Panel"]
 layout_mode = 0
 offset_right = 451.0
 offset_bottom = 109.0
+mouse_filter = 2
 
 [node name="Title" type="Label" parent="Panel/Panel1"]
 layout_mode = 0
@@ -35,6 +38,7 @@ layout_mode = 0
 offset_top = 109.0
 offset_right = 451.0
 offset_bottom = 289.0
+mouse_filter = 2
 
 [node name="Info" type="Label" parent="Panel/Panel2"]
 layout_mode = 0
@@ -50,10 +54,12 @@ layout_mode = 0
 offset_top = 289.0
 offset_right = 451.0
 offset_bottom = 414.0
+mouse_filter = 2
 
 [node name="Button" type="Button" parent="Panel/Panel3"]
 layout_mode = 0
 offset_right = 451.0
 offset_bottom = 125.0
+mouse_filter = 1
 theme_override_font_sizes/font_size = 40
 text = "[进入]"

@@ -72,6 +72,8 @@ public partial class CardLv : Control
 	
 	public void Init()
 	{
+		// 默认按钮忽略鼠标事件
+		this.GetNode<Button>("Button").MouseFilter = MouseFilterEnum.Ignore;
 		CoverNode = GetNode<Godot.Panel>("Panel");
 		// 为每个下一张关卡创建连接线
 		for (int i = 0; i < Nexts.Count; i++)

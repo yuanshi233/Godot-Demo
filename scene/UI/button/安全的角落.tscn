@@ -70,6 +70,7 @@ script = ExtResource("1_seswx")
 layout_mode = 0
 offset_right = 250.0
 offset_bottom = 60.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_gb0j2")
 
 [node name="Label" type="Label" parent="Panel1"]
@@ -86,6 +87,7 @@ layout_mode = 0
 offset_top = 60.0
 offset_right = 250.0
 offset_bottom = 120.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6xl6o")
 
 [node name="Label" type="Label" parent="Panel2"]
@@ -102,7 +104,6 @@ vertical_alignment = 1
 layout_mode = 0
 offset_right = 250.0
 offset_bottom = 120.0
-mouse_filter = 1
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxFlat_njeiv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t6lou")
@@ -114,4 +115,5 @@ script = ExtResource("2_njeiv")
 layout_mode = 0
 offset_right = 250.0
 offset_bottom = 120.0
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_seswx")

@@ -107,6 +107,7 @@ public partial class Route : Control
 		foreach (var card in cardLv[0])
 		{
 			card.CoverNode.Visible = false;
+			card.GetNode<Button>("Button").MouseFilter = MouseFilterEnum.Pass;
 			foreach (var item in card.Nexts)
 			{
 				item.line.DefaultColor = Color.Color8(145, 145, 145);
@@ -114,11 +115,12 @@ public partial class Route : Control
 		}
 
 	}
-
-	private void UiAndLvControl()
+	public override void _Process(double delta)
 	{
+		
+    }
 
-	}
+	
 
 	private void Link()
 	{
