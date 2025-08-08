@@ -1,7 +1,4 @@
 using Godot;
-using System;
-using System.Diagnostics;
-using System.Dynamic;
 public partial class CardA : Panel
 {
 	

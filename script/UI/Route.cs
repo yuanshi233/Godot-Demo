@@ -1,9 +1,7 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Security.Cryptography;
 
 public partial class Route : Control
 {
@@ -46,7 +44,7 @@ public partial class Route : Control
 		const float sizey = 120 / 2, spacey = 60;
 		return row * (sizey + spacey) + (GetViewportRect().Size.Y - rowCount * (sizey + spacey) + spacey) / 2;
 	}
-	public Panel panel=ResourceLoader.Load<PackedScene>("res://scene/UI/panel.tscn").Instantiate<Panel>();
+	public Panel panel = ResourceLoader.Load<PackedScene>("res://scene/UI/panel.tscn").Instantiate<Panel>();
 	/// <summary>
 	/// 探索级别/主关卡级别
 	/// </summary>
@@ -62,6 +60,7 @@ public partial class Route : Control
 
 	public override void _Ready()
 	{
+		
 		Global.ChangeSceneWithStretch(GetTree().Root, Window.ContentScaleModeEnum.CanvasItems, Window.ContentScaleAspectEnum.Ignore);
 
 		cardLv = new CardLv[WeightedRandom(CowCountProbably)][];
@@ -102,25 +101,15 @@ public partial class Route : Control
 			}
 		}
 
-		// 10. 初始化第一列的关卡
-
-		foreach (var card in cardLv[0])
-		{
-			card.CoverNode.Visible = false;
-			card.GetNode<Button>("Button").MouseFilter = MouseFilterEnum.Pass;
-			foreach (var item in card.Nexts)
-			{
-				item.line.DefaultColor = Color.Color8(145, 145, 145);
-			}
-		}
-
+		//初始化
+		CardLvControl.ProcessCardRow(cardLv[0], false, Color.Color8(145, 145, 145));
 	}
 	public override void _Process(double delta)
 	{
-		
-    }
 
-	
+	}
+
+
 
 	private void Link()
 	{

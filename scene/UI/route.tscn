@@ -16,8 +16,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_m1boh")
 CardLvs = Dictionary[PackedScene, float]({
-ExtResource("2_br7ua"): 50.0,
-ExtResource("3_5n6du"): 50.0,
+ExtResource("2_br7ua"): 70.0,
+ExtResource("3_5n6du"): 60.0,
 ExtResource("4_gkjc7"): 50.0
 })
 RowCountProbably = Dictionary[int, float]({

@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using Godot;
 
@@ -10,10 +7,12 @@ public partial class CardLvControl : Button
     [Export] public int Lv { get; set; }
     [Export] string title = "[标题]";
     [Export] string info = "[关卡信息INFO]";
+    private PackedScene bat;
     private bool isMouseOver = false;
     Panel panel;
     public override void _Ready()
     {
+        bat = GD.Load<PackedScene>("res://scene/UI/bat.tscn");
         ButtonDown += OnButtonDown;
         panel = (FindParent("Route") as Route).panel;
     }
@@ -48,8 +47,8 @@ public partial class CardLvControl : Button
 
     }
 
-    private static int currentCowIndex = 0;
-
+    public static int currentCowIndex = 0;
+    private Bat batInst;
     private void EnterAndChangeCow()
     {
         if (GetTree().CurrentScene is not Route route || GetParent() is not CardLv currentCard)
@@ -58,10 +57,17 @@ public partial class CardLvControl : Button
         }
 
         // 检查边界条件
-        if (currentCowIndex >= route.cardLv.Length)
+        if (currentCowIndex > route.cardLv.Length)
         {
             return;
         }
+
+        //加入战斗
+        Global.DifficultyCoefficient = Lv;
+        batInst = bat.Instantiate<Bat>();
+        GetTree().CurrentScene.GetNode<TextureRect>("background").Visible = false;
+		GetTree().CurrentScene.GetNode<Godot.Panel>("Panel").Visible = false;
+        GetTree().CurrentScene.AddChild(batInst);
 
         // 处理当前列
         ProcessCardRow(route.cardLv[currentCowIndex], true, Color.Color8(45, 45, 45));
@@ -74,7 +80,7 @@ public partial class CardLvControl : Button
         currentCowIndex++;
     }
 
-    private void ProcessCardRow(IEnumerable<CardLv> cards, bool coverVisible, Color lineColor)
+    public static void ProcessCardRow(IEnumerable<CardLv> cards, bool coverVisible, Color lineColor)
     {
         foreach (var card in cards)
         {

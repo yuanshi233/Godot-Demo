@@ -4,7 +4,8 @@ using Godot;
 public abstract partial class RoleBase : CharacterBody2D
 {
 	public bool IsDied => state.HP <= 0;
-	public bool IsPresent => this == Player.player.role;
+	public bool IsPresent_;
+	public abstract bool IsPresent { get; set; }
 	[Export] public PackedScene CardCScene { get; set; }
 	public abstract void Attack(int type);
 	public abstract void Move(Vector2 inputVector);
@@ -30,7 +31,7 @@ public abstract partial class RoleBase : CharacterBody2D
 			HitType.health => -value,
 			_ => 0
 		};
-		if(IsPresent)
+		if (IsPresent_)
 			Hud.HP = HP;
 		if (IsDied)
 			OnDie();
@@ -51,5 +52,7 @@ public abstract partial class RoleBase : CharacterBody2D
 		cardC = CardC.Instantiate(CardCScene, i);
 		return cardC;
 	}
+	
+	
 
 } 

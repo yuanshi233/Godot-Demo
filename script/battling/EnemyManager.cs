@@ -1,5 +1,4 @@
 using Godot;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,6 +6,7 @@ public partial class EnemyManager : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 	//刷怪点
+
 	private List<Vector2> pos = [];
 
 	private List<PackedScene> _enemies = [];
@@ -15,11 +15,8 @@ public partial class EnemyManager : Node2D
 
 	private Node2D node2D;
 	private const float Interval = 2f;
-	public static EnemyManager enemyManager;
 	public override void _Ready()
 	{
-
-		enemyManager = this;
 		node2D = GetNode<Node2D>("../character");
 		//test
 		pos.Add(new Vector2(500, 10));
@@ -44,18 +41,26 @@ public partial class EnemyManager : Node2D
 
 	private void OnTimerTimeout()
 	{
+		int lastA = -1;
+
 		foreach (var _ in Enumerable.Range(0, 15))
 		{
-			var a = (int)GD.RandRange(0, 8);
+			int a;
+			do
+			{
+				a = (int)GD.RandRange(0, 8);
+			}
+			while (a == lastA);
+
+			lastA = a;
+
 			var ene = SpawnEnemy();
 			if (ene != null)
 			{
 				ene.GlobalPosition = pos[a];
-				node2D.AddChild(ene);
+				AddChild(ene);
 			}
-
 		}
-
 
 
 		/*
@@ -80,6 +85,12 @@ public partial class EnemyManager : Node2D
 			var enemy = _enemies[0].Instantiate<EnemyBase>();
 			enemy.Visible = false;
 			enemy.ProcessMode = ProcessModeEnum.Disabled;
+			//简单计算数值
+			enemy.HP *= Global.DifficultyCoefficient;
+			enemy.AtkVal += Global.DifficultyCoefficient * 10;
+			enemy.PhyDef += Global.DifficultyCoefficient;
+			enemy.SpellDef += Global.DifficultyCoefficient;
+
 			_pool.Add(enemy);
 		}
 	}
@@ -110,6 +121,22 @@ public partial class EnemyManager : Node2D
 		enemy.ProcessMode = ProcessModeEnum.Disabled;
 		_activeEnemies.Remove(enemy);
 		_pool.Add(enemy);
-		node2D.RemoveChild(enemy);
+		RemoveChild(enemy);
+		//结算
+		if (Hud.Instance.KillCount.Text.ToInt() >= 5)
+		{
+			
+			GetTree().CurrentScene.GetNode<TextureRect>("background").Visible = true;
+			GetTree().CurrentScene.GetNode<Godot.Panel>("Panel").Visible = true;
+			//转移所有权
+			foreach (var i in GetParent().GetNode<Node2D>("character").GetChildren())
+			{
+				GetParent().GetNode<Node2D>("character").RemoveChild(i);
+			}
+			GetParent().QueueFree();
+
+			
+		}
+
 	}
 }

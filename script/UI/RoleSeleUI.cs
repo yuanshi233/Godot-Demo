@@ -1,10 +1,15 @@
 using Godot;
-using System;
-using System.Diagnostics;
 
 public partial class RoleSeleUI : Control
 {
 	public static RoleSeleUI Instance;
+
+	[Export]
+	public HBoxContainer containerB;
+	[Export]
+	public HBoxContainer containerA;
+	
+
 	// Called when the node enters the scene tree for the first time.
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,13 +34,8 @@ public partial class RoleSeleUI : Control
 	}
 	private void OnButtonEnter()
 	{
-		GetTree().ChangeSceneToPacked(batScene);
+		GetTree().ChangeSceneToPacked(GD.Load<PackedScene>("res://scene/UI/route.tscn"));
 	}
-	[Export]
-	public HBoxContainer containerB;
-	[Export]
-	public HBoxContainer containerA;
-	[Export]
-	public PackedScene batScene;
+
 
 }

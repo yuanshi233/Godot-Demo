@@ -1,17 +1,38 @@
 using Godot;
-using System;
 
 public partial class RoleManager : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
-	public static RoleManager roleManager;
+	private Player player;
 	public override void _Ready()
 	{
-		Player.player.id = 0;
-		Player.player.ChangeRole(Global.RoleTeam[0]);
+		//重置
+		/*
+		for (int i = 0; i < Global.RoleTeam.Count; i++)
+		{
+			Global.RoleTeam[i].state = new RoleState();
+		}
+		*/
+		player = GetParent().GetNode("Player") as Player;
+		for (int i = 0; i < Global.RoleTeam.Count; i++)
+		{
+			if (!Global.RoleTeam[i].IsDied)
+			{
+				player.ChangeRole(Global.RoleTeam[i]);
+				player.id = i;
+			}
+			else if (i == Global.RoleTeam.Count - 1)		//全部阵亡
+			{
+				GetTree().Paused = true;
+				Hud.Instance.GetNode<Label>("Label5").Visible = true;
+				_lock = false;
+				player._lock = false;
+			}
+		}
 		foreach (var role in Global.RoleTeam)
+		{
 			role.UpdateCardC();
-		roleManager = this;
+		}
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,14 +43,14 @@ public partial class RoleManager : Node2D
 			return;
 		for (int i = 0; i < Global.RoleTeam.Count; i++)
 		{
-			if (Player.player.id != i)
+			if (player.id != i)
 			{
 				Global.RoleTeam[i]._Process(delta);
 			}
-			if (Input.IsKeyPressed((Key)((int)Key.Key1 + i)) && Player.player.id != i && !Global.RoleTeam[i].IsDied)
+			if (Input.IsKeyPressed((Key)((int)Key.Key1 + i)) && player.id != i && !Global.RoleTeam[i].IsDied)
 			{
-				Player.player.ChangeRole(Global.RoleTeam[i]);
-				Player.player.id = i;
+				player.ChangeRole(Global.RoleTeam[i]);
+				player.id = i;
 			}
 		}
 	}
@@ -37,15 +58,15 @@ public partial class RoleManager : Node2D
 	public void RoleDie()
 	{
 		_lock = true;
-		Player.player._lock = true;
+		player._lock = true;
 		for (int i = 0; i < Global.RoleTeam.Count; i++)
 		{
 			if (!Global.RoleTeam[i].IsDied)
 			{
-				Player.player.ChangeRole(Global.RoleTeam[i]);
-				Player.player.id = i;
+				player.ChangeRole(Global.RoleTeam[i]);
+				player.id = i;
 				_lock = false;
-				Player.player._lock = false;
+				player._lock = false;
 				break;
 			}
 		}
@@ -54,7 +75,7 @@ public partial class RoleManager : Node2D
 			GetTree().Paused = true;
 			Hud.Instance.GetNode<Label>("Label5").Visible = true;
 			_lock = false;
-			Player.player._lock = false;
+			player._lock = false;
 		}
 
 	}

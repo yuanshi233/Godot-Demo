@@ -1,6 +1,4 @@
 using Godot;
-using Godot.NativeInterop;
-using System;
 
 public partial class RosmonWeapon : Node2D
 {

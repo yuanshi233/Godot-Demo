@@ -117,3 +117,10 @@ script = ExtResource("5_b4x1x")
 
 [node name="character" type="Node2D" parent="."]
 y_sort_enabled = true
+scale = Vector2(1, 1.02388)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

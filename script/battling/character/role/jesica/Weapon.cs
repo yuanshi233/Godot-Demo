@@ -1,7 +1,5 @@
 using Godot;
 using System;
-using System.Text.Unicode;
-using static Godot.TextServer;
 
 public partial class Weapon : Node2D
 {

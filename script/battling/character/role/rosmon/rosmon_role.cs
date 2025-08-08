@@ -11,7 +11,13 @@ public partial class rosmon_role : RoleBase
 	private ProgressBar cardC_HpBar;
 	private ProgressBar cardC_CdBar;
 
-	private int sta;        //1死亡2后摇
+	public override bool IsPresent
+	{
+		set => IsPresent_ = this == (GetParent().GetParent().GetNode("Player") as Player).role;
+		get => IsPresent_;
+	}
+
+    private int sta;        //1死亡2后摇
 
 	public override void _Ready()
 	{
@@ -22,7 +28,7 @@ public partial class rosmon_role : RoleBase
 
 	protected override void OnDie()
 	{
-		if (sta!=1)
+		if (sta != 1)
 		{
 			UpdateCardC();
 			sta = 1;
@@ -39,9 +45,9 @@ public partial class rosmon_role : RoleBase
 		t += delta;
 		if (IsPresent)
 		{
-			Hud.CD = Math.Min(1,t / state.SpeedSkill);
+			Hud.CD = Math.Min(1, t / state.SpeedSkill);
 		}
-		t1 = Math.Min(t1,state.SpeedAtk);
+		t1 = Math.Min(t1, state.SpeedAtk);
 		UpdateCardC();
 	}
 
@@ -143,7 +149,7 @@ public partial class rosmon_role : RoleBase
 	{
 		if (sta == 1)
 		{
-			RoleManager.roleManager.RoleDie();
+			(GetParent().GetParent().GetNode("RoleManager")  as RoleManager).RoleDie();
 		}
 		if (sta == 2)
 			sta = 0;

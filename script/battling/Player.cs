@@ -1,6 +1,4 @@
 using Godot;
-using System;
-using System.Globalization;
 
 public partial class Player : Node2D
 {
@@ -8,7 +6,6 @@ public partial class Player : Node2D
 	private Vector2 inputVector;
 	public RoleBase role;
 	public int id = -1;
-	public static Player player;
 	private Node camera2D;
 	private Node2D node2D;
 	public bool _lock = false;
@@ -17,7 +14,6 @@ public partial class Player : Node2D
 	{
 		camera2D = GD.Load<PackedScene>("res://scene/UI/camera.tscn").Instantiate();
 		node2D = GetNode<Node2D>("../character");
-		player = this;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

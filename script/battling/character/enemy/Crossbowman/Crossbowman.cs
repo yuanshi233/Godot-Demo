@@ -1,20 +1,8 @@
 using Godot;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Net.Http;
 
 public partial class Crossbowman : EnemyBase
 {
-
-	[Export] public double SpeedMove { get; set; } = 100;
-	[Export] public float Acceleration { get; set; } = 15.0f;
-	[Export] public float Friction { get; set; } = 10.0f;
-
-	[Export] public double HP { get; set; } = 80;
-	[Export] public double AtkVal { get; set; } = 30;
-	[Export] public double PhyDef { get; set; } = 0;
-	[Export] public double SpellDef { get; set; } = 0;
 
 	[Export] private PackedScene arrow;
 	private Node2D issue;
@@ -51,7 +39,7 @@ public partial class Crossbowman : EnemyBase
 			return;
 		}
 
-		Vector2 pos = (Player.player.role.GlobalPosition - GlobalPosition).Normalized();
+		Vector2 pos = ((GetParent().GetParent().GetNode("Player") as Player).role.GlobalPosition - GlobalPosition).Normalized();
 		HandleMovement(pos);
 		HandleFlipAndAnimation(pos);
 	}
@@ -118,11 +106,11 @@ public partial class Crossbowman : EnemyBase
 			}
 			sta = 0;
 			return;
-			
+
 		}
 		if (sta == 3)
 		{
-			EnemyManager.enemyManager.OnEnemyDie(this);
+			(GetParent() as EnemyManager).OnEnemyDie(this);
 			return;
 		}
 	}

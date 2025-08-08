@@ -1,6 +1,5 @@
 using Godot;
 using System;
-using System.ComponentModel.DataAnnotations;
 
 public partial class jesica_Role : RoleBase
 {
@@ -13,8 +12,11 @@ public partial class jesica_Role : RoleBase
 	private ProgressBar cardC_HpBar;
 	private ProgressBar cardC_CdBar;
 	private Sprite2D sprite2D;
-
-
+	public override bool IsPresent
+	{
+		set => IsPresent_ = this == (GetParent().GetParent().GetNode("Player") as Player).role;
+		get => IsPresent_;
+	}
 
 	public override void _Ready()
 	{
@@ -50,9 +52,9 @@ public partial class jesica_Role : RoleBase
 		}
 		if (IsPresent)
 		{
-			Hud.CD = Math.Min(1,t / state.SpeedSkill);
+			Hud.CD = Math.Min(1, t / state.SpeedSkill);
 		}
-		t1 = Math.Min(state.SpeedAtk,t1);
+		t1 = Math.Min(state.SpeedAtk, t1);
 		UpdateCardC();
 	}
 
@@ -138,7 +140,7 @@ public partial class jesica_Role : RoleBase
 
 	public void _on_animation_finished()
 	{
-		RoleManager.roleManager.RoleDie();
+		(GetParent().GetParent().GetNode("RoleManager") as RoleManager).RoleDie();
 	}
 	public override void _ExitTree()
 	{

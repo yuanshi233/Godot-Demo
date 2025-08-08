@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://br0geytwqhjiu"]
+[gd_scene load_steps=12 format=3 uid="uid://br0geytwqhjiu"]
 
 [ext_resource type="Script" uid="uid://cva2e0lnbmji3" path="res://script/UI/card/CardLv.cs" id="1_vb6jg"]
 [ext_resource type="PackedScene" uid="uid://req2ycg8yit4" path="res://scene/UI/arrowLv.tscn" id="2_nrl3e"]
 [ext_resource type="Script" uid="uid://8mscea6evhea" path="res://script/UI/card/CardLvControl.cs" id="3_nwimv"]
+[ext_resource type="PackedScene" uid="uid://dwckn6ubr6ari" path="res://scene/UI/bat.tscn" id="4_vw1hl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_01isp"]
 bg_color = Color(0.703198, 0.457739, 0.978784, 1)
@@ -118,6 +119,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_nhq3w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_7rbl6")
 script = ExtResource("3_nwimv")
 Lv = 1
+bat = ExtResource("4_vw1hl")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
